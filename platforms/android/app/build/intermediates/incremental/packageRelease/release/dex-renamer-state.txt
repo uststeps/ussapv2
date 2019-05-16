@@ -1,0 +1,8 @@
+<<<<<<< HEAD
+#Thu May 16 14:03:01 SGT 2019
+=======
+#Tue May 07 11:15:02 SGT 2019
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+base.0=C\:\\Users\\Jeremy\\Documents\\GitHub\\ussap\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

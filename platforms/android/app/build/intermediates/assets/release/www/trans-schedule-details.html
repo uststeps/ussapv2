@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" / <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+   <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file; style-src 'self' 'unsafe-inline'; script-src 'self'  'unsafe-inline' 'unsafe-eval' ">
+	 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/sidemenu.js"></script>
+    <script type="text/javascript" src="lib/slideout/slideout.min.js"></script>
+    <script type="text/javascript" src="lib/datatables/datatables.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="lib/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/jqueryUI/jquery-ui.min.css"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/sidemenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/schedule-trans.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/*.css" />
+    <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.css" />
+    
+    <title></title>
+</head>
+
+<body class="bg-cream">
+    <!--      Side Nav       -->
+    <nav id="sidenav" class="sidenav">
+    </nav>
+    <!--                     -->
+    <main id="panel" class="panel bg-cream">
+
+        <!-- Header -->
+        <div id="header">
+           
+			<div class="container">
+				<div class="row">
+					<div class="col-2"> 
+						<span class="menubutton" onclick="app.toggleMenu()">
+							<label class="hamburger-icon">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</label>
+						</span>
+					</div>
+					<div id="topbarTitle" class="col-8 " align="center">CHANGE OF SCHEDULE DETAILS</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+
+        </div> 
+
+        <div class="p-4" style="margin-bottom:100px;">
+			
+			  <!--Leave Details Display-->
+				<div class="card mb-3" >
+				  <div class="p-3 bg-white text-dark" >Date of Filing</div>
+				  <div class="card-body">
+					  <div class="row">
+						<div class="col col-12 border-right" align="center" >
+							<div class="row">
+								<div class="col-12">
+									<h2 class="text-warning" id="filingDate">12-MAR-2019</h2>
+								</div>
+								
+							</div>
+						</div>
+	
+					  </div>
+				  </div>
+				</div>
+				
+			
+         
+			  <!--Work Schedules-->
+			  <div class="bg-white card mb-3" >
+				  <div class="p-3 bg-white text-dark">Work Schedule</div>
+				  <div class="card-body" id="emp_schedule">
+				 
+				  </div>
+
+				</div>
+				<div class="bg-white card mb-3" >
+				  <div class="p-3 bg-white text-dark">Proposed Work Schedule</div>
+				  <div class="card-body" id="proposed_schedule">
+
+				  </div>
+
+				</div>
+              <!-- -->
+			  
+			  <!--Leave Status-->
+			  <div class="bg-white card border">
+				<div class="p-3 bg-white text-dark">
+					Effectivity Period
+				</div>
+				<div class="card-footer bg-muted text-dark border-bottom" id="effectivity">
+					
+				</div>
+				<div class="p-3 bg-white text-dark">
+					Reason
+				</div>
+				<div class="card-footer bg-muted text-dark border-bottom"  id="schedReason">
+					TESTING ONLY
+				</div>
+				
+				</div>
+			  
+
+			  <div class="card bg-white mb-3" >
+				  <div class="p-3 bg-white text-dark">Remarks</div>
+				  <div class="card-body bg-white">
+					<div class="row">
+					<div class="col w-100 font-weight-bold"  >Department Head: </div>
+					<div class="w-100"></div>
+					<div class="col w-100" id="remark_dh" ></div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_dh_date" ></div>
+					<div class="w-100"></div>
+					
+					<div class="col w-100 font-weight-bold"  >Human Resource </div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_hr"></div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_hr_date"></div>
+					<div class="w-100"></div>
+				  </div>
+				</div>
+				<h4 class="text-warning"></h4>
+				<div class="container">
+				  
+				</div>
+             </div>
+			 
+			  <div class="card bg-white mb-3 p-0" >
+				   <div class="card-body p-0 bg-white">
+					<button class="btn p-2 rounded text-white btn-warning w-100" onclick="window.location='trans-schedule.html'"><h3>BACK</h3></button>
+				  </div>
+              </div>
+	
+    </main>
+
+
+    <script type="text/javascript"> 
+		app.initialize();
+		document.addEventListener("deviceready", app.getChangeSchedDetails, false); 
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='utf-8'?>
+<<<<<<< HEAD
+<widget id="com.steps.ussap" version="3.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+=======
+<widget id="com.steps.ussap" version="3.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+    <feature name="Battery">
+        <param name="android-package" value="org.apache.cordova.batterystatus.BatteryListener" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="Contacts">
+        <param name="android-package" value="org.apache.cordova.contacts.ContactManager" />
+    </feature>
+    <feature name="DatePickerPlugin">
+        <param name="android-package" value="com.plugin.datepicker.DatePickerPlugin" />
+    </feature>
+    <feature name="Accelerometer">
+        <param name="android-package" value="org.apache.cordova.devicemotion.AccelListener" />
+    </feature>
+    <feature name="Compass">
+        <param name="android-package" value="org.apache.cordova.deviceorientation.CompassListener" />
+    </feature>
+    <feature name="Notification">
+        <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="FileOpener2">
+        <param name="android-package" value="io.github.pwlin.cordova.plugins.fileopener2.FileOpener2" />
+    </feature>
+    <feature name="FileTransfer">
+        <param name="android-package" value="org.apache.cordova.filetransfer.FileTransfer" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="Globalization">
+        <param name="android-package" value="org.apache.cordova.globalization.Globalization" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+    </feature>
+    <feature name="Media">
+        <param name="android-package" value="org.apache.cordova.media.AudioHandler" />
+    </feature>
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+    <feature name="NetworkStatus">
+        <param name="android-package" value="org.apache.cordova.networkinformation.NetworkManager" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="android-package" value="org.apache.cordova.statusbar.StatusBar" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Vibration">
+        <param name="android-package" value="org.apache.cordova.vibration.Vibration" />
+    </feature>
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <name>UST Support Staff Portal</name>
+    <description>
+    </description>
+    <author email="myust.steps@gmail.com" href="">
+        STEPS
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <icon qualifier="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
+    <icon qualifier="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
+    <icon qualifier="hdpi" src="www/res/icon/android/drawable-hdpi-icon.png" />
+    <icon qualifier="xhdpi" src="www/res/icon/android/drawable-xhdpi-icon.png" />
+    <icon qualifier="xxhdpi" src="www/res/icon/android/drawable-xxhdpi-icon.png" />
+    <icon qualifier="xxxhdpi" src="www/res/icon/android/drawable-xxxhdpi-icon.png" />
+    <allow-intent href="market:*" />
+    <allow-intent href="http://*/*/*/*/*" />
+    <allow-intent href="https://*/*/*/*/*" />
+    <allow-intent href="http://*/*/*/*" />
+    <allow-intent href="https://*/*/*/*" />
+    <allow-intent href="http://*/*/*" />
+    <allow-intent href="https://*/*/*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="loglevel" value="DEBUG" />
+    <preference name="android-version" value="7.0.0" />
+    <preference name="ios-version" value="4.5.4" />
+    <preference name="phonegap-version" value="cli-8.0.0" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-minSdkVersion" value="23" />
+    <preference name="android-targetSdkVersion" value="26" />
+    <preference name="android-compileSdkVersion" value="26" />
+    <preference name="AutoHideSplashScreen" value="true" />
+    <preference name="SplashScreenDelay" value="0" />
+    <preference name="AndroidLaunchMode" value="singleTop" />
+    <preference name="Fullscreen" value="false" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#2D81C1" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
+    <preference name="SplashScreen" value="none" />
+</widget>

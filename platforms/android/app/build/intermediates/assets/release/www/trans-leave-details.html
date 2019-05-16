@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" / <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file; style-src 'self' 'unsafe-inline'; script-src 'self'  'unsafe-inline' 'unsafe-eval' ">
+	 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/sidemenu.js"></script>
+    <script type="text/javascript" src="lib/slideout/slideout.min.js"></script>
+    <script type="text/javascript" src="lib/datatables/datatables.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="lib/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/jqueryUI/jquery-ui.min.css"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/sidemenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/leave-transact.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/*.css" />
+    <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.css" />
+    
+    <title></title>
+</head>
+
+<body class="bg-cream">
+    <!--      Side Nav       -->
+    <nav id="sidenav" class="sidenav">
+    </nav>
+    <!--                     -->
+    <main id="panel" class="panel bg-cream">
+
+        <!-- Header -->
+        <div id="header">
+           
+			<div class="container">
+				<div class="row">
+					<div class="col-2"> 
+						<span class="menubutton" onclick="app.toggleMenu()">
+							<label class="hamburger-icon">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</label>
+						</span>
+					</div>
+					<div id="topbarTitle" class="col-8 " align="center">LEAVE DETAILS</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+
+        </div> 
+
+        <div class="p-4" style="margin-bottom:100px;">
+			
+			  <!--Leave Details Display-->
+				<div class="card mb-3" >
+				  <div class="p-3 bg-white text-dark" >Leave Details</div>
+				  <div class="card-body">
+					  <div class="row">
+						<div class="col col-6 border-right" align="center" >
+							<div class="row">
+								<div class="col-12">
+<<<<<<< HEAD
+									<h3 class="text-warning" id="leave_type"></h3>
+								</div>
+								<div class="col-12" id="date_filed">
+								
+=======
+									<h3 class="text-warning" id="leave_type">SL</h3>
+								</div>
+								<div class="col-12" id="date_filed">
+									13-FEB-2018
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+								</div>
+							</div>
+						</div>
+						<div class="col col-6" align="center">
+							<div class="row">
+								<div class="col-12">
+<<<<<<< HEAD
+									<h3 class="text-warning" id="total_days"></h3>
+=======
+									<h3 class="text-warning" id="total_days">1</h3>
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+								</div>
+								<div class="col-12">
+									Total Days Filed
+								</div>
+							</div>
+						</div>
+						<!--
+							<div class="col card-title">Leave Type</div>
+							<div class="col" ></div>
+							<div class="w-100"></div>
+							<div class="col  card-title">Date Filed</div>
+							<div class="col" ></div>
+							<div class="w-100"></div>
+							<div class="col  card-title">Total Days Filed</div>
+							<div class="col" ></div>
+						-->
+					  </div>
+				  </div>
+				</div>
+				
+			
+              <!-- -->
+			  <!--Leave Credit Display-->
+			  <div class="card mb-3 bg-white p-0" >
+				  <div class=" bg-white p-3 text-dark">Leave Credit</div>
+				  <div class="card-body">
+					<div class="row">
+						<div class="col col-6 border-right" align="center" >
+							<div class="row">
+								<div class="col-12">
+<<<<<<< HEAD
+									<h3 class=""  id="balance_sl" style="color:black;"></h3>
+=======
+									<h3 class=""  id="balance_sl" style="color:black;">13</h3>
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+								</div>
+								<div class="col-12">
+									Sick Leave
+								</div>
+							</div>
+						</div>
+						<div class="col col-6" align="center">
+							<div class="row">
+								<div class="col-12">
+<<<<<<< HEAD
+									<h3 class="" id="balance_vl"  style="color:black;"></h3>
+=======
+									<h3 class="" id="balance_vl"  style="color:black;">14</h3>
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+								</div>
+								<div class="col-12">
+									Vacation Leave
+								</div>
+							</div>
+						</div>
+
+					  </div>
+				  </div>
+				</div>
+			
+              <!-- -->
+			  <!--Leave Status-->
+			  <div class="bg-white card mb-3" >
+				  <div class="p-3 bg-white">Leave Status</div>
+				  <div class="card-body" id="leave_status_list">
+				 
+				  </div>
+				  <!--
+				    <div class="card-footer text-muted">
+						<div class="col col-12 font-weight-bold" align="center">
+						DATE
+					</div>
+					<div class="col col-12" align="center">
+						<div class="row">
+							<div class="col-6" id="leave_date">
+								13-FEB-2018
+							</div>
+							<div class="col-6" id="time_period">
+								WHOLE DAY
+							</div>
+						</div>
+					</div>
+				   </div>
+				   -->
+				</div>
+		
+              <!-- -->
+			  
+			  <!--Leave Status-->
+			  <div class="card border">
+				<div class="card-header bg-white text-dark">
+					Reason for Leave
+				</div>
+				<div class="card-footer bg-muted text-dark border-bottom" id="reason">
+				</div>
+				<div class="card-header bg-white text-dark">
+					Reason for Late Filling
+				</div>
+				<div class="card-footer bg-muted text-dark border-bottom" id="reason_late">
+				</div>
+				
+				<div class="card-body bg-white">
+				<div class="row">
+					<div class="col col-6 border-right" align="center" >
+						<div class="row">
+							<div class="col-12">
+								<h4 class="text-warning" id="day_with_pay">1.0</h4>
+							</div>
+							<div class="col-12" style="color:black;">
+								Total Days With Pay
+							</div>
+						</div>
+					</div>
+					<div class="col col-6" align="center">
+						<div class="row">
+							<div class="col-12">
+								<h4 class="text-warning" id="day_witho_pay">1.0</h4>
+							</div>
+							<div class="col-12" style="color:black;">
+								Total Days Without Pay
+							</div>
+						</div>
+					</div>
+				</div>
+				</div>
+				
+				<!--
+				  <div class="row table  table-condensed p-4" >
+					<div class="col font-weight-bold">Reason for Leave:</div>
+					<div class="col" id="reason"></div>
+					<div class="w-100"></div>
+					<div class="col font-weight-bold">Reason for Late Filling:</div>
+					<div class="col" id="reason_late"></div>
+					<div class="w-100"></div>
+					<div class="col font-weight-bold">Total Days With Pay:</div>
+					<div class="col" id="day_with_pay"></div>
+					<div class="w-100"></div>
+					<div class="col font-weight-bold">Total Days Without Pay:</div>
+					<div class="col" id="day_witho_pay"></div>
+				  </div>
+				 -->
+				  
+				</div>
+			  
+              <!-- -->
+			   
+			  <!--Remarks-->
+			  <div class="card bg-white mb-3" >
+				  <div class="bg-white p-3">Remarks</div>
+				  <div class="card-body">
+					<div class="row">
+					<div class="col w-100 font-weight-bold"  >Department Head: </div>
+					<div class="w-100"></div>
+					<div class="col w-100" id="remark_dept" ></div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_dept_date" ></div>
+					<div class="w-100"></div>
+					
+					<div class="col w-100 font-weight-bold"  >Human Resource </div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_hr"></div>
+					<div class="w-100"></div>
+					<div class="col w-100"  id="remark_hr_date"></div>
+					<div class="w-100"></div>
+<<<<<<< HEAD
+                                        
+                                        
+                                        <div class="cancelRem col w-100 font-weight-bold text-danger"  id="cancel_flag"> CANCELLED </div>
+					<div class="cancelRem w-100"></div>
+					<div class="cancelRem col w-100 text-danger"  id=remark_cancel></div>
+					<div class="cancelRem w-100"></div>
+
+=======
+>>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+				  </div>
+				</div>
+				<h4 class="text-warning"></h4>
+				<div class="container">
+				  
+				</div>
+              <!-- -->
+			</div>
+		 <div class="card bg-white mb-3 p-0" >
+				  <div class="card-body p-0 bg-white">
+					<button class="btn p-2 rounded text-white btn-warning w-100" onclick="window.location='trans-leave.html'"><h3>BACK</h3></button>
+				  </div>
+             </div>
+	
+    </main>
+
+<!--
+    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark" id="botNav">
+		  <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item text-center pr-2">
+            <a class="nav-link text-warning" href="#">
+			<i id="botnav-leave" class="far fa-id-card fa-2x"></i>
+			<br/><small>Leave Application</small></a>
+          </li>
+
+          <li class="nav-item text-center pr-2">
+            <a class="nav-link text-white" href="attendance.html">
+			<i id="botnav-attendance" class="fas fa-user-clock fa-2x"></i>
+			<br/><small>Attendance</small></a>
+          </li>
+          
+          <li class="nav-item text-center pr-2">
+            <a class="nav-link text-white" href="payslip.html">
+			<i id="botnav-payslip" class="fas fa-money-check fa-2x"></i>
+			<br/><small>Payslip</small></a>
+          </li>
+
+          <li class="nav-item text-center">
+            <a class="nav-link text-white" href="download_forms.html">
+			<i id="botnav-forms" class="fas fa-file-download fa-2x"></i>
+			<br/><small>Download Forms</small></a>
+          </li>
+        </ul>
+  </div>
+    </nav>
+        -->
+    <script type="text/javascript"> 
+		 app.initialize();
+		document.addEventListener("deviceready", app.getLeaveDetails, false); 
+
+    </script>
+</body>
+
+</html>

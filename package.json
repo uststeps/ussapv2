@@ -1,0 +1,60 @@
+{
+  "name": "com.steps.ussap",
+  "version": "1.0.1",
+  "displayName": "UST Support Staff Portal",
+  "cordova": {
+    "platforms": [
+      "android"
+    ],
+    "plugins": {
+      "cordova-plugin-battery-status": {},
+      "cordova-plugin-camera": {},
+      "cordova-plugin-contacts": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-device-motion": {},
+      "cordova-plugin-device-orientation": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-globalization": {},
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-media": {},
+      "cordova-plugin-network-information": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-vibration": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-file-opener2": {},
+      "cordova-android-support-gradle-release": {
+        "ANDROID_SUPPORT_VERSION": "24.+"
+      },
+      "cordova-plugin-dialogs": {},
+      "cordova-plugin-file-transfer": {},
+      "cordova-plugin-datepicker": {},
+      "cordova-plugin-local-notification": {}
+    }
+  },
+  "dependencies": {
+    "cordova-android": "^7.1.4",
+    "cordova-android-support-gradle-release": "~1.4.4",
+    "cordova-plugin-app-event": "^1.2.1",
+    "cordova-plugin-battery-status": "~1.1.1",
+    "cordova-plugin-camera": "~2.1.1",
+    "cordova-plugin-contacts": "~2.0.1",
+    "cordova-plugin-datepicker": "~0.9.3",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-device-motion": "~1.2.0",
+    "cordova-plugin-device-orientation": "~1.0.2",
+    "cordova-plugin-dialogs": "~1.2.1",
+    "cordova-plugin-file-opener2": "~2.0.19",
+    "cordova-plugin-file-transfer": "~1.5.1",
+    "cordova-plugin-geolocation": "~2.1.0",
+    "cordova-plugin-globalization": "~1.0.3",
+    "cordova-plugin-inappbrowser": "~1.3.0",
+    "cordova-plugin-local-notification": "^0.8.4",
+    "cordova-plugin-media": "~2.2.0",
+    "cordova-plugin-network-information": "~1.2.0",
+    "cordova-plugin-splashscreen": "~3.2.1",
+    "cordova-plugin-statusbar": "~2.1.2",
+    "cordova-plugin-vibration": "~2.1.0",
+    "cordova-plugin-whitelist": "~1.2.2"
+  }
+}

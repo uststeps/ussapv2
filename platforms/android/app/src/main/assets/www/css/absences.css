@@ -1,0 +1,28 @@
+#body {
+    padding:20px;
+}
+
+
+.absHeader {
+    background-color:#f0ad4e;
+    color:white;
+}
+
+.absHeader2 {
+    background-color:#fcf8e3;
+    font-weight:bold;
+}
+
+.absTable {
+    border-collapse:collapse;
+    border-color: #f0ad4e ;
+    border-style: solid;
+    border-width: 2px;
+    
+    
+}
+
+.absTable td{
+    border:1px solid #cccccc;
+    padding:10px;
+}

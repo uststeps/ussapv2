@@ -1,0 +1,354 @@
+
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+/*Google Fonts*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+
+main {
+	margin-bottom:300px;
+}
+
+body,html {
+    font-family: 'Roboto', sans-serif;
+	width:100%;
+	height: 100vh;
+    -webkit-touch-callout: none;             
+    -webkit-text-size-adjust: none;            
+    -webkit-user-select: none;               
+    background-attachment:fixed;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 1px;
+    margin:0px;
+    padding:0px;
+    color: #7f8c8d;
+    background: #ECF0F1;
+}
+
+strong{
+    font-weight: 700;
+}
+
+     .panel {
+        width:100%;
+        background-color:white;
+        min-height: 100vh;
+        height:100%;
+        margin:0px;
+        padding:0px;
+     }
+
+#header {
+    width:100%;
+    display:block;
+    background-color:#222;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    padding-right: 2%;
+    font-size:20px;
+    color: #fff;
+} 
+
+/*Custom CSS*/
+
+.bg-yellow{
+    background: #fdc601;
+}
+
+.bg-cream{
+    background: #ECF0F1;
+}
+
+.bg-white{
+    background: #FFFFFF;
+}
+
+.text-asphalt{
+    color: #34495e;
+}
+
+.text-dkyellow{
+    color: #cc8e35;
+}
+
+.text-yellow{
+  color: #fdc601;
+}
+
+.bg-dark{
+  background: #111111 !important;
+}
+
+.loose {
+  letter-spacing: 2px;
+}
+
+.line{
+    border-bottom: 1px solid #ECF0F1;
+}
+
+.radius{
+  border-radius: 5px;
+}
+
+.btn-login{
+    padding-top: 10px;
+    padding-bottom : 10px;
+    font-size: 13px;
+}
+
+.borderless-btn{
+    border: none;
+}
+
+.text-initial{
+    text-transform:initial !important;
+}
+
+.info-card{
+    border-radius: 5px;
+}
+
+/*Override Bootstrap*/
+
+.form-control,
+.btn{
+    border-radius: 0px;
+}
+
+/*Login CSS*/
+
+input[type=text],
+input[type=password]{
+    width:100%;
+    outline:none;
+    box-sizing:border-box;
+    transition:.3s;
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+  
+  input[type=text]:focus,
+  input[type=password]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+  
+.inputWithIcon input[type=text],
+.inputWithIcon input[type=password]{
+    padding-left:40px;
+  }
+  
+  .inputWithIcon{
+    position:relative;
+	vertical-align:middle !important;
+  }
+  
+  .inputWithIcon i{
+    position:absolute;
+    left:10px;
+    top:32%;
+	
+    color:#aaa;
+    transition:.3s;
+	vertical-align:center !important;
+  }
+  
+  .inputWithIcon input[type=text]:focus + i,
+  .inputWithIcon input[type=password]:focus + i{
+    color:dodgerBlue;
+  }
+  
+  .login-icon{
+    
+    color:white;
+
+    text-align: center;
+    vertical-align: bottom;
+}
+  
+ /*Attendance*/
+
+ .attendance-links a,
+ .download-links a{
+    border-bottom: 1px solid #fdc601;
+    width: 100%;
+    padding: 7% 5%;
+ }
+
+ .attendance-links a:after{
+    content: "\f054";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+ }
+
+ .download-links a{
+    padding-right: 15%;
+ }
+ .download-links a:after{
+    content: "\f019";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+ }
+
+
+  .attendance-links a:hover,
+  .download-links a:hover{
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  .schedule-links a{
+    border-bottom: 1px solid #fdc601;
+    width: 100%;
+    padding: 7% 5%;
+ }
+
+ .schedule-links a:after{
+    content: "\f017";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+ }
+
+ .schedule-links a{
+    padding-right: 15%;
+ }
+ .schedule-links a:after{
+    content: "\f017";
+    font-family: 'Font Awesome 5 Free';
+    font-style: normal;
+    font-weight: 900;
+    position: absolute;
+    right: 20px;
+ }
+
+ .schedule-links:active {
+	background-color:#ff0000;
+ }
+
+  .schedule-links a:hover{
+    text-decoration: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ffc107;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #ffc107;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(13px);
+  -ms-transform: translateX(13px);
+  transform: translateX(13px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 17px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+
+/* HAMBURGER ICON */
+.hamburger-icon {
+    margin: 0;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 10%;
+}
+.hamburger-icon span {
+    width: 500%;
+    background-color: #ffffff;
+    height: 3px;
+    display: block;
+    margin-bottom: 6px;
+}
+.hamburger-icon span:last-child {
+    margin-bottom:0px;
+}
+
+	.footer {
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		font-size:10px;
+		text-align: center;
+	}
+
+  
