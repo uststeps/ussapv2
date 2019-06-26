@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":30002},"path":"AndroidManifest.xml","properties":{"packageId":"com.steps.ussap","split":"","minSdkVersion":"19"}}]
-=======
-[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":30001},"path":"AndroidManifest.xml","properties":{"packageId":"com.steps.ussap","split":"","minSdkVersion":"19"}}]
->>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+[{"outputType":{"type":"INSTANT_RUN_MERGED_MANIFESTS"},"apkInfo":{"type":"MAIN","splits":[],"versionCode":30003},"path":"AndroidManifest.xml","properties":{"packageId":"com.steps.ussap","split":"","minSdkVersion":"19"}}]

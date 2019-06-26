@@ -1,5 +1,544 @@
-<<<<<<< HEAD
-var _0x2ae0=['addEventListener','backbutton','notification','app','exitApp','Cancel','Exit','plugins','local','cancelAll','sys','getItem','remember','true','#rememberme','prop','checked','onLogin','.alert','hide','#currentVersion','html','empnumber','mypass','val','#password','validation','ajax','service/login','json','POST','setRequestHeader','password','#loadingDiv','show','#empnumber','readonly','attr','#loginButton','disabled','removeAttr','validated','college_1','college_2','full_name','full_empnumber','employment_date',':checked','parse','notification-','log','notifications\x20cancelled\x20:\x20BEFORE\x20RE\x20SCHEDULED','toggleSwitch','initial','location','initialsetup.html','profile.html','Invalid\x20Login','ERROR\x20AT\x20AJAX\x20LOGIN\x20:\x20','stringify','There\x20was\x20an\x20error\x20connecting\x20to\x20the\x20server.','length','which','keyCode','replace','index.html','each','amS','split','AM\x20TIME\x20IN','day','AM\x20TIME\x20OUT','amE','pmS','PM\x20TIME\x20IN','PM\x20TIME\x20OUT','pmE','schedule','trigger','data','processor','service/serverdt','date','getDTRRecord','sort','AJAX\x20ERROR\x20AT\x20serverdt\x20:\x20','#curdate-holder','pdate','type','OUT','DTR\x20Alert:\x20Time\x20out\x20for\x20am\x20schedule','DTR\x20Alert:\x2010\x20Minutes\x20before\x20PM\x20time\x20in','DTR\x20Alert:\x20Time\x20out\x20for\x20pm\x20schedule','setItem','ecode','isEmu','false','showAlert','console','isBypass','version','server','https://supportstaff.ust.edu.ph/restServiceUSSAP/resources/','6:00\x20am','6:30\x20am','7:00\x20am','7:30\x20am','8:30\x20am','9:00\x20am','10:00\x20am','10:30\x20am','11:00\x20am','11:30\x20am','12:00\x20pm','12:30\x20pm','1:00\x20pm','1:30\x20pm','2:00\x20pm','2:30\x20pm','3:00\x20pm','3:30\x20pm','4:00\x20pm','4:30\x20pm','5:00\x20pm','5:30\x20pm','6:00\x20pm','6:30\x20pm','7:00\x20pm','7:30\x20pm','8:00\x20pm','9:00\x20pm','9:30\x20pm','10:00\x20pm','10:30\x20pm','Monday','Tuesday','Wednesday','Thursday','Satruday','Sunday','JAN','FEB','MAR','APR','JUN','AUG','SEP','OCT'];(function(_0x3e7c9e,_0x1287c9){var _0x1fb51f=function(_0x332d3a){while(--_0x332d3a){_0x3e7c9e['push'](_0x3e7c9e['shift']());}};_0x1fb51f(++_0x1287c9);}(_0x2ae0,0x185));var _0x2d84=function(_0x3e7414,_0xceb9df){_0x3e7414=_0x3e7414-0x0;var _0x1f680e=_0x2ae0[_0x3e7414];return _0x1f680e;};localStorage[_0x2d84('0x0')](_0x2d84('0x1'),'u9n4mT^a|X!545P');localStorage[_0x2d84('0x0')](_0x2d84('0x2'),_0x2d84('0x3'));localStorage['setItem'](_0x2d84('0x4'),_0x2d84('0x5'));localStorage[_0x2d84('0x0')](_0x2d84('0x6'),_0x2d84('0x3'));localStorage[_0x2d84('0x0')]('isRemember',_0x2d84('0x3'));localStorage[_0x2d84('0x0')]('curinfo','0');localStorage[_0x2d84('0x0')](_0x2d84('0x7'),'3.0.2');localStorage['setItem'](_0x2d84('0x8'),_0x2d84('0x9'));var jsn;var lastIndex;var timedata={'06:00':_0x2d84('0xa'),'06:30':_0x2d84('0xb'),'07:00':_0x2d84('0xc'),'07:30':_0x2d84('0xd'),'08:00':'8:00\x20am','08:30':_0x2d84('0xe'),'09:00':_0x2d84('0xf'),'09:30':'9:30\x20am','10:00':_0x2d84('0x10'),'10:30':_0x2d84('0x11'),'11:00':_0x2d84('0x12'),'11:30':_0x2d84('0x13'),'12:00':_0x2d84('0x14'),'12:30':_0x2d84('0x15'),'13:00':_0x2d84('0x16'),'13:30':_0x2d84('0x17'),'14:00':_0x2d84('0x18'),'14:30':_0x2d84('0x19'),'15:00':_0x2d84('0x1a'),'15:30':_0x2d84('0x1b'),'16:00':_0x2d84('0x1c'),'16:30':_0x2d84('0x1d'),'17:00':_0x2d84('0x1e'),'17:30':_0x2d84('0x1f'),'18:00':_0x2d84('0x20'),'18:30':_0x2d84('0x21'),'19:00':_0x2d84('0x22'),'19:30':_0x2d84('0x23'),'20:00':_0x2d84('0x24'),'20:30':'8:30\x20pm','21:00':_0x2d84('0x25'),'21:30':_0x2d84('0x26'),'22:00':_0x2d84('0x27'),'22:30':_0x2d84('0x28')};var days={'1':_0x2d84('0x29'),'2':_0x2d84('0x2a'),'3':_0x2d84('0x2b'),'4':_0x2d84('0x2c'),'5':'Friday','6':_0x2d84('0x2d'),'7':_0x2d84('0x2e')};var months={'d01':_0x2d84('0x2f'),'d02':_0x2d84('0x30'),'d03':_0x2d84('0x31'),'d04':_0x2d84('0x32'),'d05':'MAY','d06':_0x2d84('0x33'),'d07':'JUL','d08':_0x2d84('0x34'),'d09':_0x2d84('0x35'),'d10':_0x2d84('0x36'),'d11':'NOV','d12':'DEC'};var months2={'JAN':'01','FEB':'02','MAR':'03','APR':'04','MAY':'05','JUN':'06','JUL':'07','AUG':'08','SEP':'09','OCT':'10','NOV':'11','DEC':'12'};var app={'initialize':function(){document[_0x2d84('0x37')](_0x2d84('0x38'),function(_0x48ea54){navigator[_0x2d84('0x39')]['confirm']('Exit\x20application?',function(_0x10967b){if(_0x10967b==0x2){navigator[_0x2d84('0x3a')][_0x2d84('0x3b')]();};},'',[_0x2d84('0x3c'),_0x2d84('0x3d')]);},!![]);cordova[_0x2d84('0x3e')]['notification'][_0x2d84('0x3f')][_0x2d84('0x40')](function(_0x4224c9){global[_0x2d84('0x41')]('Notification\x20Cancelled');},this);if(localStorage[_0x2d84('0x42')](_0x2d84('0x43'))==_0x2d84('0x44')){$(_0x2d84('0x45'))[_0x2d84('0x46')](_0x2d84('0x47'),!![]);app[_0x2d84('0x48')]();}else{}},'bindEvents':function(){},'onDeviceReady':function(){},'receivedEvent':function(_0x42086c){},'onLogin':function(){$(_0x2d84('0x49'))[_0x2d84('0x4a')]();var _0x3742c8;var _0x3cd23f;$(_0x2d84('0x4b'))[_0x2d84('0x4c')](localStorage[_0x2d84('0x42')]('version'));if(localStorage[_0x2d84('0x42')](_0x2d84('0x43'))==_0x2d84('0x44')){_0x3742c8=localStorage[_0x2d84('0x42')](_0x2d84('0x4d'));_0x3cd23f=localStorage[_0x2d84('0x42')](_0x2d84('0x4e'));}else{_0x3742c8=$('#empnumber')[_0x2d84('0x4f')]();_0x3cd23f=$(_0x2d84('0x50'))[_0x2d84('0x4f')]();}if(app[_0x2d84('0x51')]()){$[_0x2d84('0x52')]({'url':localStorage[_0x2d84('0x42')]('server')+_0x2d84('0x53'),'dataType':_0x2d84('0x54'),'type':_0x2d84('0x55'),'beforeSend':function(_0x1bb0a1){_0x1bb0a1[_0x2d84('0x56')](_0x2d84('0x4d'),_0x3742c8);_0x1bb0a1[_0x2d84('0x56')](_0x2d84('0x57'),_0x3cd23f);_0x1bb0a1['setRequestHeader'](_0x2d84('0x1'),localStorage[_0x2d84('0x42')](_0x2d84('0x1')));$(_0x2d84('0x58'))[_0x2d84('0x59')]();$(_0x2d84('0x5a'))['attr'](_0x2d84('0x5b'),_0x2d84('0x44'));$(_0x2d84('0x50'))[_0x2d84('0x5c')]('readonly',_0x2d84('0x44'));$(_0x2d84('0x5d'))[_0x2d84('0x5c')](_0x2d84('0x5e'),_0x2d84('0x44'));},'success':function(_0x5a9e3f){$('#loadingDiv')[_0x2d84('0x4a')]();$(_0x2d84('0x5a'))[_0x2d84('0x5f')](_0x2d84('0x5b'));$(_0x2d84('0x50'))[_0x2d84('0x5f')](_0x2d84('0x5b'));$(_0x2d84('0x5d'))[_0x2d84('0x5f')]('disabled');if(_0x5a9e3f[_0x2d84('0x60')]=='true'){localStorage[_0x2d84('0x0')](_0x2d84('0x4d'),_0x3742c8);localStorage['setItem'](_0x2d84('0x61'),_0x5a9e3f[_0x2d84('0x61')]);localStorage['setItem'](_0x2d84('0x62'),_0x5a9e3f[_0x2d84('0x62')]);localStorage[_0x2d84('0x0')](_0x2d84('0x63'),_0x5a9e3f['full_name']);localStorage[_0x2d84('0x0')](_0x2d84('0x64'),_0x5a9e3f[_0x2d84('0x64')]);localStorage['setItem'](_0x2d84('0x65'),_0x5a9e3f[_0x2d84('0x65')]);localStorage[_0x2d84('0x0')](_0x2d84('0x4e'),_0x3cd23f);localStorage['setItem']('passwordValidator',_0x3cd23f);if($(_0x2d84('0x45'))['is'](_0x2d84('0x66'))){localStorage[_0x2d84('0x0')](_0x2d84('0x43'),_0x2d84('0x44'));}else{localStorage[_0x2d84('0x0')](_0x2d84('0x43'),_0x2d84('0x3'));};jsn=JSON[_0x2d84('0x67')](localStorage['getItem']('schedule-'+localStorage[_0x2d84('0x42')](_0x2d84('0x4d'))));if(localStorage[_0x2d84('0x42')](_0x2d84('0x68')+localStorage[_0x2d84('0x42')](_0x2d84('0x4d')))==_0x2d84('0x44')){cordova[_0x2d84('0x3e')][_0x2d84('0x39')][_0x2d84('0x3f')][_0x2d84('0x40')](function(_0xcef4ef){console[_0x2d84('0x69')](_0x2d84('0x6a'));},this);app[_0x2d84('0x6b')]();}if(_0x5a9e3f[_0x2d84('0x6c')]==_0x2d84('0x44')){window[_0x2d84('0x6d')]=_0x2d84('0x6e');}else{window['location']=_0x2d84('0x6f');};}else{$(_0x2d84('0x58'))['hide']();$('#empnumber')['removeAttr'](_0x2d84('0x5b'));$(_0x2d84('0x50'))[_0x2d84('0x5f')](_0x2d84('0x5b'));$(_0x2d84('0x5d'))[_0x2d84('0x5f')](_0x2d84('0x5e'));$(_0x2d84('0x49'))[_0x2d84('0x4c')](_0x2d84('0x70'));$(_0x2d84('0x49'))[_0x2d84('0x59')]();}},'error':function(_0x43ceb4,_0x172068,_0x468780){global[_0x2d84('0x41')](_0x2d84('0x71')+JSON[_0x2d84('0x72')](_0x43ceb4));$('#loadingDiv')[_0x2d84('0x4a')]();$('#empnumber')[_0x2d84('0x5f')]('readonly');$(_0x2d84('0x50'))[_0x2d84('0x5f')](_0x2d84('0x5b'));$(_0x2d84('0x5d'))[_0x2d84('0x5f')](_0x2d84('0x5e'));$(_0x2d84('0x49'))[_0x2d84('0x4c')](_0x2d84('0x73'));$(_0x2d84('0x49'))[_0x2d84('0x59')]();}});}else{$(_0x2d84('0x49'))[_0x2d84('0x4c')]('Employee\x20number\x20and\x20password\x20is\x20required.');$(_0x2d84('0x49'))[_0x2d84('0x59')]();}return![];},'validation':function(){if(localStorage[_0x2d84('0x42')](_0x2d84('0x43'))==_0x2d84('0x44')){return!![];}else{if($(_0x2d84('0x5a'))[_0x2d84('0x4f')]()[_0x2d84('0x74')]==0x0){return![];}if($(_0x2d84('0x50'))['val']()[_0x2d84('0x74')]==0x0){return![];}return!![];}},'isNumber':function(_0x59313a){var _0x3caf08=_0x59313a[_0x2d84('0x75')]?_0x59313a[_0x2d84('0x75')]:_0x59313a[_0x2d84('0x76')];if(_0x3caf08!=0x2e&&_0x3caf08>0x1f&&(_0x3caf08<0x30||_0x3caf08>0x39))return![];return!![];},'onLogout':function(){window[_0x2d84('0x6d')][_0x2d84('0x77')](_0x2d84('0x78'));},'toggleSwitch':function(){var _0x435815=0x1;var _0x547d6d=[];var _0x6538d1=0x0;var _0x4e83ce=0x0;var _0x15a9b8='Daily\x20Time\x20Record\x20Alert';$[_0x2d84('0x79')](jsn,function(_0x84880d,_0x260b4e){var _0x521db4=0x0;var _0x448769=0x0;if(_0x260b4e[_0x2d84('0x7a')][_0x2d84('0x7b')](':')[0x1]==0x0){_0x521db4=parseInt(_0x260b4e[_0x2d84('0x7a')][_0x2d84('0x7b')](':')[0x0])-0x1;_0x448769=0x32;}else{_0x521db4=parseInt(_0x260b4e[_0x2d84('0x7a')]['split'](':')[0x0]);_0x448769=parseInt(_0x260b4e[_0x2d84('0x7a')][_0x2d84('0x7b')](':')[0x1])-0xa;}_0x547d6d[_0x4e83ce++]={'id':_0x4e83ce,'title':_0x15a9b8,'text':_0x2d84('0x7c'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x260b4e[_0x2d84('0x7d')]),'hour':_0x521db4,'minute':_0x448769,'second':0x0}},'data':{'processor':!![],'sort':0x1}};_0x547d6d[_0x4e83ce++]={'id':_0x4e83ce,'title':_0x15a9b8,'text':_0x2d84('0x7e'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x260b4e['day']),'hour':parseInt(_0x260b4e[_0x2d84('0x7f')][_0x2d84('0x7b')](':')[0x0]),'minute':parseInt(_0x260b4e[_0x2d84('0x7f')]['split'](':')[0x1]),'second':0x1}},'data':{'processor':!![],'sort':0x2}};var _0x3fb4ba=0x0;var _0x432ac2=0x0;if(_0x260b4e['pmS'][_0x2d84('0x7b')](':')[0x1]==0x0){_0x3fb4ba=parseInt(_0x260b4e[_0x2d84('0x80')][_0x2d84('0x7b')](':')[0x0])-0x1;_0x432ac2=0x32;}else{_0x3fb4ba=parseInt(_0x260b4e[_0x2d84('0x80')]['split'](':')[0x0]);_0x432ac2=parseInt(_0x260b4e[_0x2d84('0x80')][_0x2d84('0x7b')](':')[0x1])-0xa;}_0x547d6d[_0x4e83ce++]={'id':_0x4e83ce,'title':_0x15a9b8,'text':_0x2d84('0x81'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x260b4e[_0x2d84('0x7d')]),'hour':_0x3fb4ba,'minute':_0x432ac2,'second':0x0}},'data':{'processor':!![],'sort':0x3}};_0x547d6d[_0x4e83ce++]={'id':_0x4e83ce,'title':_0x15a9b8,'text':_0x2d84('0x82'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x260b4e[_0x2d84('0x7d')]),'hour':parseInt(_0x260b4e[_0x2d84('0x83')][_0x2d84('0x7b')](':')[0x0]),'minute':parseInt(_0x260b4e[_0x2d84('0x83')][_0x2d84('0x7b')](':')[0x1]),'second':0x0}},'data':{'processor':!![],'sort':0x4}};});cordova[_0x2d84('0x3e')]['notification'][_0x2d84('0x3f')][_0x2d84('0x84')](_0x547d6d);cordova[_0x2d84('0x3e')][_0x2d84('0x39')]['local']['on'](_0x2d84('0x85'),function(_0x452d91){if(_0x452d91[_0x2d84('0x86')][_0x2d84('0x87')]){$[_0x2d84('0x52')]({'url':localStorage[_0x2d84('0x42')]('server')+_0x2d84('0x88'),'type':_0x2d84('0x55'),'dataType':_0x2d84('0x54'),'beforeSend':function(_0x23335d){_0x23335d[_0x2d84('0x56')](_0x2d84('0x1'),localStorage[_0x2d84('0x42')](_0x2d84('0x1')));},'success':function(_0x23aea2){var _0x89f868=_0x23aea2[_0x2d84('0x89')][_0x2d84('0x7b')]('/')[0x2];var _0x5236af=_0x23aea2[_0x2d84('0x89')][_0x2d84('0x7b')]('/')[0x0];var _0x5b3e2b=_0x23aea2[_0x2d84('0x89')][_0x2d84('0x7b')]('/')[0x1];var _0x341ebf=_0x89f868+'-'+_0x5236af+'-'+_0x5b3e2b;var _0x553b1e=_0x5b3e2b+'-'+months['d'+_0x5236af]+'-'+_0x89f868;app[_0x2d84('0x8a')](_0x23aea2[_0x2d84('0x89')],_0x452d91[_0x2d84('0x86')][_0x2d84('0x8b')]);},'error':function(_0x253c12,_0x4c324f,_0x3415da){global[_0x2d84('0x41')](_0x2d84('0x8c')+JSON[_0x2d84('0x72')](_0x253c12));}});}});localStorage[_0x2d84('0x0')](_0x2d84('0x68')+localStorage[_0x2d84('0x42')](_0x2d84('0x4d')),_0x2d84('0x44'));},'getDTRRecord':function(_0x3eab3b,_0x1ecce5){var _0x27996e=_0x3eab3b[_0x2d84('0x7b')]('/')[0x2];var _0x4dba11=_0x3eab3b[_0x2d84('0x7b')]('/')[0x0];var _0x10c034=_0x3eab3b[_0x2d84('0x7b')]('/')[0x1];$(_0x2d84('0x8d'))[_0x2d84('0x4c')](_0x10c034+'-'+months['d'+_0x4dba11]+'-'+_0x27996e);$['ajax']({'url':localStorage['getItem'](_0x2d84('0x8'))+'attendance/dtr','type':_0x2d84('0x55'),'dataType':_0x2d84('0x54'),'beforeSend':function(_0x1cb16c){_0x1cb16c[_0x2d84('0x56')](_0x2d84('0x1'),localStorage[_0x2d84('0x42')](_0x2d84('0x1')));_0x1cb16c['setRequestHeader'](_0x2d84('0x4d'),localStorage[_0x2d84('0x42')](_0x2d84('0x4d')));_0x1cb16c[_0x2d84('0x56')](_0x2d84('0x8e'),_0x3eab3b);},'success':function(_0x67d8f3){var _0x4c52fb=0x0;var _0x4459e3=![];var _0x471db1='';var _0x278963=![];var _0x3291e9=![];var _0x51dea7=![];var _0x78cb23=![];$[_0x2d84('0x79')](_0x67d8f3,function(_0x211cc0,_0x16151d){if(_0x4c52fb==0x0){if(_0x211cc0==0x0){_0x278963=!![];_0x4c52fb++;}}else if(_0x4c52fb==0x1){if(_0x67d8f3[_0x211cc0][_0x2d84('0x8f')]==_0x2d84('0x90')){_0x3291e9=!![];_0x4c52fb++;}}else if(_0x4c52fb==0x2){if(_0x67d8f3[_0x211cc0][_0x2d84('0x8f')]=='IN'){_0x51dea7=!![];_0x4c52fb++;}}else if(_0x4c52fb==0x3){if(_0x67d8f3[_0x211cc0]['type']==_0x2d84('0x90')){_0x78cb23=!![];_0x4c52fb++;}}});if(_0x1ecce5==0x1&&_0x278963==![]){_0x4459e3=!![];_0x471db1='DTR\x20Alert:\x2010\x20Minutes\x20before\x20AM\x20time\x20in';}else if(_0x1ecce5==0x2&&_0x3291e9==![]){_0x4459e3=!![];_0x471db1=_0x2d84('0x91');}else if(_0x1ecce5==0x3&&_0x51dea7==![]){_0x4459e3=!![];_0x471db1=_0x2d84('0x92');}else if(_0x1ecce5==0x4&&_0x78cb23==![]){_0x4459e3=!![];_0x471db1=_0x2d84('0x93');}if(_0x4459e3){cordova['plugins'][_0x2d84('0x39')]['local'][_0x2d84('0x84')]({'id':0x3e7,'title':'DTR\x20Reminder','text':_0x471db1,'foreground':!![],'data':{'processor':![]}});}},'error':function(_0x5f2814,_0x55939c,_0x4dc65a){}});}};
-=======
-var _0x461e=['4:30\x20pm','5:00\x20pm','6:00\x20pm','6:30\x20pm','7:00\x20pm','7:30\x20pm','8:00\x20pm','9:00\x20pm','9:30\x20pm','10:00\x20pm','Wednesday','Friday','Satruday','JAN','FEB','MAR','APR','JUN','JUL','NOV','DEC','addEventListener','backbutton','notification','confirm','Exit\x20application?','app','exitApp','Cancel','Exit','plugins','local','sys','Notification\x20Cancelled','getItem','remember','checked','onLogin','.alert','hide','html','true','#empnumber','val','#password','validation','ajax','server','service/login','json','setRequestHeader','empnumber','password','#loadingDiv','show','attr','readonly','#loginButton','disabled','removeAttr','validated','college_1','college_2','full_name','full_empnumber','employment_date','mypass','passwordValidator','#rememberme',':checked','parse','schedule-','notification-','cancelAll','log','location','initialsetup.html','profile.html','Invalid\x20Login','ERROR\x20AT\x20AJAX\x20LOGIN\x20:\x20','There\x20was\x20an\x20error\x20connecting\x20to\x20the\x20server.','Employee\x20number\x20and\x20password\x20is\x20required.','length','keyCode','replace','Daily\x20Time\x20Record\x20Alert','split','amS','AM\x20TIME\x20IN','day','AM\x20TIME\x20OUT','amE','pmS','PM\x20TIME\x20IN','PM\x20TIME\x20OUT','pmE','schedule','data','processor','service/serverdt','POST','date','getDTRRecord','sort','AJAX\x20ERROR\x20AT\x20serverdt\x20:\x20','#curdate-holder','attendance/dtr','pdate','each','OUT','type','DTR\x20Alert:\x20Time\x20out\x20for\x20am\x20schedule','DTR\x20Alert:\x2010\x20Minutes\x20before\x20PM\x20time\x20in','DTR\x20Alert:\x20Time\x20out\x20for\x20pm\x20schedule','DTR\x20Reminder','setItem','ecode','u9n4mT^a|X!545P','isEmu','false','showAlert','console','isBypass','isRemember','curinfo','version','3.0.0','https://supportstaff.ust.edu.ph/restServiceUSSAP/resources/','6:00\x20am','6:30\x20am','7:30\x20am','8:30\x20am','10:00\x20am','11:00\x20am','11:30\x20am','12:00\x20pm','12:30\x20pm','1:00\x20pm','1:30\x20pm','2:00\x20pm','3:00\x20pm','3:30\x20pm','4:00\x20pm'];(function(_0x5e6bcf,_0x3efb07){var _0x32a747=function(_0xeb39a9){while(--_0xeb39a9){_0x5e6bcf['push'](_0x5e6bcf['shift']());}};_0x32a747(++_0x3efb07);}(_0x461e,0x73));var _0x2e20=function(_0x128d9e,_0xacf393){_0x128d9e=_0x128d9e-0x0;var _0x8aa866=_0x461e[_0x128d9e];return _0x8aa866;};localStorage[_0x2e20('0x0')](_0x2e20('0x1'),_0x2e20('0x2'));localStorage[_0x2e20('0x0')](_0x2e20('0x3'),_0x2e20('0x4'));localStorage['setItem'](_0x2e20('0x5'),_0x2e20('0x6'));localStorage[_0x2e20('0x0')](_0x2e20('0x7'),_0x2e20('0x4'));localStorage[_0x2e20('0x0')](_0x2e20('0x8'),_0x2e20('0x4'));localStorage['setItem'](_0x2e20('0x9'),'0');localStorage[_0x2e20('0x0')](_0x2e20('0xa'),_0x2e20('0xb'));localStorage[_0x2e20('0x0')]('server',_0x2e20('0xc'));var jsn;var lastIndex;var timedata={'06:00':_0x2e20('0xd'),'06:30':_0x2e20('0xe'),'07:00':'7:00\x20am','07:30':_0x2e20('0xf'),'08:00':'8:00\x20am','08:30':_0x2e20('0x10'),'09:00':'9:00\x20am','09:30':'9:30\x20am','10:00':_0x2e20('0x11'),'10:30':'10:30\x20am','11:00':_0x2e20('0x12'),'11:30':_0x2e20('0x13'),'12:00':_0x2e20('0x14'),'12:30':_0x2e20('0x15'),'13:00':_0x2e20('0x16'),'13:30':_0x2e20('0x17'),'14:00':_0x2e20('0x18'),'14:30':'2:30\x20pm','15:00':_0x2e20('0x19'),'15:30':_0x2e20('0x1a'),'16:00':_0x2e20('0x1b'),'16:30':_0x2e20('0x1c'),'17:00':_0x2e20('0x1d'),'17:30':'5:30\x20pm','18:00':_0x2e20('0x1e'),'18:30':_0x2e20('0x1f'),'19:00':_0x2e20('0x20'),'19:30':_0x2e20('0x21'),'20:00':_0x2e20('0x22'),'20:30':'8:30\x20pm','21:00':_0x2e20('0x23'),'21:30':_0x2e20('0x24'),'22:00':_0x2e20('0x25'),'22:30':'10:30\x20pm'};var days={'1':'Monday','2':'Tuesday','3':_0x2e20('0x26'),'4':'Thursday','5':_0x2e20('0x27'),'6':_0x2e20('0x28'),'7':'Sunday'};var months={'d01':_0x2e20('0x29'),'d02':_0x2e20('0x2a'),'d03':_0x2e20('0x2b'),'d04':_0x2e20('0x2c'),'d05':'MAY','d06':_0x2e20('0x2d'),'d07':_0x2e20('0x2e'),'d08':'AUG','d09':'SEP','d10':'OCT','d11':_0x2e20('0x2f'),'d12':_0x2e20('0x30')};var months2={'JAN':'01','FEB':'02','MAR':'03','APR':'04','MAY':'05','JUN':'06','JUL':'07','AUG':'08','SEP':'09','OCT':'10','NOV':'11','DEC':'12'};var app={'initialize':function(){document[_0x2e20('0x31')](_0x2e20('0x32'),function(_0x5a1e29){navigator[_0x2e20('0x33')][_0x2e20('0x34')](_0x2e20('0x35'),function(_0x38726d){if(_0x38726d==0x2){navigator[_0x2e20('0x36')][_0x2e20('0x37')]();};},'',[_0x2e20('0x38'),_0x2e20('0x39')]);},!![]);cordova[_0x2e20('0x3a')]['notification'][_0x2e20('0x3b')]['cancelAll'](function(_0x15e506){global[_0x2e20('0x3c')](_0x2e20('0x3d'));},this);if(localStorage[_0x2e20('0x3e')](_0x2e20('0x3f'))=='true'){$('#rememberme')['prop'](_0x2e20('0x40'),!![]);app[_0x2e20('0x41')]();}else{}},'bindEvents':function(){},'onDeviceReady':function(){},'receivedEvent':function(_0x22dd88){},'onLogin':function(){$(_0x2e20('0x42'))[_0x2e20('0x43')]();var _0x4070d7;var _0x1e563e;$('#currentVersion')[_0x2e20('0x44')](localStorage[_0x2e20('0x3e')](_0x2e20('0xa')));if(localStorage[_0x2e20('0x3e')]('remember')==_0x2e20('0x45')){_0x4070d7=localStorage[_0x2e20('0x3e')]('empnumber');_0x1e563e=localStorage[_0x2e20('0x3e')]('mypass');}else{_0x4070d7=$(_0x2e20('0x46'))[_0x2e20('0x47')]();_0x1e563e=$(_0x2e20('0x48'))[_0x2e20('0x47')]();}if(app[_0x2e20('0x49')]()){$[_0x2e20('0x4a')]({'url':localStorage['getItem'](_0x2e20('0x4b'))+_0x2e20('0x4c'),'dataType':_0x2e20('0x4d'),'type':'POST','beforeSend':function(_0x31ba70){_0x31ba70[_0x2e20('0x4e')](_0x2e20('0x4f'),_0x4070d7);_0x31ba70[_0x2e20('0x4e')](_0x2e20('0x50'),_0x1e563e);_0x31ba70['setRequestHeader'](_0x2e20('0x1'),localStorage[_0x2e20('0x3e')](_0x2e20('0x1')));$(_0x2e20('0x51'))[_0x2e20('0x52')]();$(_0x2e20('0x46'))['attr']('readonly',_0x2e20('0x45'));$(_0x2e20('0x48'))[_0x2e20('0x53')](_0x2e20('0x54'),_0x2e20('0x45'));$(_0x2e20('0x55'))['attr'](_0x2e20('0x56'),'true');},'success':function(_0x300763){$(_0x2e20('0x51'))[_0x2e20('0x43')]();$(_0x2e20('0x46'))['removeAttr'](_0x2e20('0x54'));$(_0x2e20('0x48'))[_0x2e20('0x57')]('readonly');$(_0x2e20('0x55'))[_0x2e20('0x57')](_0x2e20('0x56'));if(_0x300763[_0x2e20('0x58')]==_0x2e20('0x45')){localStorage[_0x2e20('0x0')](_0x2e20('0x4f'),_0x4070d7);localStorage['setItem'](_0x2e20('0x59'),_0x300763[_0x2e20('0x59')]);localStorage['setItem'](_0x2e20('0x5a'),_0x300763[_0x2e20('0x5a')]);localStorage['setItem'](_0x2e20('0x5b'),_0x300763['full_name']);localStorage[_0x2e20('0x0')]('full_empnumber',_0x300763[_0x2e20('0x5c')]);localStorage[_0x2e20('0x0')](_0x2e20('0x5d'),_0x300763[_0x2e20('0x5d')]);localStorage[_0x2e20('0x0')](_0x2e20('0x5e'),_0x1e563e);localStorage[_0x2e20('0x0')](_0x2e20('0x5f'),_0x1e563e);if($(_0x2e20('0x60'))['is'](_0x2e20('0x61'))){localStorage[_0x2e20('0x0')](_0x2e20('0x3f'),_0x2e20('0x45'));}else{localStorage[_0x2e20('0x0')](_0x2e20('0x3f'),_0x2e20('0x4'));};jsn=JSON[_0x2e20('0x62')](localStorage['getItem'](_0x2e20('0x63')+localStorage['getItem'](_0x2e20('0x4f'))));if(localStorage[_0x2e20('0x3e')](_0x2e20('0x64')+localStorage[_0x2e20('0x3e')](_0x2e20('0x4f')))==_0x2e20('0x45')){cordova[_0x2e20('0x3a')][_0x2e20('0x33')][_0x2e20('0x3b')][_0x2e20('0x65')](function(_0x11f6c5){console[_0x2e20('0x66')]('notifications\x20cancelled\x20:\x20BEFORE\x20RE\x20SCHEDULED');},this);app['toggleSwitch']();}if(_0x300763['initial']==_0x2e20('0x45')){window[_0x2e20('0x67')]=_0x2e20('0x68');}else{window[_0x2e20('0x67')]=_0x2e20('0x69');};}else{$(_0x2e20('0x51'))[_0x2e20('0x43')]();$(_0x2e20('0x46'))[_0x2e20('0x57')](_0x2e20('0x54'));$(_0x2e20('0x48'))[_0x2e20('0x57')](_0x2e20('0x54'));$(_0x2e20('0x55'))[_0x2e20('0x57')](_0x2e20('0x56'));$(_0x2e20('0x42'))[_0x2e20('0x44')](_0x2e20('0x6a'));$('.alert')[_0x2e20('0x52')]();}},'error':function(_0x3b13f8,_0x2c5684,_0x5e0b78){global[_0x2e20('0x3c')](_0x2e20('0x6b')+JSON['stringify'](_0x3b13f8));$(_0x2e20('0x51'))[_0x2e20('0x43')]();$('#empnumber')[_0x2e20('0x57')](_0x2e20('0x54'));$('#password')[_0x2e20('0x57')](_0x2e20('0x54'));$(_0x2e20('0x55'))[_0x2e20('0x57')]('disabled');$(_0x2e20('0x42'))[_0x2e20('0x44')](_0x2e20('0x6c'));$('.alert')[_0x2e20('0x52')]();}});}else{$(_0x2e20('0x42'))['html'](_0x2e20('0x6d'));$(_0x2e20('0x42'))[_0x2e20('0x52')]();}return![];},'validation':function(){if(localStorage[_0x2e20('0x3e')]('remember')==_0x2e20('0x45')){return!![];}else{if($('#empnumber')[_0x2e20('0x47')]()['length']==0x0){return![];}if($(_0x2e20('0x48'))[_0x2e20('0x47')]()[_0x2e20('0x6e')]==0x0){return![];}return!![];}},'isNumber':function(_0x5dad44){var _0x3335a1=_0x5dad44['which']?_0x5dad44['which']:_0x5dad44[_0x2e20('0x6f')];if(_0x3335a1!=0x2e&&_0x3335a1>0x1f&&(_0x3335a1<0x30||_0x3335a1>0x39))return![];return!![];},'onLogout':function(){window[_0x2e20('0x67')][_0x2e20('0x70')]('index.html');},'toggleSwitch':function(){var _0x3855d8=0x1;var _0xf64aed=[];var _0x830836=0x0;var _0x2b70e5=0x0;var _0x1abbd0=_0x2e20('0x71');$['each'](jsn,function(_0x129383,_0x3ed394){var _0x2ec3b6=0x0;var _0x96a6a2=0x0;if(_0x3ed394['amS'][_0x2e20('0x72')](':')[0x1]==0x0){_0x2ec3b6=parseInt(_0x3ed394[_0x2e20('0x73')][_0x2e20('0x72')](':')[0x0])-0x1;_0x96a6a2=0x32;}else{_0x2ec3b6=parseInt(_0x3ed394[_0x2e20('0x73')][_0x2e20('0x72')](':')[0x0]);_0x96a6a2=parseInt(_0x3ed394[_0x2e20('0x73')][_0x2e20('0x72')](':')[0x1])-0xa;}_0xf64aed[_0x2b70e5++]={'id':_0x2b70e5,'title':_0x1abbd0,'text':_0x2e20('0x74'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x3ed394[_0x2e20('0x75')]),'hour':_0x2ec3b6,'minute':_0x96a6a2,'second':0x0}},'data':{'processor':!![],'sort':0x1}};_0xf64aed[_0x2b70e5++]={'id':_0x2b70e5,'title':_0x1abbd0,'text':_0x2e20('0x76'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x3ed394[_0x2e20('0x75')]),'hour':parseInt(_0x3ed394['amE']['split'](':')[0x0]),'minute':parseInt(_0x3ed394[_0x2e20('0x77')]['split'](':')[0x1]),'second':0x1}},'data':{'processor':!![],'sort':0x2}};var _0x482c86=0x0;var _0x212082=0x0;if(_0x3ed394[_0x2e20('0x78')][_0x2e20('0x72')](':')[0x1]==0x0){_0x482c86=parseInt(_0x3ed394['pmS'][_0x2e20('0x72')](':')[0x0])-0x1;_0x212082=0x32;}else{_0x482c86=parseInt(_0x3ed394[_0x2e20('0x78')][_0x2e20('0x72')](':')[0x0]);_0x212082=parseInt(_0x3ed394[_0x2e20('0x78')]['split'](':')[0x1])-0xa;}_0xf64aed[_0x2b70e5++]={'id':_0x2b70e5,'title':_0x1abbd0,'text':_0x2e20('0x79'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x3ed394[_0x2e20('0x75')]),'hour':_0x482c86,'minute':_0x212082,'second':0x0}},'data':{'processor':!![],'sort':0x3}};_0xf64aed[_0x2b70e5++]={'id':_0x2b70e5,'title':_0x1abbd0,'text':_0x2e20('0x7a'),'trigger':{'count':0x5a0,'every':{'weekday':parseInt(_0x3ed394[_0x2e20('0x75')]),'hour':parseInt(_0x3ed394['pmE'][_0x2e20('0x72')](':')[0x0]),'minute':parseInt(_0x3ed394[_0x2e20('0x7b')][_0x2e20('0x72')](':')[0x1]),'second':0x0}},'data':{'processor':!![],'sort':0x4}};});cordova[_0x2e20('0x3a')][_0x2e20('0x33')][_0x2e20('0x3b')][_0x2e20('0x7c')](_0xf64aed);cordova[_0x2e20('0x3a')][_0x2e20('0x33')][_0x2e20('0x3b')]['on']('trigger',function(_0x135704){if(_0x135704[_0x2e20('0x7d')][_0x2e20('0x7e')]){$[_0x2e20('0x4a')]({'url':localStorage[_0x2e20('0x3e')](_0x2e20('0x4b'))+_0x2e20('0x7f'),'type':_0x2e20('0x80'),'dataType':_0x2e20('0x4d'),'beforeSend':function(_0xd99c91){_0xd99c91[_0x2e20('0x4e')](_0x2e20('0x1'),localStorage[_0x2e20('0x3e')](_0x2e20('0x1')));},'success':function(_0xdefbd8){var _0x4e956b=_0xdefbd8['date'][_0x2e20('0x72')]('/')[0x2];var _0x325eab=_0xdefbd8[_0x2e20('0x81')][_0x2e20('0x72')]('/')[0x0];var _0x4b07e8=_0xdefbd8[_0x2e20('0x81')]['split']('/')[0x1];var _0x207462=_0x4e956b+'-'+_0x325eab+'-'+_0x4b07e8;var _0x3146ad=_0x4b07e8+'-'+months['d'+_0x325eab]+'-'+_0x4e956b;app[_0x2e20('0x82')](_0xdefbd8['date'],_0x135704[_0x2e20('0x7d')][_0x2e20('0x83')]);},'error':function(_0x3956f0,_0x3fb9cc,_0x2d560b){global[_0x2e20('0x3c')](_0x2e20('0x84')+JSON['stringify'](_0x3956f0));}});}});localStorage[_0x2e20('0x0')](_0x2e20('0x64')+localStorage[_0x2e20('0x3e')](_0x2e20('0x4f')),_0x2e20('0x45'));},'getDTRRecord':function(_0x205c8a,_0x5548e0){var _0x27bc64=_0x205c8a[_0x2e20('0x72')]('/')[0x2];var _0x3180dc=_0x205c8a[_0x2e20('0x72')]('/')[0x0];var _0x9bf918=_0x205c8a[_0x2e20('0x72')]('/')[0x1];$(_0x2e20('0x85'))[_0x2e20('0x44')](_0x9bf918+'-'+months['d'+_0x3180dc]+'-'+_0x27bc64);$['ajax']({'url':localStorage['getItem'](_0x2e20('0x4b'))+_0x2e20('0x86'),'type':'POST','dataType':_0x2e20('0x4d'),'beforeSend':function(_0x544a8f){_0x544a8f[_0x2e20('0x4e')](_0x2e20('0x1'),localStorage[_0x2e20('0x3e')](_0x2e20('0x1')));_0x544a8f['setRequestHeader'](_0x2e20('0x4f'),localStorage['getItem'](_0x2e20('0x4f')));_0x544a8f[_0x2e20('0x4e')](_0x2e20('0x87'),_0x205c8a);},'success':function(_0x224f48){var _0x37f0ee=0x0;var _0x488f9a=![];var _0x3fd7cc='';var _0xf44f3a=![];var _0x36674d=![];var _0x44734d=![];var _0x1e1e7f=![];$[_0x2e20('0x88')](_0x224f48,function(_0x36adc2,_0x41854b){if(_0x37f0ee==0x0){if(_0x36adc2==0x0){_0xf44f3a=!![];_0x37f0ee++;}}else if(_0x37f0ee==0x1){if(_0x224f48[_0x36adc2]['type']==_0x2e20('0x89')){_0x36674d=!![];_0x37f0ee++;}}else if(_0x37f0ee==0x2){if(_0x224f48[_0x36adc2][_0x2e20('0x8a')]=='IN'){_0x44734d=!![];_0x37f0ee++;}}else if(_0x37f0ee==0x3){if(_0x224f48[_0x36adc2][_0x2e20('0x8a')]==_0x2e20('0x89')){_0x1e1e7f=!![];_0x37f0ee++;}}});if(_0x5548e0==0x1&&_0xf44f3a==![]){_0x488f9a=!![];_0x3fd7cc='DTR\x20Alert:\x2010\x20Minutes\x20before\x20AM\x20time\x20in';}else if(_0x5548e0==0x2&&_0x36674d==![]){_0x488f9a=!![];_0x3fd7cc=_0x2e20('0x8b');}else if(_0x5548e0==0x3&&_0x44734d==![]){_0x488f9a=!![];_0x3fd7cc=_0x2e20('0x8c');}else if(_0x5548e0==0x4&&_0x1e1e7f==![]){_0x488f9a=!![];_0x3fd7cc=_0x2e20('0x8d');}if(_0x488f9a){cordova[_0x2e20('0x3a')][_0x2e20('0x33')][_0x2e20('0x3b')][_0x2e20('0x7c')]({'id':0x3e7,'title':_0x2e20('0x8e'),'text':_0x3fd7cc,'foreground':!![],'data':{'processor':![]}});}},'error':function(_0x33c056,_0x3f3eda,_0x2bb719){}});}};
->>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+//localStorage.setItem("ecode" , "aaa");
+localStorage.setItem("ecode" 		, "u9n4mT^a|X!545P"	); // Same as Server code --HeaderParam xml ecode 
+localStorage.setItem("isEmu" 		, "false"	);
+localStorage.setItem("showAlert"	, "console"	);
+localStorage.setItem("isBypass"		, "false"	);
+localStorage.setItem("isRemember" 	, "false"	);
+localStorage.setItem("curinfo"		, "0"		);
+localStorage.setItem("version" 		, "3.0.3"  );
+
+localStorage.setItem("server"	, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
+//localStorage.setItem("server"		, "http://172.24.0.120:9279/restServiceUSSAP/resources/"	);
+//localStorage.setItem("server"		, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
+//localStorage.setItem("server"		, "https://supportstaff.ust.edu.ph/restServiceUSSAP/resources/");
+
+/*-------------------------------------------------*/
+/* SCHEDULE DATA */
+var jsn;
+var lastIndex;
+
+var timedata = {
+	"06:00" : "6:00 am",
+	"06:30" : "6:30 am",
+	"07:00" : "7:00 am",
+	"07:30" : "7:30 am",
+	"08:00" : "8:00 am",
+	"08:30" : "8:30 am",
+	"09:00" : "9:00 am",
+	"09:30" : "9:30 am",
+	"10:00" : "10:00 am",
+	"10:30" : "10:30 am",
+	"11:00" : "11:00 am",
+	"11:30" : "11:30 am",
+	"12:00" : "12:00 pm",
+	"12:30" : "12:30 pm",
+	"13:00" : "1:00 pm",
+	"13:30" : "1:30 pm",
+	"14:00" : "2:00 pm",
+	"14:30" : "2:30 pm",
+	"15:00" : "3:00 pm",
+	"15:30" : "3:30 pm",
+	"16:00" : "4:00 pm",
+	"16:30" : "4:30 pm",
+	"17:00" : "5:00 pm",
+	"17:30" : "5:30 pm",
+	"18:00" : "6:00 pm",
+	"18:30" : "6:30 pm",
+	"19:00" : "7:00 pm",
+	"19:30" : "7:30 pm",
+	"20:00" : "8:00 pm",
+	"20:30" : "8:30 pm",
+	"21:00" : "9:00 pm",
+	"21:30" : "9:30 pm",
+	"22:00" : "10:00 pm",
+	"22:30" : "10:30 pm"
+}
+var days =  {
+	"1" : "Monday",
+	"2" : "Tuesday",
+	"3" : "Wednesday",
+	"4" : "Thursday",
+	"5" : "Friday",
+	"6" : "Satruday",
+	"7" : "Sunday"
+}
+var months = {
+	d01 : "JAN",
+	d02 : "FEB",
+	d03 : "MAR", 
+	d04 : "APR", 
+	d05 : "MAY", 
+	d06 : "JUN", 
+	d07 : "JUL", 
+	d08 : "AUG", 
+	d09 : "SEP", 
+	d10 : "OCT", 
+	d11 : "NOV", 
+	d12 : "DEC" 
+};
+
+var months2 = {
+	JAN : "01",
+	FEB : "02",
+	MAR : "03",
+	APR : "04",
+	MAY : "05",
+	JUN : "06",
+	JUL : "07",
+	AUG : "08",
+	SEP : "09",
+	OCT : "10",
+	NOV : "11",
+	DEC : "12"
+};
+/**/
+var app = {
+	
+    initialize: function() {
+        
+        
+        document.addEventListener("backbutton", function(e){
+			navigator.notification.confirm(
+				"Exit application?",        	 	// Alert Message
+				function(buttonIndex) {				// Callback on message
+					if (buttonIndex == 2) {			
+						navigator.app.exitApp();
+					};
+				},                 					// callback
+				"",           						// title
+				['Cancel', 'Exit']                  // Buttons
+			);	
+		}, true);
+        cordova.plugins.notification.local.cancelAll(function(notification) {
+			global.sys("Notification Cancelled");
+		}, this);
+		
+		//alert(localStorage.getItem("remember"));
+		
+		if (localStorage.getItem("remember") == "true"){
+			$("#rememberme").prop("checked", true);
+			app.onLogin();
+		} else {
+			
+		}
+    },
+    
+    bindEvents: function() {
+           
+		
+
+    }, 
+
+    onDeviceReady: function() {
+
+		 
+		/* CANCEL ALL PENDING NOTIF WHEN INDEX LOADS */
+		
+    }, 
+    
+    receivedEvent: function(id) {
+		
+    },
+    
+    onLogin: function(){
+		$(".alert").hide();
+		var empnum;
+		var pass;
+		$("#currentVersion").html(localStorage.getItem("version"));
+                //alert(localStorage.getItem("remember"));
+		if (localStorage.getItem("remember") == "true") {
+			empnum = localStorage.getItem("empnumber");
+			pass   = localStorage.getItem("mypass");
+		} else {
+                       // empnum = "4816";
+			empnum = $("#empnumber").val();
+			pass = $("#password").val();
+			
+		}
+		
+		if (app.validation()) {
+			//return false;
+            $.ajax(
+             {
+                url        : localStorage.getItem("server") + "service/login",
+                dataType   : "json",
+                type       : "POST",
+                beforeSend : function(xhr){
+                    xhr.setRequestHeader('empnumber' ,  empnum			);
+                    xhr.setRequestHeader('password'  ,  pass			);
+                    xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
+					
+					$("#loadingDiv"		).show();
+					$("#empnumber"		).attr("readonly"	, "true" );
+					$("#password"		).attr("readonly"	, "true" );
+					$("#loginButton"	).attr("disabled"	, "true" );
+                },
+                success    : function(msg) { 
+					$("#loadingDiv").hide();
+					$("#empnumber").removeAttr("readonly");
+					$("#password").removeAttr("readonly");
+					$("#loginButton").removeAttr("disabled");
+				   //alert("VALDIATED: " + msg["validated"]);
+                   if (msg["validated"] == "true") {
+					  
+					  
+					   
+                            localStorage.setItem("empnumber"       , empnum  );
+                            //localStorage.setItem("empnumber"       , "4816"  );
+					  localStorage.setItem("college_1"       , msg["college_1"]       );
+					  localStorage.setItem("college_2"       , msg["college_2"]       );
+					  localStorage.setItem("full_name"       , msg["full_name"]       );
+					  localStorage.setItem("full_empnumber"  , msg["full_empnumber"]  );
+					  localStorage.setItem("employment_date" , msg["employment_date"] );
+					  localStorage.setItem("mypass" , pass);
+					  
+					  
+					  //alert(localStorage.getItem("full_empnumber"));
+				
+					  localStorage.setItem("passwordValidator",pass);
+					  
+					  
+					  	if ($("#rememberme").is(":checked")) {
+							localStorage.setItem("remember", "true");
+						} else {
+							localStorage.setItem("remember", "false");
+						};
+						
+                                                //alert(localStorage.getItem("remember"));
+						jsn = JSON.parse(localStorage.getItem("schedule-" + localStorage.getItem("empnumber")));
+							
+						if (localStorage.getItem("notification-" + localStorage.getItem("empnumber")) == "true") {	
+							cordova.plugins.notification.local.cancelAll(function(notification) {
+								console.log("notifications cancelled : BEFORE RE SCHEDULED");
+							}, this);
+							app.toggleSwitch();
+						} 
+					  if (msg["initial"] == "true") {
+						// GO TO INITIAL SETUP
+
+						window.location = "initialsetup.html";
+					  } else {
+						// GO DIRECTLY TO PROFILE
+						window.location = "profile.html";
+					  };
+					  
+		
+                   } else {
+					    $("#loadingDiv"  ).hide();
+						$("#empnumber"   ).removeAttr("readonly");
+						$("#password"    ).removeAttr("readonly");
+						$("#loginButton" ).removeAttr("disabled");
+					
+					    $(".alert").html("Invalid Login");
+					    $(".alert").show();
+
+				   }
+                },
+                error     : function(jqXHR	, textStatus, errorThrown) {
+					global.sys("ERROR AT AJAX LOGIN : " + JSON.stringify(jqXHR));
+					$("#loadingDiv" ).hide();
+					$("#empnumber"  ).removeAttr("readonly");
+					$("#password"   ).removeAttr("readonly");
+					$("#loginButton").removeAttr("disabled");
+					
+					$(".alert").html("There was an error connecting to the server.");
+					$(".alert").show();
+			   }
+            });
+        } else {
+            $(".alert").html("Employee number and password is required.");
+			$(".alert").show();		
+		}
+		return false;
+    },
+    
+    validation: function() {
+		
+		if (localStorage.getItem("remember")=="true"){
+			return true;
+		} else {
+			if ( $("#empnumber").val().length == 0 ) {
+				return false;
+			}
+			
+			if ($("#password").val().length == 0 ) {
+				return false;
+			}
+			return true;
+		}
+		
+      
+    },
+	
+	isNumber: function(evt) {
+        var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+        if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57)) return false;
+        return true;
+    }  ,
+	onLogout: function(){
+		window.location.replace("index.html");
+	}  ,	
+	toggleSwitch: function(){
+		var check = 1;
+		var data = [];
+		var dtrFlag = 0;
+	
+			var index = 0;
+
+			var defaultTitle = "Daily Time Record Alert";
+			$.each(jsn, function(i,e){
+					
+					
+				var r_amS_H = 0;
+				var r_amS_M = 0;
+				if (e["amS"].split(":")[1] == 0){
+					r_amS_H = parseInt(e["amS"].split(":")[0]) - 1;
+					r_amS_M = 50;
+				} else {
+					r_amS_H = parseInt(e["amS"].split(":")[0]);
+					r_amS_M = parseInt(e["amS"].split(":")[1]) - 10;
+				}
+			
+				data[index++] = {
+					id   	: index,
+					title	: defaultTitle, 
+					text : "AM TIME IN",
+					trigger : { 
+								count: 1440,
+								every: { 
+									weekday	: parseInt(e["day"]), 
+									hour	: r_amS_H,
+									minute	: r_amS_M,
+									second  : 0
+								}
+							 },
+					
+					data: { processor: true,sort: 1 }
+				};
+
+		
+				data[index++] = {
+					id   	: index,
+					title	: defaultTitle, 
+					text : "AM TIME OUT",
+					trigger : { 
+								count: 1440,
+								every: { 
+									weekday	: parseInt(e["day"]), 
+									hour	: parseInt(e["amE"].split(":")[0]), 
+									minute	: parseInt(e["amE"].split(":")[1]),
+									second  : 1
+								}
+							  },
+					
+					data: { processor: true,sort: 2 }
+				};
+				
+					
+				
+				var r_pmS_H = 0;
+				var r_pmS_M = 0;
+				if (e["pmS"].split(":")[1] == 0){
+					r_pmS_H = parseInt(e["pmS"].split(":")[0]) - 1;
+					r_pmS_M = 50;
+				} else {
+					r_pmS_H = parseInt(e["pmS"].split(":")[0]);
+					r_pmS_M = parseInt(e["pmS"].split(":")[1]) - 10;
+				}
+				
+				data[index++] = {
+					id   	: index,
+					title	: defaultTitle, 
+					text : "PM TIME IN",
+					trigger : { 
+								count: 1440,
+								every: { 
+									weekday	: parseInt(e["day"]), 
+									hour	: r_pmS_H, 
+									minute	: r_pmS_M,
+									second  : 0
+								}
+							 },
+					
+					data: { processor: true,sort: 3 }
+				};
+				
+				data[index++] = {
+					id   	: index,
+					title	: defaultTitle, 
+					text : "PM TIME OUT",
+					trigger	: { 
+								count: 1440,
+								every: { 
+									weekday	: parseInt(e["day"]), 
+									hour	: parseInt(e["pmE"].split(":")[0]), 
+									minute	: parseInt(e["pmE"].split(":")[1]),
+									second  : 0
+								}
+							 },
+					
+					data: { processor: true, sort: 4 }
+				};
+				
+			});
+				
+			//alert(JSON.stringify(data));
+			cordova.plugins.notification.local.schedule(data);
+			
+			// TODO BACKGROUND PROCESS
+			// check if notification is working if not do algo
+			/*  NOTIFICATION CONDITION CHECKER
+				*WORKS BUT APP NEED TO BE MINIMIZED NOT CLOSED
+			*/	
+			
+
+	
+			cordova.plugins.notification.local.on("trigger", function(notification) {
+				
+				if (notification.data.processor) {
+				$.ajax({
+					url       : localStorage.getItem("server") + "service/serverdt",
+					type      : "POST",
+					dataType  : "json",
+					beforeSend: function(xhr){
+						 xhr.setRequestHeader('ecode'  ,  localStorage.getItem("ecode") ); 
+					},  
+					success: function(msg) { 
+					   //global.msg(msg["date"]);
+					   
+					   var year 	= msg["date"].split("/")[2];
+					   var month 	= msg["date"].split("/")[0];
+					   var day 		= msg["date"].split("/")[1];
+					   
+					   var formatted = year + "-" + month + "-" + day;
+					   
+					   var formatted_v2 = day + "-" + months["d" + month] + "-" + year;
+					   
+					   // USE THE FORMATTED DATE
+	
+					   app.getDTRRecord(msg["date"], notification.data.sort);
+					},
+					error: function(jqXHR	, textStatus, errorThrown) {  
+						global.sys("AJAX ERROR AT serverdt : " + JSON.stringify(jqXHR));
+					   //alert(JSON.stringify(jqXHR));
+					   //alert(JSON.stringify(textStatus));
+					   //alert(JSON.stringify(errorThrown));
+					}
+				});
+				}
+			});
+			/**/
+			
+			
+			localStorage.setItem("notification-"+ localStorage.getItem("empnumber"), "true" );
+			
+		
+	},
+	getDTRRecord: function(pdate,notifId){
+		//console.log("i am looping");
+		
+		//alert("TRYING TO FETCH DTR");
+		var year 	= pdate.split("/")[2];
+		var month 	= pdate.split("/")[0];
+		var day 	= pdate.split("/")[1];
+		$("#curdate-holder").html(day + "-" + months["d" + month] + "-" + year);
+        $.ajax({
+            url      : localStorage.getItem("server") + "attendance/dtr",
+            type     : "POST",
+            dataType : "json",
+            beforeSend: function(xhr){
+                 xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode"     ) );
+                 xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ) );
+                 xhr.setRequestHeader('pdate'     ,  pdate ); 
+            },  
+            success: function(msg) { 
+			var index = 0;			// check what in or out is current
+			var sendNotif = false ;	// if true send notif
+			var notifMessage = "";
+			var amIn 	= false;
+			var amOut 	= false;
+			var pmIn 	= false;
+			var pmOut	= false;
+			
+			
+			
+			
+			
+			/* 
+			
+			
+			*/
+			$.each(msg, function(i,e){
+				if ( index == 0 ) {
+					if (i==0) {
+						amIn = true;
+						index++;
+					}
+				} else if (index == 1){
+					if (msg[i]["type"] == "OUT") {
+						amOut = true;
+						index++;
+					} 
+				} else if (index == 2){
+					if (msg[i]["type"] == "IN"){
+						pmIn = true;
+						index++;
+					}
+				} else if (index == 3) {
+					if (msg[i]["type"] == "OUT"){
+						pmOut = true;
+						index++;
+					}
+				}
+			});
+			
+			
+		
+			
+			/* FLAG CHECKER  */
+			//  console.log("############ NOTIF ID :" + notifId);					
+			//  console.log("############ FLAGS    :" + amIn + " : " + amOut + " : " + pmIn + " : " + pmOut);
+			/* */
+			/*
+				notif id = 1 == AM IN
+				notif id = 2 == AM OUT 
+				notif id = 3 == PM IN 
+				notif id = 4 == PM OUT
+			*/
+			
+			
+			if (notifId == 1 && amIn  == false) {
+				sendNotif = true;
+				notifMessage = "DTR Alert: 10 Minutes before AM time in";
+            } else if (notifId == 2 && amOut == false) {
+				sendNotif = true;
+				notifMessage = "DTR Alert: Time out for am schedule";
+			} else if (notifId == 3 && pmIn  == false) {
+				sendNotif = true;
+				notifMessage = "DTR Alert: 10 Minutes before PM time in";
+			} else if (notifId == 4 && pmOut == false) {
+				sendNotif = true;
+				notifMessage = "DTR Alert: Time out for pm schedule";
+			}
+			
+			if (sendNotif) {
+				cordova.plugins.notification.local.schedule( {
+					id		: 999,
+					title	: "DTR Reminder", 
+					text 	: notifMessage,
+					foreground: true,
+					data: {processor: false}
+				});
+			}
+			
+			
+			
+			},
+            error: function(jqXHR	, textStatus, errorThrown) {  
+				//global.msg("jqXHR: " 		  + JSON.stringify(jqXHR)		);
+             	//global.msg("STATUS: " 	  + JSON.stringify(textStatus)	);
+				//global.msg("ERROR THROWN: " + JSON.stringify(errorThrown)	);
+            }
+        });  
+    }
+};

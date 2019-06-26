@@ -161,38 +161,55 @@ var app = {
 									} else {
 										canEdit = "false";
 									}
-									
-									$("#leaveholder").append(
-											
-										'<div id="row' + msg["leave-list"][x.toString()]["leave_id"] + '" ontouchstart="app.onTouchStart(\'' + msg["leave-list"][x.toString()]["leave_id"] + '\')"  ontouchend="app.onTouchEnd()" class="list-group-item list-group-item-action">'
-											+ '<div class="row">'
-											+ '	<div class="col-4 font-weight-bold border-right" >'
-											+		'<div class="row">'
-											+			'<div class="col-12 font-weight-bold text-warning" align="center">'
-											+				'<h1>' + leaveName  + '</h1>'
-											+ 			'</div>'
-											+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-											+ 				msg["leave-list"][x.toString()]["leave_date"] 
-											+ 			'</div>'
-											+ 		'</div>'
-											+ '</div>'
-											+ '<div class="col-8">'
-											+ '<div class="row">'
-											+ '<div class="col-6 font-weight-bold"> Department Head</div>'
-											+			'<div class="col-6 " >' +  recIns1  + '</div>'
-											+ '</div>'
-											+ '<div class="row">'
-											+       '<div class="col-6 font-weight-bold" > HR Department</div>'
-											+ '<div class="col-6" >' +  recIns2 + '</div>'
-											+ '<input type="hidden" id="canEdit' + msg["leave-list"][x.toString()]["leave_id"] + '" value="' + canEdit + '">' 
-											+ '</div>'
-											+ '</div>'
-									
-											+ '</div>'
-									+ '</div>'
-										
-										
-									);
+                                   
+						
+                                                                        var fullTypeName = "";
+                                                                        var leaveIcon = "";
+                                                                        if (leaveName == "SL") {
+                                                                            fullTypeName = "SICK LEAVE";
+                                                                            leaveIcon = "fa-capsules";
+                                                                        } else if (leaveName == "BL") {
+                                                                            fullTypeName = "BIRTHDAY LEAVE";
+                                                                            leaveIcon = "fa-birthday-cake";
+                                                                           
+                                                                        } else if (leaveName == "VL") {
+                                                                            fullTypeName = "VACATION LEAVE"
+                                                                             leaveIcon = "fa-umbrella-beach";
+                                                                        }
+                                                                        
+                                                                        var statusIcon1 = "";
+                                                                        var statusIcon2 = "";
+                                                                        if (recIns1.length <= 0) {
+                                                                            statusIcon1 = "fa-hourglass-start text-muted";
+                                                                        } else {
+                                                                            statusIcon1 = "fa-calendar-check text-success";
+                                                                        }
+                                                                        if (recIns2.length <= 0) {
+                                                                            statusIcon2 = "fa-hourglass-start text-muted";
+                                                                        } else {
+                                                                            statusIcon2 = "fa-calendar-check text-success";
+                                                                        }
+                                                                
+                                                                    $("#leaveholder").append(                       
+                                                                        '<div id="row' + msg["leave-list"][x.toString()]["leave_id"] + '" ontouchstart="app.onTouchStart(\'' + msg["leave-list"][x.toString()]["leave_id"] + '\')"  ontouchend="app.onTouchEnd()" class="leave-item">'
+                                                                        +     '<dl class="row">'
+                                                                        +        '<dt class="col-2 text-secondary text-right"><i class="fas '+leaveIcon+'"></i></dt>'
+                                                                        +        '<dd class="col-10 text-asphalt">Applied for '+fullTypeName+'</dd>'
+                                                                        +        '<dt class="col-2 text-secondary text-right"><i class="fas fa-calendar-alt"></i></dt>'
+                                                                        +        '<dd class="col-10 text-asphalt">'+msg["leave-list"][x.toString()]["leave_date"] +'</dd>'
+                                                                        +       '<dt class="col-2 text-secondary text-right">Status</dt>'
+                                                                        +        '<dd class="col-10 text-asphalt">'
+                                                                        +            '<i class="fas '+statusIcon1+'"></i>&nbsp;Department Head<br/>'
+                                                                        +            '<i class="fas '+statusIcon2+'"></i>&nbsp;HRD Head'
+                                                                        +        '</dd>'
+                                                                        +    '</dl>'
+                                                                        + '</div>'
+                                                                        + '<input type="hidden" id="canEdit' + msg["leave-list"][x.toString()]["leave_id"] + '" value="' + canEdit + '">' 
+                                                                        + '<div class="line mb-3"></div>'
+                                                                    );
+                                                                        
+                                                                        
+                                                                
 									rowIndex++;
 							
 								}
@@ -337,7 +354,8 @@ var app = {
     },
 	
 	removeDay: function(el) {
-		$(el).parents("tr").remove() ;
+                $("#dayHolder"+el).remove();
+		//$(el).parents("tr").remove() ;
 		app.checkTotalDaysFiled();
 	},
 	
@@ -410,7 +428,8 @@ var app = {
 			var reformat = month[SplittedDate[1]] + "/" + SplittedDate[0] + "/" + SplittedDate[2];
 				
 			var difference = app.getDateDifference( reformat,serverDate);
-			
+			var difference_from = app.getDateDifference( serverDate,reformat);
+                        
 			if ($(obj).val().length <= 0) {
 				$(obj).attr("class","dateCounter form-control border-danger");
 				findError++;
@@ -428,12 +447,25 @@ var app = {
 					} else {
 						//$(obj).attr("class","dateCounter form-control");
 						// Sick Leave
-						if ($("#leaveData").val() != "1D9B3909DA8A22A9058FA85C3A0CFCFB") {
-                                                       // alert(difference);
-							if (difference >= 3) {
-								findLate++;
-							}
+                                              //alert("DIFFERENCE BACK: " + difference);
+                                              //alert("DIFFERENCE FROM: " + difference_from);
+                                              
+                                              
+                                              
+						if ($("#leaveType").val() == "1D9B3909DA8A22A9058FA85C3A0CFCFB") {
+                                                    if (difference >=6) {
+                                                        findLate++;
+                                                    }
+						} else if ($("#leaveType").val() == "139762731B9FD2F651EEFA3556C2D39B") {
+                                                    //alert("FINDING LATE");
+                                                    if (difference > 0) {
+                                                        findLate++;
+                                                    }
+                                                    if (difference_from > -1 && difference_from <= 3) {
+                                                        findLate++;
+                                                    }
 						} 
+                                               
 						$(obj).attr("class","dateCounter form-control");
 					}
 					
@@ -446,7 +478,7 @@ var app = {
 		});
 		
 		
-                
+           
                 
 		if (findError > 0) {
 			return false;
@@ -725,9 +757,9 @@ var app = {
 		
 		if (totalDays > 0){
 		
-		delButton ='<td>' +
-				'<button onclick="app.removeDay(this)" id="remove' + overAll + '" class="removeButton btn text-danger btn-link"><i class="fas fa-trash-alt"></i></button>' + 
-			'</td>';
+	   delButton=   '<div class="col-1">'
+                    +     '<button class="btn btn-link" title="Delete" onclick="app.removeDay('+overAll+')" id="remove' + overAll + '"><i class="fas fa-trash-alt text-danger"></i></button>'
+                    + '</div>';
 		
 		}
 		
@@ -743,30 +775,25 @@ var app = {
 		} else if (timePeriod == "PM") {
 			selectedFlag[2] = "selected";
 		}
+                
+                      
+                
+                $("#dateTable").append('<div class="form-group row" id="dayHolder'+overAll+'">'
+                +        '<input type="hidden" id="idHolder' +  overAll + '" class="idHolder" value="' + overAll + '"/>'
+                +            '<div class="col-6">'
+                +                '<input id="date' + overAll + '" class="dateCounter form-control" readonly type="text"/>' 
+                +            '</div>'
+                +            '<div class="col-4">'
+                +                '<select class="dayType form-control" id="dayType' + overAll + '" onchange="app.checkTotalDaysFiled()">'
+                +                    '<option ' + selectedFlag[0] + ' value="0">WHOLE DAY</option>' 
+                +                    '<option ' + selectedFlag[1] + ' value="1">AM</option>' 
+                +                    '<option ' + selectedFlag[2] + ' value="2">PM</option>' 
+                +		'</select>' 
+                +            '</div> '
+                +            delButton
+                + '</div>');
 		
-		$("#dateTable").append('<tr>' +
-			'<td>' +
-				'<input type="hidden" id="idHolder' +  overAll + '" class="idHolder" value="' + overAll + '"/>' +
-				'<input id="date' + overAll + '" class="dateCounter form-control" readonly type="text"/>' + 
-			'</td>' + 
-			'<td>' + 
-				'<select class="dayType form-control" id="dayType' + overAll + '" onchange="app.checkTotalDaysFiled()">'+
-					'<option ' + selectedFlag[0] + ' value="0">' + 
-						'WHOLE DAY' +
-					'</option>' +
-					'<option ' + selectedFlag[1] + ' value="1">' +
-						'AM' + 
-					'</option>' +
-					'<option ' + selectedFlag[2] + ' value="2">' + 
-						'PM' + 
-					'</option>' + 
-				'</select>' + 
-			'</td>' + 
-			
-			delButton +
-			
-		'</tr>');
-		
+
 
 		app.checkDatePickerOptions();	
 		
@@ -786,34 +813,33 @@ var app = {
 		
 		if (totalDays > 0){
 		
+                /*
 		delButton ='<td>' +
 				'<button onclick="app.removeDay(this)" id="remove' + overAll + '" class="removeButton btn text-danger btn-link"><i class="fas fa-trash-alt"></i></button>' + 
 			'</td>';
-		
+		*/
+                 delButton=   '<div class="col-1">'
+                    +     '<button class="btn btn-link" title="Delete" onclick="app.removeDay('+overAll+')" id="remove' + overAll + '"><i class="fas fa-trash-alt text-danger"></i></button>'
+                    + '</div>';
 		}
+                
+                
+                $("#dateTable").append('<div class="form-group row" id="dayHolder'+overAll+'">'
+                +        '<input type="hidden" id="idHolder' +  overAll + '" class="idHolder" value="' + overAll + '"/>'
+                +            '<div class="col-6">'
+                +                '<input id="date' + overAll + '" class="dateCounter form-control" readonly type="text"/>' 
+                +            '</div>'
+                +            '<div class="col-4">'
+                +                '<select class="dayType form-control" id="dayType' + overAll + '" onchange="app.checkTotalDaysFiled()">'
+                +                    '<option value="0">WHOLE DAY</option>' 
+                +                    '<option value="1">AM</option>' 
+                +                    '<option value="2">PM</option>' 
+                +		'</select>' 
+                +            '</div> '
+                +            delButton
+                + '</div>');
 		
-		$("#dateTable").append('<tr>' +
-			'<td>' +
-				'<input type="hidden" id="idHolder' +  overAll + '" class="idHolder" value="' + overAll + '"/>' +
-				'<input id="date' + overAll + '" class="dateCounter form-control" readonly type="text"/>' + 
-			'</td>' + 
-			'<td>' + 
-				'<select class="dayType form-control" id="dayType' + overAll + '" onchange="app.checkTotalDaysFiled()">'+
-					'<option value="0">' + 
-						'WHOLE DAY' +
-					'</option>' +
-					'<option value="1">' +
-						'AM' + 
-					'</option>' +
-					'<option value="2">' + 
-						'PM' + 
-					'</option>' + 
-				'</select>' + 
-			'</td>' + 
-			
-			delButton +
-			
-		'</tr>');
+      
 		
 		app.checkDatePickerOptions();	
 		app.checkTotalDaysFiled();
@@ -923,6 +949,8 @@ var app = {
 					} 
 					if (msg["leave_application"]["leave_late_reason"] != null) {
 					$("#reasonLate").val(msg["leave_application"]["leave_late_reason"]);
+                                        $(".reasonLate").show();
+                                        //alert("REASON LATE SHOWN");
 					}
 					$("#loadingGif").hide();
 					$("#contentHolder").show();
@@ -1008,8 +1036,24 @@ var app = {
 				var leave_balance = msg["leave_balance"];
 				var leave_details = msg["leave_details"]["0"];
 				var leave_status = msg["leave_status"];
+                                
+                                var days_without_pay = msg["count_withoutPay"];
+                                var days_with_pay = msg["count_withPay"];
+                                
+                                $("#day_with_pay").html(days_with_pay);
+                                $("#day_witho_pay").html(days_without_pay);
 				
-				$("#leave_type").html(leave_app["leave_type_name"]);
+                                var leaveTypeFull= "";
+                                if (leave_app["leave_type_name"] == "SL") {
+                                    leaveTypeFull = "Sick Leave";
+                                } else if (leave_app["leave_type_name"] == "VL") {
+                                    leaveTypeFull = "Vacation Leave";
+                                } else {
+                                    leaveTypeFull = "Birthday Leave";
+                                }
+                                
+				$("#leave_type").html(leaveTypeFull);
+                                
 				$("#date_filed").html(leave_app["leave_date"]);
 				
 
@@ -1022,7 +1066,7 @@ var app = {
                                     
                                     $(".cancelRem").show();
                                         $("#cancel_flag").html("CANCELLED");
-                                        $("#remark_cancel").html(leave_app["cancel_reason"]);
+                                        $("#remark_cancel").html('<i class="far fa-user"></i>&nbsp;' +leave_app["update_by"] + "&nbsp;&nbsp;" +leave_app["cancel_reason"] + '<br/><i class="far fa-clock"></i>&nbsp;' + leave_app["update_date"]);
                                             
                                     } else {
                                         
@@ -1032,94 +1076,135 @@ var app = {
 				$("#leave_status_list").html("");
 				$.each(msg["leave_details"], function(index, element) {
 					
-					var stat_dept = element["approval_flag"];
-				
+                                        var stat_dept ="";
+                                        
+                                        var dept_label = 'Department Head';
+                                        var hr_label = 'HRD Head';
+                                        
+                                        if (element["approval_flag"] != null) {
+                                            stat_dept = element["approval_flag"];
+                                        }
 					if (stat_dept == "1"){
-						stat_dept = '<div class="text text-success"><i class="fas fa-check"></i>&nbsp;APPROVED</div>';
+                                            stat_dept = '<i class="fas fa-calendar-check text-success"></i> APPROVED - Department Head';
 					} else if (stat_dept == "0") {
-						stat_dept = '<div class="text text-danger"><i class="fas fa-times"></i>&nbsp;DISAPPROVED</div>';
+                                            stat_dept = '<i class="fas fa-calendar-times text-danger"></i> DISAPPROVED - Department Head';
 					} else {
-						stat_dept = '<div class="text text-secondary"><i class="far fa-circle"></i>&nbsp;PENDING</div>';
+                                            stat_dept = '<i class="fas fa-hourglass-start text-muted"></i> PENDING - Department Head';
 					}
 					
-					var stat_hr = element["payment_flag"];
+                                        
+                                          var stat_hr ="";
+                                        if (element["payment_flag"] != null) {
+                                            stat_hr = element["payment_flag"];
+                                        }
 					
 					if (stat_hr == "1"){
-						stat_hr = '<div class="text text-success"><i class="fas fa-check"></i>&nbsp;WITH PAY</div>';
+						stat_hr = '<i class="fas fa-calendar-check text-success"></i> WITH PAY - HRD Head';
 					} else if (stat_hr == "0") {
-						stat_hr = '<div class="text text-danger"><i class="fas fa-times"></i>&nbsp;WITHOUT PAY</div>';
+						stat_hr = '<i class="fas fa-calendar-times text-danger"></i> WITHOUT PAY - HRD Head';
 					} else if (stat_hr == "2") {
-						stat_hr ='<div class="text text-danger"><i class="fas fa-times"></i>&nbsp;CANCELLED</div>';
+						stat_hr ='<i class="fas fa-calendar-times text-danger"></i> CANCELLED - HRD Head';
 					} else {
-						stat_hr ='<div class="text text-danger"></div>';
+                                                hr_label = "";
+						 stat_hr = '<i class="fas fa-hourglass-start text-muted"></i> PENDING - HRD Head';
 					}
 					
 					if (stat_dept == '<div class="text text-secondary"><i class="far fa-circle"></i>&nbsp;PENDING</div>') {
-						stat_hr = '<div class="text text-secondary"><i class="far fa-circle"></i>&nbsp;PENDING</div>';
+                                            hr_label = "";
+                                            
 					}
 
 					
 					totalDaysSum =  element["total_days"];
 					
                                         
+                                        var timePeriodFull = "";
+                                        if (element["time_period"] == "WD") {
+                                            timePeriodFull = "Whole Day";
+                                        } else {
+                                             timePeriodFull = "Half Day";
+                                        }
                                         
-                                    
-                                        
-					$("#leave_status_list").append(
-			
-					   '<div class="row">' 
-					+    '<div class="col col-4 border-right" align="center" >' 
-					+	   	'<div class="row">'
-					+			'<div class="row">'
-					+				'<div class="col-12" >' + element["leave_date"] +  '</div>'
-					+				'<div class="col-12" >' + element["week_day"] + '</div>'
-					+ 		    '</div>'
-					+		'</div>'
-					+   '</div>'
-					+ 	'<div class="col col-4" align="center">'
-						+	'<div class="row">'
-						+		'<div class="col-12">'
-						+			stat_dept
-						+		'</div>'
-						+		'<div class="col-12">'
-						+			'Dept Head'
-						+		'</div>'
-						+	'</div>'
-						+ '</div>'
-						+ '<div class="col col-4" align="center">'
-						+	'<div class="row">'
-						+		'<div class="col-12">'
-						+			stat_hr
-						+		'</div>'
-						+		'<div class="col-12">'
-						+			'HRD Head'
-						+		'</div>'
-						+	'</div>'
-						+ '</div>'
-                                                
-					+ '</div>'
-					+ '</div>'
-					);
+                                       
+                                        $("#leave_status_list").append('<dl class="row mb-4">'
+                                        +    '<dt class="col-2 text-secondary text-right"><i class="fas fa-calendar-alt"></i></dt>'
+                                        +    '<dd class="col-10 text-asphalt">'+element["leave_date"] +' ('+element["week_day"]+', '+timePeriodFull+')</dd>'
+                                        +        '<dt class="col-2 text-secondary text-right">Status</dt>'
+                                        +        '<dd class="col-10 text-asphalt">'
+                                        +            stat_dept + ' <br/>'
+                                        +            stat_hr + ''
+                                        +        '</dd>'
+                                        +'</dl>');
+
+                                   
 				});
 								
 				$("#total_days").html(totalDaysSum);
 				
 				$("#reason").html(leave_app["leave_reason"]);
-				$("#reason_late").html(leave_app["leave_late_reason"]);
+                                
+                                if (leave_app["leave_late_reason"] != null) {
+                                if (leave_app["leave_late_reason"].length <=0) {
+                                    $(".late-reason").hide();
+                                }  else {
+                                    $("#reason_late").html(leave_app["leave_late_reason"]);
+                                }
 				
+                                } else {
+                                   $(".late-reason").hide();   
+                                }
 			
 				$("#balance_sl").html(leave_balance["SL"]);
-				
-				$("#remark_dept").html('<i class="far fa-user"></i>&nbsp;' + leave_status["0"]["approver_name"]);
-				$("#remark_dept_date").html('<i class="far fa-clock"></i>&nbsp;' +  leave_status["0"]["rec_ins_dt"]);
-				
-				$("#remark_hr").html('<i class="far fa-user"></i>&nbsp;' + leave_status["1"]["approver_name"]);
-				$("#remark_hr_date").html('<i class="far fa-clock"></i>&nbsp;' +  leave_status["1"]["rec_ins_dt"]);
-				
 				$("#balance_vl").html(leave_balance["VL"]);
+                                
+                               
+                                
+                                $("#workschedule").html(leave_app["work_schedule"]);
+                                $("#dayoffs").html(leave_app["dsp_day_off1"]+ " and " + leave_app["dsp_day_off2"]);
+                                
+                                
+                                if (leave_status["0"]!= null) {
+                                     $("#approver_dept").html(leave_status["0"]["approver_name"]);
+                                       $("#approver_date_dept").html(leave_status["0"]["rec_ins_dt"]);
+                                } else {
+                                    $(".dept-remarks").remove();
+                                }
+                                if (leave_status["1"]!= null) {
+                                     $("#approver_hrd").html(leave_status["1"]["approver_name"]);
+                                       $("#approver_date_hrd").html(leave_status["1"]["rec_ins_dt"]);
+                                } else {
+                                      $(".hrd-remarks").remove();
+                                }
+                                
+                               
+                               
+                              
+                              
+                                
+                                
+                                
+                                if (leave_status["0"]["remarks"]!=null) {
+                                    if (leave_status["0"]["remarks"].length > 0) {
+                                        $("#remarks_dept").html(leave_status["0"]["remarks"]);
+                                    } else {
+                                        $(".remarks_holder_dept").remove();
+                                    }
+                                   
+                                } else {
+                                      $(".remarks_holder_dept").remove();
+                                }
+                                if (leave_status["1"]["remarks"]!=null) {
+                                    if (leave_status["1"]["remarks"].length >0) {
+                                         $("#remarks_hrd").html(leave_status["1"]["remarks"]);
+                                    } else {
+                                         $(".remarks_holder_hrd").remove();
+                                    }
+                                   
+                                } else {
+                                      $(".remarks_holder_hrd").remove();
+                                }
+                                
 				
-				$("#day_with_pay").html(msg["count_withPay"]);
-				$("#day_witho_pay").html(msg["count_withoutPay"]);
 			},
 			error: function(jqXHR	, textStatus, errorThrown) {
 				alert(JSON.stringify(jqXHR));

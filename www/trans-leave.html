@@ -41,8 +41,7 @@
 
         <!-- Header -->
         <div id="header">
-           
-			<div class="container">
+            <div class="container">
 				<div class="row">
 					<div class="col-2"> 
 						<span class="menubutton" onclick="app.toggleMenu()">
@@ -57,31 +56,32 @@
 					<div class="col-2"></div>
 				</div>
 			</div>
-
-
         </div> 
 	<div id="yearSelectorHolder">
-				
-					<select id="leaveYear"  class="form-control form-control-lg " style="text-align:center;" onchange="app.onYearChange()">
-						<option value="-1">Select a Year</option>
-					</select>
-				</div>	
-				<div class="p-4 m-0 mb-2 bg-warning text-dark">
-					<h5>Touch and hold to delete or edit Leave Application</h5>
-				</div>
+            <select id="leaveYear"  class="form-control form-control-lg " style="text-align:center;" onchange="app.onYearChange()">
+		<option value="-1">Select a Year</option>
+            </select>
+	</div>	
+	<div class="p-4 m-0 mb-2 bg-warning text-dark">
+            <h5>Touch and hold to delete or edit Leave Application</h5>
+	</div>
         <div class="bg-cream p-4" style="margin-bottom:100px;">
-		
-				<div id="alert-leave" class="alert">
+            <div id="alert-leave" class="alert">
+            </div>
+            <div align="center"><img src="img/loading.gif" id="loadingGif"/></div>
+            <div class="bg-white mb-4 info-card">
+                    <h5 class="text-dkyellow p-3 mb-0">Leave Application</h5>
+
+                    <div class="line"></div>
+                    <div class="leave-item" >
+					<div  id="leaveholder" class="p-3">    
+                                            
+                                            
+                                            
+                                        </div>
 					
-				</div>
-				<div align="center">
-					<img src="img/loading.gif" id="loadingGif"/>
-				</div>
-				
-				<div id="leaveholder" class="bg-cream list-group" >
-					
-					
-				</div>
+		  </div>
+            </div>
          </div>
      
     

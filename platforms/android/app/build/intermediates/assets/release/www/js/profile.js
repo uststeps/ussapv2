@@ -545,11 +545,7 @@ var app = {
 				var controls = '';
                                 var printButton="";
                                 var controlButton = "";
-<<<<<<< HEAD
                                 alert(msg[a]["print"] );
-=======
-                                //alert(msg[a]["print"] );
->>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
                                 if (msg[a]["print"] == 1) {
                                     //printButton = '<a target="_BLANK" href="http://docs.google.com/gview?embedded=true&url=http://172.20.0.40:8888/reports/rwservlet?REPORT=hr_seminar_certificate2_ussap.rdf&DESFORMAT=PDF&DESTYPE=CACHE&P_HR_S_ID=44&P_EMP=5320&P_SESSION=&USERID=HR_USER4/hr_user4@domingo&ORACLE_SHUTDOWN=YES&PARAMFORM=NO">Print</a>';
                                     printButton=' <button class="p-0 btn btn-link" onclick="app.printCert(\'' + msg[a]["sem_id"] + '\',\'' + msg[a]["print_type"] + '\')" title="Pinrt Certificate"><i class="fas fa-print"></i></button>'
@@ -791,3 +787,4 @@ var app = {
 		localStorage.setItem("remember","false");
 	}
 };
+ 

@@ -149,6 +149,7 @@ var app = {
 					type       : "POST",
 					dataType   : "json",            
 					beforeSend : function(xhr){
+                                               // xhr.setRequestHeader('empnumber' ,  5128);
 						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
@@ -163,6 +164,7 @@ var app = {
 							type       : "POST",
 							dataType   : "json",            
 							beforeSend : function(xhr){
+                                                           // xhr.setRequestHeader('empnumber' , 5128);
 								xhr.setRequestHeader('empnumber' , empnumber);
 								xhr.setRequestHeader('ecode'     , localStorage.getItem("ecode") 	);
 								xhr.setRequestHeader('appyear' , toPassYear);
@@ -172,9 +174,10 @@ var app = {
 								var i = 0;
 								var totalList = 0;
 								$("#applicationHolder").html("");
+                                                                
+                                                          
 								$.each(msg["appList"], function(index, element) {
 
-	
 									totalList++;
 									i++;
 									
@@ -196,7 +199,7 @@ var app = {
 									var statDH = msg["appStatus"][appl["id"] + "-" + "dh"];
 									var recIns1 = "";
 									if ( statHR !=null){
-										recIns1 =statHR["dsp_approval_date"];
+										recIns1 = statHR["dsp_approval_date"];
 									}
 									var recIns2 = "";
 									if (statDH!=null){
@@ -210,38 +213,37 @@ var app = {
 									} else {
 										canEdit = "false";
 									}
+                                                                        
+                                                                        var dept_status = "";
+                                                                        var hrd_status = "";
+                                                                        if (msg["appStatus"][appl["id"] + "-" + "dh"]!=null) {
+                                                                            dept_status= '<i class="fas fa-calendar-check text-success"></i> Department Head';
+                                                                        } else {
+                                                                            dept_status='<i class="fas fa-hourglass-start text-muted"></i> Department Head';
+                                                                        }
+                                                                         if (msg["appStatus"][appl["id"] + "-" + "hr"]!=null) {
+                                                                            hrd_status= '<i class="fas fa-calendar-check text-success"></i> HRD Head';
+                                                                        } else {
+                                                                            hrd_status='<i class="fas fa-hourglass-start text-muted"></i> HRD Head</dd>';
+                                                                        }
+                                                                        
+                                                                        
+                                                                        $("#applicationHolder").append(
+                                                                        '<div class="leave-item" id="row' + appl["id"] + '" ontouchstart="app.onTouchStart(\'' + appl["id"] + '\')"  ontouchend="app.onTouchEnd()">'
+                                                                        +    '<dl class="row">'
+                                                                        +        '<dt class="col-2 text-secondary text-right"><i class="fas fa-user-clock"></i></dt>'
+                                                                        +        '<dd class="col-10 text-asphalt">Applied on '+appl["rec_ins_dt"]+'</dd>'
+                                                                        +       '<dt class="col-2 text-secondary text-right">Status</dt>'
+                                                                        +        '<dd class="col-10 text-asphalt">'
+                                                                        +          dept_status
+                                                                        +            '<br/>'
+                                                                        +          hrd_status
+                                                                        + '</dd><input type="hidden" id="canEdit' + appl["id"] + '" value="' + canEdit + '">'       
+                                                                        +    '</dl>'
+                                                                        +'</div>'
+                                                                        +'<div class="line mb-3"></div>');
 									
-									$("#applicationHolder").append(
-											
-										'<div id="row' + appl["id"] + '" ontouchstart="app.onTouchStart(\'' + appl["id"] + '\')"  ontouchend="app.onTouchEnd()" class="list-group-item list-group-item-action">'
-											+ '<div class="row">'
-											+ '	<div class="col-4 font-weight-bold border-right" >'
-											+		'<div class="row">'
-											+			'<div class="col-12 font-weight-bold text-dark" align="center">'
-											+				'<h5>' + appl["rec_ins_dt"] + '</h5>'
-											+ 			'</div>'
-											+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-											+ 				'Application Date'
-											+ 			'</div>'
-											+ 		'</div>'
-											+ '</div>'
-											+ '<div class="col-8">'
-											+ '<div class="row">'
-											+ '<div class="col-6 font-weight-bold"> Department Head</div>'
-											+			'<div class="col-6 " >' +  recIns1  + '</div>'
-											+ '</div>'
-											+ '<div class="row">'
-											+       '<div class="col-6 font-weight-bold" > HR Department</div>'
-											+ '<div class="col-6" >' +  recIns2 + '</div>'
-											+ '<input type="hidden" id="canEdit' + appl["id"] + '" value="' + canEdit + '">' 
-											+ '</div>'
-											+ '</div>'
 									
-											+ '</div>'
-									+ '</div>'
-										
-										
-									);
 									rowIndex++;
 							
 								}
@@ -456,7 +458,29 @@ var app = {
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
 					success: function(msg) { 
-						app.populateEmpSchedule(msg["empSched"]); 
+                                          //  alert(JSON.stringify(msg));
+                                            var empSchedule = msg["empSched"];
+                                                               if (empSchedule["Sunday"] != null) {
+                                                                    $("#sun_empSched").html(empSchedule["Sunday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Monday"] != null) {
+                                                                    $("#mon_empSched").html(empSchedule["Monday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Tuesday"] != null) {
+                                                                    $("#tue_empSched").html(empSchedule["Tuesday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Wednesday"] != null) {
+                                                                    $("#wed_empSched").html(empSchedule["Wednesday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Thursday"] != null) {
+                                                                    $("#thu_empSched").html(empSchedule["Thursday"]["sched"]);
+                                                                }
+                                                                 if (empSchedule["Friday"] != null) {
+                                                                    $("#fri_empSched").html(empSchedule["Friday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Saturday"] != null) {
+                                                                    $("#sat_empSched").html(empSchedule["Saturday"]["sched"]);
+                                                                }
 						
 						if ($("#applicationIdHolder").val() == null){
 						
@@ -664,6 +688,7 @@ var app = {
 					type       : "POST",
 					dataType   : "json",            
 					beforeSend : function(xhr){
+                                            //xhr.setRequestHeader('empnumber' ,  5128);
 						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
 						//xhr.setRequestHeader('empnumber' ,  "4800");
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
@@ -688,52 +713,101 @@ var app = {
 						if (appData["reason_cws"] !=null){
 							$("#schedReason").html(appData["reason_cws"]);
 						}
-							
+						
+                                                var foundStatus = 0;
 						$.each(appStatus, function(index, element) {
-							
+							foundStatus++;
 							if (element["remarks"] != null){
-								$("#remark_" + element["approving_body"]).html(element["remarks"]);
+								$("#remark_" + element["approving_body"]).html('"' + element["remarks"] + '"');
 							} else {
 								$("#remark_" + element["approving_body"]).html("");
 							}
-							$("#remark_" + element["approving_body"] + "_date").html(
-								element["approver_name"] + " - " + element["rec_ins_dt"]
-							);
+                                                        
+                                                        if (element["disapprove_flag"] == 0) {
+                                                            $("#status_" + element["approving_body"]).html('<i class="fas fa-calendar-check text-success"></i> APPROVED<br/>');
+                                                        } else {
+                                                            $("#status_" + element["approving_body"]).html('<i class="fas fa-calendar-times text-danger"></i> DISAPPROVED<br/>');
+                                                        }
+                                                        
+                                                       
+                                                        
+                                                        
+                                                        if (element["rec_ins_dt"] !=null) {
+                                                             $("#approver_" +  element["approving_body"]).html('<i class="fas fa-user text-muted"></i>&nbsp;' + element["approver_name"] +'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;');
+                                                             $("#date_" +  element["approving_body"]).html('<i class="fas fa-clock text-muted"></i>&nbsp;' + element["rec_ins_dt"]);
+                                                            
+                                                        } else {
+                                                             $("#date_" +  element["approving_body"]).html('<i class="fas fa-hourglass-start text-muted"></i>&nbsp;' + 'PENDING');
+                                                        }
+                                                       
+ 
+							
 							
 						});
-							
-						app.populateEmpSchedule(empSchedule);
+                                                if (foundStatus <= 0) {
+                                                     $("#date_dh").html('<i class="fas fa-hourglass-start text-muted"></i>&nbsp;' + 'PENDING');
+                                                     $("#date_hr").html('<i class="fas fa-hourglass-start text-muted"></i>&nbsp;' + 'PENDING');
+                                                }
+                                   
+							      if (empSchedule["Sunday"] != null) {
+                                                                    $("#sun_empSched").html(empSchedule["Sunday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Monday"] != null) {
+                                                                    $("#mon_empSched").html(empSchedule["Monday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Tuesday"] != null) {
+                                                                    $("#tue_empSched").html(empSchedule["Tuesday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Wednesday"] != null) {
+                                                                    $("#wed_empSched").html(empSchedule["Wednesday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Thursday"] != null) {
+                                                                    $("#thu_empSched").html(empSchedule["Thursday"]["sched"]);
+                                                                }
+                                                                 if (empSchedule["Friday"] != null) {
+                                                                    $("#fri_empSched").html(empSchedule["Friday"]["sched"]);
+                                                                }
+                                                                if (empSchedule["Saturday"] != null) {
+                                                                    $("#sat_empSched").html(empSchedule["Saturday"]["sched"]);
+                                                                }
+                                                                
+                                                                
+						//app.populateEmpSchedule(empSchedule);
 						
 						$.each(appDays, function(index, element) {
 							
-							if (element["morning_sched"] != null && element["afternoon_sched"] !=null){
-								$("#proposed_schedule").append(
-							
-									'<div class="row bg-default">' 
-									   
-									+   '<div class="col col-4 border-right " align="center" >' 
-									+	   	'<div class="row">'
-									+				'<div class="col-12 text-dark" >' + element["dsp_day_name"] +  '</div>'
-									+		'</div>'
-									+   '</div>'
-									
-									+ 	'<div class="col col-8" align="center">'
-									+		'<div class="col-12 text-dark">'
-									+				element["morning_sched"] + " - " + element["afternoon_sched"]
-									+		'</div>'
-									+ 	'</div>'
-									
-									/*
-									+ 	'<div class="col col-4" align="center">'
-									+			'<div class="col-12">'
-									+				element["sched"].split(";\t")[1]
-									+			'</div>'
-									+ 	'</div>'
-									*/
-									+ '</div>'
-									);
-							}
-							
+							if (appDays[index] != null) {
+                                                            if (appDays[index]["dsp_day_name"] == "Sunday") {
+                                                                if (appDays[index]["morning_sched"] != null) {
+                                                                     $("#sun_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                }
+                                                               
+                                                            } else if (appDays[index]["dsp_day_name"] == "Monday") {
+                                                                   if (appDays[index]["morning_sched"] != null) {
+                                                                     $("#mon_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                   }
+                                                            } else if (appDays[index]["dsp_day_name"] == "Tuesday") {
+                                                                   if (appDays[index]["morning_sched"] != null) {
+                                                                        $("#tue_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                    }
+                                                            } else if (appDays[index]["dsp_day_name"] == "Wednesday") {
+                                                                if (appDays[index]["morning_sched"] != null) {
+                                                                 $("#wed_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                }
+                                                            } else if (appDays[index]["dsp_day_name"] == "Thursday") {
+                                                                if (appDays[index]["morning_sched"] != null) {
+                                                                 $("#thu_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                }
+                                                            } else if (appDays[index]["dsp_day_name"] == "Friday") {
+                                                                   if (appDays[index]["morning_sched"] != null) {
+                                                                 $("#fri_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                   }
+                                                            } else if (appDays[index]["dsp_day_name"] == "Saturday") {
+                                                                   if (appDays[index]["morning_sched"] != null) {
+                                                                 $("#sat_proposed").html(appDays[index]["morning_sched"] + "&nbsp;&nbsp;" + appDays[index]["afternoon_sched"]);
+                                                                   }
+                                                            }
+                                                        }
 							
 					
 						});

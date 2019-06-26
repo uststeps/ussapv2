@@ -61,31 +61,30 @@
 
         </div> 
 	<div id="yearSelectorHolder">
-				
-					<select id="yearSelect"  class="form-control form-control-lg " style="text-align:center;" onchange="app.onYearChange()">
-						<option value="-1">Select a Year</option>
-					</select>
-				</div>	
-				<div class="p-4 m-0 bg-warning text-dark">
-					<h5>Touch and hold to delete or edit Change of Schedule Application</h5>
-				</div>
-			<div class="bg-cream p-4" style="padding-bottom:200px;">
+            <select id="yearSelect"  class="form-control form-control-lg " style="text-align:center;" onchange="app.onYearChange()">
+		<option value="-1">Select a Year</option>
+            </select>
+	</div>	
+	<div class="p-4 m-0 bg-warning text-dark">
+            <h5>Touch and hold to delete or edit Change of Schedule Application</h5>
+	</div>
+	<div class="bg-cream p-4" style="padding-bottom:200px;">
+            <div id="alert-leave" class="alert"></div>
+            <div align="center"><img src="img/loading.gif" id="loadingGif"/></div>
 		
-				<div id="alert-leave" class="alert">
-					
-				</div>
-				<div align="center">
-					<img src="img/loading.gif" id="loadingGif"/>
-				</div>
-				
-				<div id="applicationHolder" class="bg-cream list-group" >
-					
-					
-				</div>
+            <div class="bg-white mb-4 info-card">
+                <h5 class="text-dkyellow p-3 mb-0">Change of Schedule Application</h5>
+                <div class="line"></div>
+                <div class="leave-item">
+                    <div id="applicationHolder" class="p-3">    
+                        
+                        
+                    </div>
+                </div>
             </div>
-     
         </div>
-
+     
+    
 	
     </main>
 

@@ -61,92 +61,173 @@
 
         </div> 
 
-        <div class="p-4" style="margin-bottom:100px;">
-			
-			  <!--Leave Details Display-->
-				<div class="card mb-3" >
-				  <div class="p-3 bg-white text-dark" >Date of Filing</div>
-				  <div class="card-body">
-					  <div class="row">
-						<div class="col col-12 border-right" align="center" >
-							<div class="row">
-								<div class="col-12">
-									<h2 class="text-warning" id="filingDate">12-MAR-2019</h2>
-								</div>
-								
-							</div>
-						</div>
-	
-					  </div>
-				  </div>
-				</div>
-				
-			
+        <div class="p-4 maincontent" style="margin-bottom:100px;">
+            <div class="bg-cream p-4">
+                <div class="bg-white mb-4 info-card text-center p-3">
+                    <h3 class="text-primary">CHANGE OF SCHEDULE</h3>
+                    Filed on <font id="filingDate"></font>
+                </div>
+                
+                <div class="bg-white mb-4 info-card">
+                    <h5 class="text-dkyellow p-3 mb-0">Current Work Schedule</h5>
+                    
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="bg-light">
+                                <td width="25%">Day</td>
+                                <td width="75%">Schedule</td>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Sunday</td>
+                                <td id="sun_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Monday</td>
+                                <td id="mon_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Tuesday</td>
+                                <td id="tue_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Wednesday</td>
+                                <td id="wed_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Thursday</td>
+                                <td id="thu_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Friday</td>
+                                <td id="fri_empSched"></td>
+                            </tr>
+
+                            <tr>
+                                <td>Saturday</td>
+                                <td id="sat_empSched"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                
          
-			  <!--Work Schedules-->
-			  <div class="bg-white card mb-3" >
-				  <div class="p-3 bg-white text-dark">Work Schedule</div>
-				  <div class="card-body" id="emp_schedule">
-				 
-				  </div>
+            <div class="bg-white mb-4 info-card">
+                              <h5 class="text-dkyellow p-3 mb-0">Proposed Work Schedule</h5>
 
-				</div>
-				<div class="bg-white card mb-3" >
-				  <div class="p-3 bg-white text-dark">Proposed Work Schedule</div>
-				  <div class="card-body" id="proposed_schedule">
+                              <table class="table table-bordered mb-0">
+                                  <thead>
+                                      <tr class="bg-light">
+                                          <td width="25%">Day</td>
+                                          <td width="75%">Schedule</td>
+                                      </tr>
+                                  </thead>
 
-				  </div>
+                                  <tbody>
+                                      <tr>
+                                          <td>Sunday</td>
+                                          <td id="sun_proposed"></td>
+                                      </tr>
 
-				</div>
-              <!-- -->
-			  
-			  <!--Leave Status-->
-			  <div class="bg-white card border">
-				<div class="p-3 bg-white text-dark">
-					Effectivity Period
-				</div>
-				<div class="card-footer bg-muted text-dark border-bottom" id="effectivity">
-					
-				</div>
-				<div class="p-3 bg-white text-dark">
-					Reason
-				</div>
-				<div class="card-footer bg-muted text-dark border-bottom"  id="schedReason">
-					TESTING ONLY
-				</div>
-				
-				</div>
-			  
+                                      <tr>
+                                          <td>Monday</td>
+                                          <td id="mon_proposed"></td>
+                                      </tr>
 
-			  <div class="card bg-white mb-3" >
-				  <div class="p-3 bg-white text-dark">Remarks</div>
-				  <div class="card-body bg-white">
-					<div class="row">
-					<div class="col w-100 font-weight-bold"  >Department Head: </div>
-					<div class="w-100"></div>
-					<div class="col w-100" id="remark_dh" ></div>
-					<div class="w-100"></div>
-					<div class="col w-100"  id="remark_dh_date" ></div>
-					<div class="w-100"></div>
-					
-					<div class="col w-100 font-weight-bold"  >Human Resource </div>
-					<div class="w-100"></div>
-					<div class="col w-100"  id="remark_hr"></div>
-					<div class="w-100"></div>
-					<div class="col w-100"  id="remark_hr_date"></div>
-					<div class="w-100"></div>
-				  </div>
-				</div>
-				<h4 class="text-warning"></h4>
-				<div class="container">
-				  
-				</div>
-             </div>
-			 
-			  <div class="card bg-white mb-3 p-0" >
-				   <div class="card-body p-0 bg-white">
-					<button class="btn p-2 rounded text-white btn-warning w-100" onclick="window.location='trans-schedule.html'"><h3>BACK</h3></button>
-				  </div>
+                                      <tr>
+                                          <td>Tuesday</td>
+                                          <td id="tue_proposed"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Wednesday</td>
+                                          <td id="wed_proposed"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Thursday</td>
+                                          <td id="thu_proposed"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Friday</td>
+                                          <td id="fri_proposed"></td>
+                                      </tr>
+
+                                      <tr>
+                                          <td>Saturday</td>
+                                          <td id="sat_proposed"></td>
+                                      </tr>
+                                  </tbody>
+                              </table>
+                   
+                              
+                      <h5 class="text-dkyellow p-3 mb-0">Other Details</h5>
+
+                    <div class="line"></div>
+
+                    <div class="p-3">
+                        <p class="text-asphalt"><small class="text-muted">Effectivity Period</small><br/>
+                            <font id="effectivity"></font><br/>
+                        <small class="text-muted">Reason</small><br/>
+                        <font id="schedReason">
+                        </font>
+                        </p>
+                        
+                    </div>
+
+                    <div class="line"></div>
+
+                    <h5 class="text-dkyellow p-3 mb-0">Remarks</h5>
+                    
+                    <div class="line"></div>
+
+                    <div class="p-3 mb-5">
+                        <dl class="row mb-4">
+                            <dt class="col-12 text-secondary small">Department Head :</dt>
+                            <dd class="col-12 text-asphalt mb-3">
+                                <em id="remark_dh"></em><br/><!--Hide if NULL-->
+                                <font id="status_dh">
+                               
+                                </font>
+                                <small><font id="approver_dh"></font>
+                                    <font id="date_dh"></font></small>
+                            </dd>
+
+                            <dt class="col-12 text-secondary small">Human Resource:</dt>
+                            <dd class="col-12 text-asphalt">
+                                <em id="remark_hr"></em><br/>
+                                <font id="status_hr">
+                               
+                                </font>
+                                <small><font id="approver_hr"></font>
+                                  <font id="date_hr"></font></small>
+
+                            </dd>
+                        </dl>
+                    </div>
+                    
+                    <div class="p-3 mb-5">
+                     <center>
+                     <a href="#" class="text-warning"  onclick="window.location='trans-schedule.html'">
+                        <h2><i class="fas fa-arrow-left"></i> &nbsp; Back</h2>
+                    </a>    
+                      </center>
+                    </div>
+            </div>
+        </div>
+            
+       </div>
+  
+		
               </div>
 	
     </main>

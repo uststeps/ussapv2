@@ -124,7 +124,6 @@
 					<div class="w-100"></div>
 					<div class="col w-100" align="center" id="" >
 						<select id="dayoff1" class="form-control">
-							<option value="-1"></option>
                             <option value="1">SUNDAY</option>
                             <option value="2">MONDAY</option>
                             <option value="3">TUESDAY</option>
@@ -135,7 +134,6 @@
 						</select>
 						<div class="text-dark  font-weight-bold">and</div>
 						<select id="dayoff2" class="form-control">
-							<option value="-1"></option>
                             <option value="1" selected>SUNDAY</option>
                             <option value="2">MONDAY</option>
                             <option value="3">TUESDAY</option>
@@ -158,15 +156,11 @@
 						<div id="leaveHolder-div" class="col">
                                                     
                                                     <div class="btn-group btn-group-justified w-100">
-<<<<<<< HEAD
+
                                                         <button type="button" id="BtnVacation" onclick="app.changeLeaveType('vl')" class="btn btn-secondary w-100 vl-button leavetype-button">VACATION</button>
                                                         <button type="button" id="BtnSick" onclick="app.changeLeaveType('sl')" class="btn btn-secondary w-100 sl-button leavetype-button">SICK</button>
                                                         <button type="button" id="BtnBirthday" onclick="app.changeLeaveType('bl')" class="btn btn-secondary w-100 bl-button leavetype-button">BIRTHDAY</button>
-=======
-                                                        <button type="button" onclick="app.changeLeaveType('vl')" class="btn btn-secondary w-100 vl-button leavetype-button">VACATION</button>
-                                                        <button type="button" onclick="app.changeLeaveType('sl')" class="btn btn-secondary w-100 sl-button leavetype-button">SICK</button>
-                                                        <button type="button" onclick="app.changeLeaveType('bl')" class="btn btn-secondary w-100 bl-button leavetype-button">BIRTHDAY</button>
->>>>>>> f7b06d37a675843cbbc2208eec2030b36122c75d
+
                                                     </div>
                                                     
 						<select style="display:none;" class="form-control w-100" onchange="app.onChangeLeaveType()" id="leaveType">
@@ -221,7 +215,17 @@
 						<div class="w-100"><br/></div>
 						<div class="col w-100 card-title  font-weight-bold text-dark">Reason for Leave</div>
 							<div class="w-100"></div>
-						<div class="col">
+						<div class="col" align="left">
+                                                    <div class="alert alert-warning" align="left">
+                                                     <p>
+                                                        <span class="label label-danger">Note</span>&nbsp;This field is required for:
+                                                    </p>
+                                                    <ul>
+                                                        <li><strong>SICK LEAVE</strong> application</li>
+                                                        <li><strong>VACATION LEAVE</strong> application for <strong>TEAM BUILDING</strong> purposes</li>
+                                                    </ul>
+                                                    </div>
+
 							<textarea id="reasonLeave" class="form-control"></textarea>
 						</div>
 						<div class="w-100 reasonLate"><br/></div>

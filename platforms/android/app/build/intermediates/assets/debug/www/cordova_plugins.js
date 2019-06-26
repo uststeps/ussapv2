@@ -121,6 +121,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
+    "clobbers": [
+      "device"
+    ]
+  },
+  {
     "id": "cordova-plugin-device-motion.Acceleration",
     "file": "plugins/cordova-plugin-device-motion/www/Acceleration.js",
     "pluginId": "cordova-plugin-device-motion",
@@ -413,14 +421,6 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-device.device",
-    "file": "plugins/cordova-plugin-device/www/device.js",
-    "pluginId": "cordova-plugin-device",
-    "clobbers": [
-      "device"
-    ]
-  },
-  {
     "id": "cordova-plugin-local-notification.LocalNotification",
     "file": "plugins/cordova-plugin-local-notification/www/local-notification.js",
     "pluginId": "cordova-plugin-local-notification",
@@ -566,11 +566,13 @@ module.exports.metadata =
 // TOP OF METADATA
 {
   "cordova-android-support-gradle-release": "1.4.4",
+  "cordova-plugin-app-event": "1.2.1",
   "cordova-plugin-battery-status": "1.1.2",
   "cordova-plugin-camera": "2.1.1",
   "cordova-plugin-console": "1.0.7",
   "cordova-plugin-contacts": "2.0.1",
   "cordova-plugin-datepicker": "0.9.3",
+  "cordova-plugin-device": "2.0.2",
   "cordova-plugin-device-motion": "1.2.5",
   "cordova-plugin-device-orientation": "1.0.7",
   "cordova-plugin-dialogs": "1.2.1",
@@ -580,8 +582,6 @@ module.exports.metadata =
   "cordova-plugin-geolocation": "2.1.0",
   "cordova-plugin-globalization": "1.0.9",
   "cordova-plugin-inappbrowser": "1.3.0",
-  "cordova-plugin-device": "2.0.2",
-  "cordova-plugin-app-event": "1.2.1",
   "cordova-plugin-local-notification": "0.8.4",
   "cordova-plugin-media": "2.2.0",
   "cordova-plugin-media-capture": "1.2.0",

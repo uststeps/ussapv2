@@ -5,7 +5,7 @@ localStorage.setItem("showAlert"	, "console"	);
 localStorage.setItem("isBypass"		, "false"	);
 localStorage.setItem("isRemember" 	, "false"	);
 localStorage.setItem("curinfo"		, "0"		);
-localStorage.setItem("version" 		, "3.0.2"  );
+localStorage.setItem("version" 		, "3.0.0"  );
 
 //localStorage.setItem("server"	, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
 //localStorage.setItem("server"		, "http://172.24.0.120:9279/restServiceUSSAP/resources/"	);
@@ -183,8 +183,8 @@ var app = {
 					  
 					  
 					   
-                        localStorage.setItem("empnumber"       , empnum  );
-                        //localStorage.setItem("empnumber"       , "4816"  );
+                            localStorage.setItem("empnumber"       , empnum  );
+                            //localStorage.setItem("empnumber"       , "4816"  );
 					  localStorage.setItem("college_1"       , msg["college_1"]       );
 					  localStorage.setItem("college_2"       , msg["college_2"]       );
 					  localStorage.setItem("full_name"       , msg["full_name"]       );

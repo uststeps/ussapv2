@@ -1,7 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-
-<widget id="com.steps.ussap" version="3.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>UST Support Staff Portal</name> 
+<widget id="com.steps.ussap" version="3.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>UST Support Staff Portal</name>
     <description>
     </description>
     <author email="myust.steps@gmail.com" href="">
@@ -9,7 +8,7 @@
     </author>
     <content src="index.html" />
     <preference name="android-version" value="7.0.0" />
-    <preference name="ios-version" value="4.5.4" />
+    <preference name="ios-version" value="^4.5.4" />
     <preference name="phonegap-version" value="cli-8.0.0" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="DisallowOverscroll" value="true" />
@@ -40,6 +39,7 @@
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
     <plugin name="cordova-plugin-dialogs" spec="~1.2.1" />
     <plugin name="cordova-plugin-datepicker" spec="~0.9.3" />
+    <access origin="*" />
     <platform name="android">
         <icon qualifier="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon qualifier="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -108,7 +108,6 @@
         <allow-intent href="mailto:*" />
         <allow-intent href="geo:*" />
     </platform>
-    <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
     <allow-intent href="tel:*" />

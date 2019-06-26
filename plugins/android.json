@@ -73,16 +73,16 @@
     }
   },
   "dependent_plugins": {
-    "cordova-plugin-console": {
+    "cordova-plugin-app-event": {
       "PACKAGE_NAME": "com.steps.ussap"
     },
-    "cordova-plugin-file": {
+    "cordova-plugin-console": {
       "PACKAGE_NAME": "com.steps.ussap"
     },
     "cordova-plugin-device": {
       "PACKAGE_NAME": "com.steps.ussap"
     },
-    "cordova-plugin-app-event": {
+    "cordova-plugin-file": {
       "PACKAGE_NAME": "com.steps.ussap"
     }
   }
