@@ -92,8 +92,8 @@ var app = {
             type       : "POST",
             dataType   : "json",            
             beforeSend : function(xhr){
-                xhr.setRequestHeader('empnum' ,  4800);
-              //  xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
+               // xhr.setRequestHeader('empnum' ,  4800);
+                xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
                 xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
             },
             success: function(msg) { 
@@ -131,8 +131,8 @@ var app = {
             type       : "POST",
             dataType   : "json",            
             beforeSend : function(xhr){
-                xhr.setRequestHeader('empnum' ,  4800);
-               // xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
+               // xhr.setRequestHeader('empnum' ,  4800);
+                xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
                 xhr.setRequestHeader('cutoffdate', selectedDate);
                 xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
             },
@@ -164,37 +164,7 @@ var app = {
                                 + '</div>'
                        );
                         
-            /*
-                    
-                    $("#meritHolder").append(
-                          '<div id="row' + element["ID"] + '" ontouchstart="app.onTouchStart(\'' + element["ID"] + '\')"  ontouchend="app.onTouchEnd()" class="list-group-item list-group-item-action">'
-				+ '<div class="row">'
-				+ '	<div class="col-4 font-weight-bold border-right" >'
-				+		'<div class="row">'
-				+			'<div class="col-12 font-weight-bold text-warning" align="center">'
-				+				'<h1>' + element["SCORE"] + '%</h1>'
-				+ 			'</div>'
-				+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-				+ 			'SCORE'
-				+ 			'</div>'
-				+ 		'</div>'
-				+ '</div>'
-				+ '<div class="col-8">'
-				+ '<div class="row">'
-                                    + '<div class="col-12 font-weight-bold">' + element["DESCRIPTION"] + '</div>'
-				+ '</div>'
-				+ '<div class="row">'
-                                    +  '<div class="col-12 font-weight-bold" >PERCENTAGE: ' + element["PERCENTAGE"] + '%</div>'
-				+ '</div>'
-				+ '</div>'
-                            + '</div>'
-			+ '</div>'
-                        
-                    
-                   
-                        
-                     );
-              */
+        
             
                     var dataCounter = 0;
                     $.each(msg["DETAILS"], function(indexCounter, elementCounter) {
@@ -209,7 +179,7 @@ var app = {
                         if (cur_id == element2["ID"]){
                     
                            $('#sub' + cur_id).append(
-                                   element2["DESCRIPTION"] + '<strong>&nbsp;&nbsp' +element2["NUM_VALUE"] +'</strong> <br/>'
+                                   element2["DESCRIPTION"] + '<strong> :&nbsp;&nbsp' +element2["NUM_VALUE"] +'</strong> <br/>'
                              
                             );
                         }
@@ -239,33 +209,7 @@ var app = {
                          +    '<p class="text-center">Total Score</p>'
                          + '</div>'
                 );
-                
-               
-                
-                
-                /*
-                $("#meritHolder").append(
-                   '<div class="list-group-item list-group-item-action">'
-			+ '<div class="row">'
-			+ '	<div class="col-12 font-weight-bold border-right" >'
-			+		'<div class="row">'
-			+			'<div class="col-12 font-weight-bold text-success" align="center">'
-			+				'<h1>' + totalScore + '%</h1>'
-			+ 			'</div>'
-			+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-			+ 			'TOTAL SCORE'
-			+ 			'</div>'
-			+               '</div>'
-                                + '</div>'
-
-                        + '</div>'
-                    + '</div>'      
-                );
-              */
-               /*
-                $(".detailstab").hide();
-                $("#btnGroup").show();
-                */
+ 
             },
             error: function(jqXHR	, textStatus, errorThrown) {
                 //alert(JSON.stringify(jqXHR));

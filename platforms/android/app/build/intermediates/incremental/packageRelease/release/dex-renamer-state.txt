@@ -1,0 +1,4 @@
+#Thu Jun 27 16:33:31 SGT 2019
+base.0=C\:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\transforms\\dex\\release\\0
+path.0=classes.dex
+renamed.0=classes.dex

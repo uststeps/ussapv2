@@ -1,0 +1,22 @@
+#body {
+    padding:20px;
+}
+
+.dlTable {
+    border-collapse:collapse;
+    border:2px solid #f0ad4e;
+}
+
+.dlTable td {
+    padding:5px;
+    border:1px solid #dfdfdf;
+}
+
+.header1 {
+    background-color:#f0ad4e;
+    color:white;
+}
+
+.header2 {
+    font-weight:bold;
+}
