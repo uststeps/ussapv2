@@ -92,8 +92,8 @@ var app = {
             type       : "POST",
             dataType   : "json",            
             beforeSend : function(xhr){
-               // xhr.setRequestHeader('empnum' ,  4800);
-                xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
+                xhr.setRequestHeader('empnum' ,  4800);
+              //  xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
                 xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
             },
             success: function(msg) { 
@@ -131,47 +131,41 @@ var app = {
             type       : "POST",
             dataType   : "json",            
             beforeSend : function(xhr){
-                //xhr.setRequestHeader('empnum' ,  4800);
-                xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
+                xhr.setRequestHeader('empnum' ,  4800);
+               // xhr.setRequestHeader('empnum' ,  localStorage.getItem("empnumber" ));
                 xhr.setRequestHeader('cutoffdate', selectedDate);
                 xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
             },
             success: function(msg) {
-                $("#meritHolder").html("");
+                $("#categ_holder").html("");
                 var totalScore = 0;
                 $.each(msg, function(index, element) {
                     
                     if (index != "DETAILS"){
                     var cur_id = element["ID"];
-                    $("#meritHolder").append(
-                          '<div id="row' + element["ID"] + '" ontouchstart="app.onTouchStart(\'' + element["ID"] + '\')"  ontouchend="app.onTouchEnd()" class="list-group-item list-group-item-action">'
-				+ '<div class="row">'
-				+ '	<div class="col-4 font-weight-bold border-right" >'
-				+		'<div class="row">'
-				+			'<div class="col-12 font-weight-bold text-warning" align="center">'
-				+				'<h1>' + element["SCORE"] + '%</h1>'
-				+ 			'</div>'
-				+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-				+ 			'SCORE'
-				+ 			'</div>'
-				+ 		'</div>'
-				+ '</div>'
-				+ '<div class="col-8">'
-				+ '<div class="row">'
-                                    + '<div class="col-12 font-weight-bold">' + element["DESCRIPTION"] + '</div>'
-				+ '</div>'
-				+ '<div class="row">'
-                                    +  '<div class="col-12 font-weight-bold" >PERCENTAGE: ' + element["PERCENTAGE"] + '%</div>'
-				+ '</div>'
-				+ '</div>'
-                            + '</div>'
-			+ '</div>'
+                 
+                   totalScore = parseFloat(totalScore) + parseFloat(element["SCORE"]);
+                         $("#categ_holder").append(
+                                '<div class="col-6  border-right border-bottom ">'
+                                +    '<div class="text-center p-4 h-100 box-100">'
+                                +        '<h2 class="text-asphalt" >'+ element["SCORE"] + '<small class="text-muted">/' + element['PERCENTAGE'] +' </small></h2>'
+                                +        '<p class="small">'
+                                +            '<a class="" data-toggle="collapse" href="#row'+element["ID"]+'" role="button" aria-expanded="false" aria-controls="row'+element["ID"]+'">'
+                                +            '' + element["DESCRIPTION"] + '<i class="fas fa-angle-down"></i>'
+                                +            '</a>'
+                                +        '</p>'
+
+                                +        '<div class="collapse" id="row' + element["ID"] + '">'
+                                 +            '<small id="sub' + element["ID"] + '">'
+            
+                                +            '</small>'
+                                +        '</div>'
+                                +    '</div>'
+                                + '</div>'
+                       );
                         
-                    
-             
-                        
-                     );
-             
+        
+            
                     var dataCounter = 0;
                     $.each(msg["DETAILS"], function(indexCounter, elementCounter) {
                         if (cur_id == elementCounter["ID"]){
@@ -179,64 +173,43 @@ var app = {
                         }
                     });
                     
-                    if (dataCounter > 0) {
-                     $("#meritHolder").append(
-                         '<div class="list-group-item bg-dark text-warning list-group-item-action detailstab">'
-                 
-                                      + '<div class="row bg-dark text-warning">'
-                                      + '	<div class="col-12 font-weight-bold border-right bg-dark text-warning" >'
-                                      + '<dl class="dl-horizontal merit-dl bg-dark text-warning" id="subholder-' +  cur_id  + '"> </dl>'
-                                      +		'</div>'
-                                      + '</div>'
-                        + '</div>'
-                    );
+                  
              
                     $.each(msg["DETAILS"], function(index2, element2) {
                         if (cur_id == element2["ID"]){
-                           $("#subholder-"+cur_id).append(
-                               '<dt>' + element2["DESCRIPTION"] + '</dt>'
-                               +'<dd>' + element2["NUM_VALUE"] + '</dd>'
+                    
+                           $('#sub' + cur_id).append(
+                                   element2["DESCRIPTION"] + '<strong>&nbsp;&nbsp' +element2["NUM_VALUE"] +'</strong> <br/>'
+                             
                             );
                         }
                     });
                   }
+                       
                     
              
                     
-                    totalScore = parseFloat(totalScore) + parseFloat(element["SCORE"]);
-                 }
+                
+                // }
 		});
                 
                 
-                
-                
-                
-               
-                
-                
-                
-                $("#meritHolder").append(
-                   '<div class="list-group-item list-group-item-action">'
-			+ '<div class="row">'
-			+ '	<div class="col-12 font-weight-bold border-right" >'
-			+		'<div class="row">'
-			+			'<div class="col-12 font-weight-bold text-success" align="center">'
-			+				'<h1>' + totalScore + '%</h1>'
-			+ 			'</div>'
-			+ 			'<div class="col-12 font-weight-bold text-secondary" align="center">'
-			+ 			'TOTAL SCORE'
-			+ 			'</div>'
-			+               '</div>'
-                                + '</div>'
-
-                        + '</div>'
-                    + '</div>'      
+                   
+                    var textColor = "text-danger";
+                    if (totalScore >= 85 ) {
+                        textColor = "text-success";
+                    } else {
+                         textColor = "text-danger";
+                    };
+                    
+                  $("#headinfo").html(
+                        '<div class="p-3">'
+                         +    ' <h5 class="text-center"><small class="text-muted">Evaluation Period</small><br/>' + $("#meritYear option:selected").text() + '</h5>'
+                         +    '<h1 class="text-center ' + textColor + '">' + totalScore + '%</h1>'
+                         +    '<p class="text-center">Total Score</p>'
+                         + '</div>'
                 );
-              
-               
-                $(".detailstab").hide();
-                $("#btnGroup").show();
-                
+ 
             },
             error: function(jqXHR	, textStatus, errorThrown) {
                 //alert(JSON.stringify(jqXHR));

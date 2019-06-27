@@ -1,0 +1,59 @@
+<!--
+	EDUCATION
+-->
+
+<h5 class="text-dkyellow p-3 mb-0"><strong>Educational Background Editor</strong></h5>
+<div class="line"></div>
+
+ <div class="p-3">
+	<div class="form-group ">
+		<label>Education Level</label>
+		<select id="schoollevel" class="form-control">
+			<option value="-1">Select Education Level</option>
+		</select>
+	</div>
+
+	<div class="form-group toToggle1">
+		<label>School Region</label>
+		<select id="region" onchange="app.onRegionSelect()" class="form-control">
+			<option value="-1">Select Region</option>
+		</select>
+	</div>
+
+	<div class="form-group toToggle1">
+		<label>School Province</label>
+		<select onchange="app.onProvinceSelect()" id="province" class="form-control">
+				<option value="-1">Select Province</option>
+		</select>
+	</div>
+
+	<div class="form-group toToggle1">
+		<label>School Municipality</label>
+		<select id="municipality" onchange="app.onMunicipalitySelect()" class="form-control">
+				<option value="-1">Select Municipality</option>
+		</select>
+	</div>
+
+	<div class="form-group">
+		<label>School Name</label>
+		<select id="school"  class="form-control toToggle1">
+				<option value="-1">Select School</option>
+		</select>
+
+		<!--If Position Not Specified-->
+		<input type="text" id="school2" class="form-control toToggle2" style="display:none;" />
+	</div>
+
+	<div class="form-group form-check">
+		<div class="checkbox">
+		  <label><input id="toggler" onclick="app.togglePosition()" type="checkbox" class="form-check-input" id="">&nbsp;&nbsp;Tick checkbox if Position is not specified</label>
+		</div>
+			
+	</div>
+
+	<div class="form-group">
+		<label>Completion Date</label>
+		<input id="year" type="text" class="form-control" />
+	</div>
+
+</div>

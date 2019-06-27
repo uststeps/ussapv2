@@ -1,0 +1,51 @@
+#body {
+    padding:20px;
+}
+
+.historyTable {
+    border-collapse:collapse;
+    border:2px solid #f0ad4e;
+}
+
+.historyTable td {
+    padding:5px;
+    border:1px solid #dfdfdf;
+}
+
+.header1 {
+    background-color:#f0ad4e;
+    color:white;
+}
+
+.header2 {
+    font-weight:bold;
+}
+
+.dtrTable {
+    width:100%;
+    border-collapse:collapse;
+    border:1px solid #f0ad4e;
+}
+
+.dtrTable td {
+    border:1px solid #f0ad4e;
+    padding:5px;
+}
+
+.dtrHeader {
+    background-color:#f0ad4e;
+    color:#ffffff;
+}
+
+.dtrHeader2 {
+    font-weight:bold;
+}    
+
+.dtrOut {
+    color:red;
+    font-weight:bold;
+}
+.dtrIn {
+    color:green;
+    font-weight:bold;
+}

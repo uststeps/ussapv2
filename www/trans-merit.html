@@ -66,19 +66,23 @@
             </select>
 	</div>	
 
-        <div class="bg-cream p-4" style="margin-bottom:100px;">
+        <div class="bg-cream p-4" id="meritHolder" style="margin-bottom:100px;">
             <div align="center">
 		<img src="img/loading.gif" id="loadingGif"/>
             </div>
-            <div class="btn-group w-100" id="btnGroup" style="display:none;" role="group" >
-                <button type="button" id="btnSummary"  class="btn btn-primary" onclick="app.onViewTypeSelect('summary')" style="width:100%;"><h2>SUMMARY</h2></button>
-                <button type="button" id="btnDetail" class="btn btn-secondary" onclick="app.onViewTypeSelect('detailed')" style="width:100%;"><h2>DETAILED</h2></button>
-              </div>
-            <div id="meritHolder" class="bg-cream list-group" >
-                <div align="center" class="alert alert-warning">
-                    Select a date.
+            
+            <div class="bg-white mb-4 info-card " id="headinfo">
+            
+            </div>
+            
+            <div class="bg-white mb-4 info-card">
+                <h5 class="text-dkyellow p-3 mb-0">Criteria</h5>
+                <div class="line"></div>
+                <div class="row flex-container no-gutters p-3" id="categ_holder">
                 </div>
             </div>
+            
+     
          </div>
      
     
