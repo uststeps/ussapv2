@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.steps.ussap"
     android:hardwareAccelerated="true"
-    android:versionCode="30007"
-    android:versionName="3.0.7" >
+    android:versionCode="30008"
+    android:versionName="3.0.8" >
 
     <uses-sdk
         android:minSdkVersion="19"

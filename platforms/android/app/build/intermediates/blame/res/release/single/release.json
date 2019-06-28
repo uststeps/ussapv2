@@ -12,6 +12,10 @@
         "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-mdpi\\ic_action_previous_item.png"
     },
     {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-ldpi_icon.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-ldpi\\icon.png"
+    },
+    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable_notification_bg.xml.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\drawable\\notification_bg.xml"
     },
@@ -74,6 +78,10 @@
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-v21_notification_action_background.xml.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\drawable-v21\\notification_action_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-hdpi_icon.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-hdpi\\icon.png"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi_ic_action_remove.png.flat",
@@ -164,6 +172,10 @@
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\drawable-xhdpi-v4\\notification_bg_normal.9.png"
     },
     {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_icon.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\icon.png"
+    },
+    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\drawable-hdpi-v4\\notification_bg_normal_pressed.9.png"
     },
@@ -236,6 +248,10 @@
         "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
     },
     {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_icon.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\icon.png"
+    },
+    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
@@ -246,6 +262,10 @@
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\layout-v21_notification_action_tombstone.xml.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\dc3fcf04610f890e0c5b4e44c117b8ad\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\mipmap-xhdpi_icon.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-xhdpi\\icon.png"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\release\\drawable-land-ldpi_screen.png.flat",
