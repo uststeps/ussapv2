@@ -48,7 +48,7 @@ var app = {
              Slide out config
         */
 		empnumber = localStorage.getItem("empnumber");
-		//empnumber = "1689";
+		//empnumber = "4816";
         slideout = new Slideout({
             'panel'    : document.getElementById('panel'   ),
             'menu'     : document.getElementById('sidenav' ),
@@ -80,10 +80,21 @@ var app = {
     },
     
     bindEvents: function() {
-       app.onDeviceReady();
-
-			   
+       app.onDeviceReady();     
     },
+    
+    sortBy: function(field, reverse, primer){
+
+   var key = primer ? 
+       function(x) {return primer(x[field])} : 
+       function(x) {return x[field]};
+
+   reverse = !reverse ? 1 : -1;
+
+   return function (a, b) {
+       return a = key(a), b = key(b), reverse * ((a > b) - (b > a));
+     } 
+},
 	
 	
 	ajaxLeaves: function(year){
@@ -92,7 +103,7 @@ var app = {
 					type       : "POST",
 					dataType   : "json",            
 					beforeSend : function(xhr){
-						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
+						xhr.setRequestHeader('empnumber' ,  empnumber);
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
 					success: function(msg) { 
@@ -153,6 +164,8 @@ var app = {
 									} else {
 										leaveName = msg["leave-list"][x.toString()]["leave_type_name"];
 									}
+                                                                        
+                                                                        
 									
 									var rowIndex = 0;
 									var canEdit = "true";
@@ -189,6 +202,15 @@ var app = {
                                                                         } else {
                                                                             statusIcon2 = "fa-calendar-check text-success";
                                                                         }
+                                                                        
+                                                                        if (msg["leave-list"][x.toString()]["disapprove_flag"] == 1) {
+                                                                            statusIcon1 = "fa-calendar-times text-danger";
+                                                                            statusIcon2 = "fa-calendar-times text-danger";
+                                                                        } 
+                                                                        if (msg["leave-list"][x.toString()]["cancel_flag"] == 1) {
+                                                                            statusIcon1 = "fa-calendar-times text-danger";
+                                                                            statusIcon2 = "fa-calendar-times text-danger";
+                                                                        } 
                                                                 
                                                                     $("#leaveholder").append(                       
                                                                         '<div id="row' + msg["leave-list"][x.toString()]["leave_id"] + '" ontouchstart="app.onTouchStart(\'' + msg["leave-list"][x.toString()]["leave_id"] + '\')"  ontouchend="app.onTouchEnd()" class="leave-item">'
@@ -1084,6 +1106,7 @@ var app = {
                                         if (element["approval_flag"] != null) {
                                             stat_dept = element["approval_flag"];
                                         }
+                                        
 					if (stat_dept == "1"){
                                             stat_dept = '<i class="fas fa-calendar-check text-success"></i> APPROVED - Department Head';
 					} else if (stat_dept == "0") {
@@ -1091,6 +1114,8 @@ var app = {
 					} else {
                                             stat_dept = '<i class="fas fa-hourglass-start text-muted"></i> PENDING - Department Head';
 					}
+                                        
+                                       
 					
                                         
                                           var stat_hr ="";
@@ -1105,9 +1130,15 @@ var app = {
 					} else if (stat_hr == "2") {
 						stat_hr ='<i class="fas fa-calendar-times text-danger"></i> CANCELLED - HRD Head';
 					} else {
-                                                hr_label = "";
 						 stat_hr = '<i class="fas fa-hourglass-start text-muted"></i> PENDING - HRD Head';
 					}
+                                        
+                                         if (leave_app["cancel_flag"] == 1) {
+                                            stat_dept = '<i class="fas fa-calendar-times text-danger"></i> CANCELLED - Department Head';
+                                            stat_hr ='<i class="fas fa-calendar-times text-danger"></i> CANCELLED - HRD Head';
+                                        }
+                                        
+                                        
 					
 					if (stat_dept == '<div class="text text-secondary"><i class="far fa-circle"></i>&nbsp;PENDING</div>') {
                                             hr_label = "";

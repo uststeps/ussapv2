@@ -49,7 +49,7 @@ var app = {
              Slide out config
         */
 		empnumber = localStorage.getItem("empnumber");
-		//empnumber = "4800";
+		//empnumber = "4816";
         slideout = new Slideout({
             'panel'    : document.getElementById('panel'   ),
             'menu'     : document.getElementById('sidenav' ),
@@ -150,7 +150,7 @@ var app = {
 					dataType   : "json",            
 					beforeSend : function(xhr){
                                                // xhr.setRequestHeader('empnumber' ,  5128);
-						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
+						xhr.setRequestHeader('empnumber' ,  empnumber);
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
 					success: function(msg) { 
@@ -523,7 +523,7 @@ var app = {
 					type       : "POST",
 					dataType   : "json",            
 					beforeSend : function(xhr){
-						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
+						xhr.setRequestHeader('empnumber' ,  empnumber);
 						//xhr.setRequestHeader('empnumber' ,  "4800");
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 						xhr.setRequestHeader('appId'	 , appId);
@@ -689,7 +689,7 @@ var app = {
 					dataType   : "json",            
 					beforeSend : function(xhr){
                                             //xhr.setRequestHeader('empnumber' ,  5128);
-						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
+						xhr.setRequestHeader('empnumber' ,  empnumber);
 						//xhr.setRequestHeader('empnumber' ,  "4800");
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 						xhr.setRequestHeader('appId'	 , localStorage.getItem("changescheduleId"));
@@ -972,7 +972,7 @@ var app = {
 					type       : "POST",
 					dataType   : "json",            
 					beforeSend : function(xhr){
-						xhr.setRequestHeader('empnumber' ,  localStorage.getItem("empnumber" ));
+						xhr.setRequestHeader('empnumber' ,  empnumber);
 						//xhr.setRequestHeader('empnumber' ,  "4800");
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 						xhr.setRequestHeader('applicationData'	 ,JSON.stringify(applicationData));
