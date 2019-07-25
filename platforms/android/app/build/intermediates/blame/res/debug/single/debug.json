@@ -8,12 +8,12 @@
         "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
     },
     {
-        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\99a8505502d27bf4b0a7806a43b29092\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\99a8505502d27bf4b0a7806a43b29092\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\99a8505502d27bf4b0a7806a43b29092\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",

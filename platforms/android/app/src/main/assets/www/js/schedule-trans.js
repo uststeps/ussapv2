@@ -142,8 +142,12 @@ var app = {
 		}, 500);
 	},
 	
-	
+	onYearChange: function() {
+		app.getChangeSchedYears($("#yearSelect").val());
+	},
+
 	getChangeSchedYears: function(year) {
+           // alert("TRYING TO GET: " + year);
 		$.ajax({
 			url   : localStorage.getItem("server") + "schedtransact/changeschedyears", 
 					type       : "POST",
@@ -154,7 +158,7 @@ var app = {
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
 					success: function(msg) { 
-						//alert(JSON.stringify(msg));
+						alert(JSON.stringify(msg));
 						var toPassYear = year;
 						
 						if (year == "current") {toPassYear = parseInt(msg["0"]);} 
@@ -1000,6 +1004,21 @@ var app = {
 			});
 			
 		} 
+	},
+         
+    toggleMenu: function() {
+		
+		slideout.toggle();
+		if (slideout.isOpen()) {
+				$("#botNav").fadeOut();
+		} else {
+				$("#botNav").fadeIn();
+				
+		}
+			   
+    },
+    onLogout: function(){
+		localStorage.setItem("remember","false");
 	}
 
 };
