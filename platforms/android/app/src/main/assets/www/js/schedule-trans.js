@@ -158,7 +158,7 @@ var app = {
 						xhr.setRequestHeader('ecode'     ,  localStorage.getItem("ecode") 	);
 					},
 					success: function(msg) { 
-						alert(JSON.stringify(msg));
+						//alert(JSON.stringify(msg));
 						var toPassYear = year;
 						
 						if (year == "current") {toPassYear = parseInt(msg["0"]);} 
