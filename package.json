@@ -24,11 +24,13 @@
       "cordova-plugin-datepicker": {},
       "cordova-plugin-local-notification": {},
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-app-event": {}
     }
   },
   "dependencies": {
     "cordova-android": "^8.0.0",
+    "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-battery-status": "~1.1.1",
     "cordova-plugin-camera": "~2.1.1",
     "cordova-plugin-contacts": "~2.0.1",

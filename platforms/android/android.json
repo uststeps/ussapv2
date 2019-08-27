@@ -20,11 +20,15 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-plugin-app-event": {
+      "PACKAGE_NAME": "com.steps.ussap"
     }
   },
   "dependent_plugins": {},
   "modules": [],
   "plugin_metadata": {
-    "cordova-plugin-whitelist": "1.3.4"
+    "cordova-plugin-whitelist": "1.3.4",
+    "cordova-plugin-app-event": "1.2.1"
   }
 }

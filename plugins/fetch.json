@@ -190,5 +190,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-app-event": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-event@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
