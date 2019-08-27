@@ -7,83 +7,9 @@
     "files": {}
   },
   "installed_plugins": {
-    "cordova-android-support-gradle-release": {
-      "ANDROID_SUPPORT_VERSION": "27.+",
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-battery-status": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-camera": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-contacts": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-datepicker": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-device-motion": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-device-orientation": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-dialogs": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-file-opener2": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-file-transfer": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-geolocation": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-globalization": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-local-notification": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-media": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-media-capture": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-splashscreen": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-vibration": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.steps.ussap"
     }
   },
-  "dependent_plugins": {
-    "cordova-plugin-app-event": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-device": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    },
-    "cordova-plugin-file": {
-      "PACKAGE_NAME": "com.steps.ussap"
-    }
-  }
+  "dependent_plugins": {}
 }

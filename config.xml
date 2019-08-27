@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.steps.ussap" version="3.1.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.steps.ussap" version="3.1.2" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>UST Support Staff Portal</name>
     <description>
     </description>
@@ -20,7 +20,7 @@
     <preference name="AndroidLaunchMode" value="singleTop" />
     <preference name="Fullscreen" value="false" />
     <preference name="StatusBarOverlaysWebView" value="false" />
-    <preference name="StatusBarBackgroundColor" value="#2D81C1" />
+    <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
     <preference name="SplashScreen" value="none" />
@@ -121,6 +121,4 @@
     <plugin name="cordova-plugin-statusbar" spec="~2.1.2" />
     <plugin name="cordova-plugin-file-transfer" spec="~1.5.1" />
     <plugin name="cordova-plugin-local-notification" spec="^0.8.4" />
-    <plugin name="cordova-plugin-whitelist" spec="~1.2.2" />
-    <engine name="android" spec="^7.1.4" />
 </widget>
