@@ -167,14 +167,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-app-event": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-app-event"
-    },
-    "is_top_level": false,
-    "variables": {}
-  },
   "cordova-plugin-local-notification": {
     "source": {
       "type": "registry",
@@ -195,6 +187,14 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-whitelist@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-app-event": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-event@latest"
     },
     "is_top_level": true,
     "variables": {}

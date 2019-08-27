@@ -1,5 +1,5 @@
 {
-  "_from": "cordova-plugin-app-event",
+  "_from": "cordova-plugin-app-event@latest",
   "_id": "cordova-plugin-app-event@1.2.1",
   "_inBundle": false,
   "_integrity": "sha1-DuuxQTKqQ7suXAgamr29l8otgTI=",
@@ -8,10 +8,10 @@
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "cordova-plugin-app-event",
+    "raw": "cordova-plugin-app-event@latest",
     "name": "cordova-plugin-app-event",
     "escapedName": "cordova-plugin-app-event",
-    "rawSpec": "",
+    "rawSpec": "latest",
     "saveSpec": null,
     "fetchSpec": "latest"
   },
@@ -22,8 +22,8 @@
   ],
   "_resolved": "https://registry.npmjs.org/cordova-plugin-app-event/-/cordova-plugin-app-event-1.2.1.tgz",
   "_shasum": "0eebb14132aa43bb2e5c081a9abdbd97ca2d8132",
-  "_spec": "cordova-plugin-app-event",
-  "_where": "C:\\Users\\Jeremy\\Documents\\GitHub\\ussap",
+  "_spec": "cordova-plugin-app-event@latest",
+  "_where": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2",
   "author": {
     "name": "Sebastián Katzer"
   },

@@ -24,7 +24,8 @@
       "cordova-plugin-datepicker": {},
       "cordova-plugin-local-notification": {},
       "cordova-plugin-statusbar": {},
-      "cordova-plugin-whitelist": {}
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-app-event": {}
     }
   },
   "dependencies": {
