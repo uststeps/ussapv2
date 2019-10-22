@@ -53,6 +53,32 @@ var app = {
         var fileTransfer = new FileTransfer();
 		var uri = "http://digitalpix.ust.edu.ph/employee/" + localStorage.getItem("full_empnumber") + "p.jpg"
 		
+		
+	
+			// WILL DOWNLOAD THE FILE IF NOT FOUND
+				fileTransfer.download(
+				uri,
+				cordova.file.dataDirectory  +  localStorage.getItem("full_empnumber")  +"p.jpg"	,
+				function(entry) {
+					$("#dpHolder").attr("src",entry.toURL());
+					//downloadedFile = true;
+				},
+				function(error) {
+					//alert("download error source " + error.source);
+					//alert(JSON.stringify(error));
+					//$("#dpholder").attr("src",entry.toURL());
+					//global.sys("download error target " + error.target);
+					//alert("download error code" 	  + error.code);
+				},
+				true,
+				{
+					headers: {
+						"referrer" : "https://supportstaff.ust.edu.ph",
+								"referer"  : "https://supportstaff.ust.edu.ph"
+					}
+				});
+		
+		/*
 		fileTransfer.download(
 						uri,
 						cordova.file.dataDirectory  + localStorage.getItem("full_empnumber")  +"p.jpg"	,
@@ -75,7 +101,7 @@ var app = {
 							}
 						}
 		);
-		
+		*/
 		//alert("GOT PAST download, going to ajax");
 		
 		$.ajax({
@@ -545,7 +571,7 @@ var app = {
 				var controls = '';
                                 var printButton="";
                                 var controlButton = "";
-                                alert(msg[a]["print"] );
+                                //alert(msg[a]["print"] );
                                 if (msg[a]["print"] == 1) {
                                     //printButton = '<a target="_BLANK" href="http://docs.google.com/gview?embedded=true&url=http://172.20.0.40:8888/reports/rwservlet?REPORT=hr_seminar_certificate2_ussap.rdf&DESFORMAT=PDF&DESTYPE=CACHE&P_HR_S_ID=44&P_EMP=5320&P_SESSION=&USERID=HR_USER4/hr_user4@domingo&ORACLE_SHUTDOWN=YES&PARAMFORM=NO">Print</a>';
                                     printButton=' <button class="p-0 btn btn-link" onclick="app.printCert(\'' + msg[a]["sem_id"] + '\',\'' + msg[a]["print_type"] + '\')" title="Pinrt Certificate"><i class="fas fa-print"></i></button>'

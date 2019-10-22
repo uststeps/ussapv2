@@ -57,7 +57,7 @@ var app = {
 						"<option value='" + i + "'>" + i + "</option>"
 					);
 			   }
-			   
+			     
 			   
 			   
              },
@@ -115,7 +115,7 @@ var app = {
 					
 					
 					$("#periodHolder").html("Pay period : " +  $("#datePeriod").val());
-					$("#salaryHolder").html("Php " + msg["header"]["net_pay"		]);
+					$("#salaryHolder").html("Php " + msg["header"]["gross_pay"		]);
 					
 					$("#summary-enum"		).html(	msg["header"]["emp_number"	]);
 					$("#summary-pay"		).html(	msg["header"]["payslip_no"	]);

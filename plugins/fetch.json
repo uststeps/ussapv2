@@ -47,22 +47,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-dialogs": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-dialogs@~1.2.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
-  "cordova-plugin-file-transfer": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-file-transfer@~1.5.1"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-geolocation": {
     "source": {
       "type": "registry",
@@ -167,18 +151,34 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-local-notification": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-local-notification@0.8"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-statusbar": {
     "source": {
       "type": "registry",
       "id": "cordova-plugin-statusbar@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-app-event": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-event@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs@latest"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-local-notification": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-local-notification@latest"
     },
     "is_top_level": true,
     "variables": {}
@@ -191,10 +191,10 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-app-event": {
+  "cordova-plugin-file-transfer": {
     "source": {
       "type": "registry",
-      "id": "cordova-plugin-app-event@latest"
+      "id": "cordova-plugin-file-transfer@1.6.1"
     },
     "is_top_level": true,
     "variables": {}

@@ -168,28 +168,28 @@ var app = {
 				$("#m_lname"	 ).val( mother["surname"	]);
 				$("#m_fname"	 ).val( mother["firstname"  ]);
 				$("#m_mname"	 ).val( mother["middlename" ]);
-				$("#m_bday"		 ).val( app.reformatDate(mother["birthdate"  ]));
+				$("#m_bday"		 ).val( mother["birthdate"  ] == null ?  "" : app.reformatDate(mother["birthdate"  ]));
 				$("#m_contact"	 ).val( mother["contact"	]);
 				$("#m_occupation").val( mother["occupation" ]);
 				
 				$("#f_lname"	 ).val( father["surname"	]);
 				$("#f_fname"	 ).val( father["firstname"	]);
 				$("#f_mname"	 ).val( father["middlename" ]);
-				$("#f_bday"		 ).val( app.reformatDate( father["birthdate"	]));
+				$("#f_bday"		 ).val( father["birthdate"  ] == null ?  "" : app.reformatDate( father["birthdate"	]));
 				$("#f_contact"	 ).val( father["contact"	]);
 				$("#f_occupation").val( father["occupation" ]);
 				
 				$("#fl_lname"	  ).val( fa_inlaw["surname"	   ]);
 				$("#fl_fname"	  ).val( fa_inlaw["firstname"  ]);
 				$("#fl_mname"	  ).val( fa_inlaw["middlename" ]);
-				$("#fl_bday"	  ).val( app.reformatDate(fa_inlaw["birthdate"  ]));
+				$("#fl_bday"	  ).val( fa_inlaw["birthdate"  ] == null ?  "" : app.reformatDate(fa_inlaw["birthdate"  ]));
 				$("#fl_contact"	  ).val( fa_inlaw["contact"	   ]);
 				$("#fl_occupation").val( fa_inlaw["occupation" ]);
 				
 				$("#ml_lname"	  ).val( mo_inlaw["surname"	   ]);
 				$("#ml_fname"	  ).val( mo_inlaw["firstname"  ]);
 				$("#ml_mname"	  ).val( mo_inlaw["middlename" ]);
-				$("#ml_bday"	  ).val( app.reformatDate(mo_inlaw["birthdate"  ]));
+				$("#ml_bday"	  ).val( mo_inlaw["birthdate"  ] == null ?  "" : app.reformatDate(mo_inlaw["birthdate"  ]));
 				$("#ml_contact"	  ).val( mo_inlaw["contact"	   ]);
 				$("#ml_occupation").val( mo_inlaw["occupation" ]);
 				}

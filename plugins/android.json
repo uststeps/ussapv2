@@ -7,12 +7,31 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-app-event": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-plugin-local-notification": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "com.steps.ussap"
     },
-    "cordova-plugin-app-event": {
+    "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.steps.ussap"
     }
   },
-  "dependent_plugins": {}
+  "dependent_plugins": {
+    "cordova-plugin-device": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-plugin-badge": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.steps.ussap"
+    }
+  }
 }
