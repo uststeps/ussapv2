@@ -74,7 +74,7 @@ var app = {
 				{
 					headers: {
 						"referrer" : "https://supportstaff.ust.edu.ph",
-								"referer"  : "https://supportstaff.ust.edu.ph"
+						"referer"  : "https://supportstaff.ust.edu.ph"
 					}
 				});
 		

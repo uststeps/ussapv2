@@ -1,9 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.steps.ussap" version="3.1.7" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
+<widget id="com.steps.ussap" version="3.1.9" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0"
 xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:cdv="http://cordova.apache.org/ns/1.0"
->
-    <name>UST Support Staff Portal</name>
+xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>USSAP</name>
     <description>
     </description>
     <author email="myust.steps@gmail.com" href="">
@@ -19,28 +18,28 @@ xmlns:cdv="http://cordova.apache.org/ns/1.0"
     <preference name="android-targetSdkVersion" value="28" />
     <preference name="android-compileSdkVersion" value="28" />
     <preference name="AutoHideSplashScreen" value="true" />
-    <preference name="SplashScreenDelay" value="0" />
-    <preference name="AndroidLaunchMode" value="singleTop" />
-    <preference name="Fullscreen" value="false" />
+    <preference name="SplashScreenDelay" 	value="0" />
+    <preference name="AndroidLaunchMode" 	value="singleTop" />
+    <preference name="Fullscreen" 		 	value="false" />
     <preference name="StatusBarOverlaysWebView" value="false" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
     <preference name="StatusBarStyle" value="lightcontent" />
     <preference name="CustomURLSchemePluginClearsAndroidIntent" value="true" />
     <preference name="SplashScreen" value="none" />
-    <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1" />
-    <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1" />
-    <plugin name="cordova-plugin-contacts" source="npm" spec="~2.0.1" />
-    <plugin name="cordova-plugin-device" source="npm" spec="~1.1.1" />
-    <plugin name="cordova-plugin-device-motion" source="npm" spec="~1.2.0" />
+    <plugin name="cordova-plugin-battery-status" 	 source="npm" spec="~1.1.1" />
+    <plugin name="cordova-plugin-camera" 		 	 source="npm" spec="~2.1.1" />
+    <plugin name="cordova-plugin-contacts"		 	 source="npm" spec="~2.0.1" />
+    <plugin name="cordova-plugin-device" 		 	 source="npm" spec="~1.1.1" />
+    <plugin name="cordova-plugin-device-motion"  	 source="npm" spec="~1.2.0" />
     <plugin name="cordova-plugin-device-orientation" source="npm" spec="~1.0.2" />
-    <plugin name="cordova-plugin-geolocation" source="npm" spec="~2.1.0" />
-    <plugin name="cordova-plugin-globalization" source="npm" spec="~1.0.3" />
-    <plugin name="cordova-plugin-inappbrowser" source="npm" spec="~1.3.0" />
-    <plugin name="cordova-plugin-media" source="npm" spec="~2.2.0" />
+    <plugin name="cordova-plugin-geolocation" 		 source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-globalization" 	 source="npm" spec="~1.0.3" />
+    <plugin name="cordova-plugin-inappbrowser" 		 source="npm" spec="~1.3.0" />
+    <plugin name="cordova-plugin-media" 			 source="npm" spec="~2.2.0" />
     <plugin name="cordova-plugin-network-information" source="npm" spec="~1.2.0" />
-    <plugin name="cordova-plugin-splashscreen" source="npm" spec="~3.2.1" />
-    <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0" />
-    <plugin name="cordova-plugin-datepicker" spec="~0.9.3" />
+    <plugin name="cordova-plugin-splashscreen" 		 source="npm" spec="~3.2.1" />
+    <plugin name="cordova-plugin-vibration" 		 source="npm" spec="~2.1.0" />
+    <plugin name="cordova-plugin-datepicker" 		 spec="~0.9.3" />
     <access origin="*" />
 
     <platform name="android">
