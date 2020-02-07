@@ -28,7 +28,7 @@ INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\sr
 INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:1-22:12
 INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:1-22:12
 	package
-		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:102-127
+		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:102-129
 		INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml
 	android:versionName
@@ -38,7 +38,7 @@ INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\sr
 	android:hardwareAccelerated
 		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:11-45
 	xmlns:android
-		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:128-186
+		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:130-188
 	android:versionCode
 		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:2:46-73
 		INJECTED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml
@@ -87,7 +87,7 @@ MERGED from [android.arch.lifecycle:runtime:1.0.0] C:\Users\Jeremy\.gradle\cache
 		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:5:53-87
 	android:usesCleartextTraffic
 		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:5:148-183
-activity#com.steps.ussap.MainActivity
+activity#com.steps.ussapv2.MainActivity
 ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:6:9-11:20
 	android:label
 		ADDED from C:\Users\Jeremy\Documents\GitHub2\ussapv2\platforms\android\app\src\main\AndroidManifest.xml:6:97-134

@@ -1,23 +1,23 @@
 [
     {
-        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
-        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
-    },
-    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-xhdpi_screen.png.flat",
         "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-land-xhdpi\\screen.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\xml_config.xml.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\xml\\config.xml"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
-        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
-        "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\d89f02478056c0d53ab63d0041c63d34\\res\\layout\\notification_template_big_media.xml"
-    },
-    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media_custom.xml.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\d89f02478056c0d53ab63d0041c63d34\\res\\layout\\notification_template_big_media_custom.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_big_media.xml.flat",
+        "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-media-compat-26.1.0.aar\\d89f02478056c0d53ab63d0041c63d34\\res\\layout\\notification_template_big_media.xml"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_media_action.xml.flat",
@@ -80,12 +80,12 @@
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f6792a36a654be58cc175e7f8d11c1d1\\res\\drawable-xhdpi-v4\\notify_panel_notification_icon_bg.png"
     },
     {
-        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
-        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
-    },
-    {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_notification_bg_normal.9.png.flat",
         "source": "C:\\Users\\Jeremy\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-26.1.0.aar\\f6792a36a654be58cc175e7f8d11c1d1\\res\\drawable-mdpi-v4\\notification_bg_normal.9.png"
+    },
+    {
+        "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-hdpi_screen.png.flat",
+        "source": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\src\\main\\res\\drawable-land-hdpi\\screen.png"
     },
     {
         "merged": "C:\\Users\\Jeremy\\Documents\\GitHub2\\ussapv2\\platforms\\android\\app\\build\\intermediates\\res\\merged\\debug\\drawable-land-mdpi_screen.png.flat",

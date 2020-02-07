@@ -17,7 +17,7 @@
        under the License.
  */
 
-package com.steps.ussap;
+package com.steps.ussapv2;
 
 import android.os.Bundle;
 import org.apache.cordova.*;
