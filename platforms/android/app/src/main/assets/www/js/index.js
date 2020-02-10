@@ -17,6 +17,13 @@ localStorage.setItem("server"		, "https://supportstaff.ust.edu.ph/restServiceUSS
 var jsn;
 var lastIndex;
 
+var grid = {};
+
+var checking = {
+	
+	
+}
+
 var timedata = {
 	"06:00" : "6:00 am",
 	"06:30" : "6:30 am",
