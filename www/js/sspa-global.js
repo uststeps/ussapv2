@@ -125,7 +125,7 @@ var app = {
             documentSize: 'A4',
             type: 'base64'
         }
-		alert("will try to fetch file");
+		//alert("will try to fetch file");
 		window.resolveLocalFileSystemURL(cordova.file.applicationDirectory + "www/printlayout/sspaevaltool.txt", app.gotFile , app.onFail);
 
 	},
@@ -140,7 +140,7 @@ var app = {
 				var data = {
 					empnumber : empnumber
 				};
-				alert("trying for ajax");
+				//alert("trying for ajax");
 				$.ajax({
 					url   : localStorage.getItem("server") + "sspa/request", 
 					type       : "POST",
@@ -151,7 +151,7 @@ var app = {
 						xhr.setRequestHeader("data"	  , JSON.stringify(data));
 					},
 					success: function(msg) { 
-						alert("ajax success");
+						//alert("ajax success");
 						toPrintHTML = toPrintHTML.replace("IDdivevaluationtool", msg.categoryContent);
 						toPrintHTML = toPrintHTML.replace("IDtbodyratingscale",msg.ratingScale);
 						let options = {
@@ -162,10 +162,10 @@ var app = {
 						pdf.fromData(toPrintHTML, options)
 							.then((base64)=>'ok')   // it will
 							.catch(
-							(err)=>alert(err)
+							(err)=>console.err(err)
 							);
 						
-						alert("got past from data");
+						//alert("got past from data");
 						
 					},
 					error: function(jqXHR	, textStatus, errorThrown) {
@@ -178,11 +178,11 @@ var app = {
 				
 				
 			}
-				alert("will try to read file");
+			//alert("will try to read file");
 			reader.readAsText(file);
 		});
 		
-		alert("DONE");
+		//alert("DONE");
 	},
 	onFail: function(e){
 		console.log("FileSystem Error");
