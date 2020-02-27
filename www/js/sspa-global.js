@@ -165,6 +165,8 @@ var app = {
 							(err)=>alert(err)
 							);
 						
+						alert("got past from data");
+						
 					},
 					error: function(jqXHR	, textStatus, errorThrown) {
 						alert(JSON.stringify(jqXHR));
