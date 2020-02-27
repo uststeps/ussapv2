@@ -161,7 +161,11 @@ var app = {
 						 
 						pdf.fromData(toPrintHTML, options)
 							.then((base64)=>'ok')   // it will
-							.catch((err)=>console.err(err));
+							.catch(
+							alert(err);
+							//(err)=>console.err(err)
+							
+							);
 						
 					},
 					error: function(jqXHR	, textStatus, errorThrown) {
