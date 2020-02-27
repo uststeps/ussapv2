@@ -25,11 +25,13 @@
       "cordova-plugin-dialogs": {},
       "cordova-plugin-local-notification": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-file-transfer": {}
+      "cordova-plugin-file-transfer": {},
+      "cordova-pdf-generator": {}
     }
   },
   "dependencies": {
     "cordova-android": "^8.0.0",
+    "cordova-pdf-generator": "^2.0.8",
     "cordova-plugin-app-event": "^1.2.1",
     "cordova-plugin-badge": "^0.8.8",
     "cordova-plugin-battery-status": "~1.1.1",

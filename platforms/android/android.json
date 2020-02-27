@@ -35,6 +35,10 @@
             {
               "xml": "<feature name=\"FileTransfer\"><param name=\"android-package\" value=\"org.apache.cordova.filetransfer.FileTransfer\" /></feature>",
               "count": 1
+            },
+            {
+              "xml": "<feature name=\"PDFService\"><param name=\"android-package\" value=\"com.pdf.generator.PDFGenerator\" /></feature>",
+              "count": 1
             }
           ]
         }
@@ -128,6 +132,9 @@
     },
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-pdf-generator": {
+      "PACKAGE_NAME": "com.steps.ussapv2"
     }
   },
   "dependent_plugins": {},
@@ -378,6 +385,16 @@
       "clobbers": [
         "window.FileTransfer"
       ]
+    },
+    {
+      "id": "cordova-pdf-generator.pdf",
+      "file": "plugins/cordova-pdf-generator/www/pdf.js",
+      "pluginId": "cordova-pdf-generator",
+      "clobbers": [
+        "cordova.plugins.pdf",
+        "pugin.pdf",
+        "pdf"
+      ]
     }
   ],
   "plugin_metadata": {
@@ -388,6 +405,7 @@
     "cordova-plugin-local-notification": "0.9.0-beta.2",
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-plugin-file": "4.3.3",
-    "cordova-plugin-file-transfer": "1.6.1"
+    "cordova-plugin-file-transfer": "1.6.1",
+    "cordova-pdf-generator": "2.0.8"
   }
 }

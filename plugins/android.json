@@ -21,6 +21,9 @@
     },
     "cordova-plugin-file-transfer": {
       "PACKAGE_NAME": "com.steps.ussap"
+    },
+    "cordova-pdf-generator": {
+      "PACKAGE_NAME": "com.steps.ussapv2"
     }
   },
   "dependent_plugins": {

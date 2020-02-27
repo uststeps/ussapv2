@@ -50,33 +50,44 @@ var app = {
 		//global.sys( "FULL EMPNUMBER: " + localStorage.getItem("full_empnumber"));
         //************************************************************************
         /* DOWNLOAD IMAGE TEST */
-        var fileTransfer = new FileTransfer();
-		var uri = "http://digitalpix.ust.edu.ph/employee/" + localStorage.getItem("full_empnumber") + "p.jpg"
 		
+		var dpDownloaded = false;
+		var dpDownloader=setInterval(function() {
+				if (!dpDownloaded) {
+					 var fileTransfer = new FileTransfer();
+					var uri = "http://digitalpix.ust.edu.ph/employee/" + localStorage.getItem("full_empnumber") + "p.jpg"
+					
+					
+				
+						// WILL DOWNLOAD THE FILE IF NOT FOUND
+							fileTransfer.download(
+							uri,
+							cordova.file.dataDirectory  +  localStorage.getItem("full_empnumber")  +"p.jpg"	,
+							function(entry) {
+								$("#dpHolder").attr("src",entry.toURL());
+								dpDownloaded = true;
+								clearInterval(dpDownloader);
+							},
+							function(error) {
+								//alert("download error source " + error.source);
+								//alert(JSON.stringify(error));
+								//$("#dpholder").attr("src",entry.toURL());
+								//global.sys("download error target " + error.target);
+								//alert("download error code" 	  + error.code);
+							},
+							true,
+							{
+								headers: {
+									"referrer" : "https://supportstaff.ust.edu.ph",
+									"referer"  : "https://supportstaff.ust.edu.ph"
+								}
+							});	
+				}
 		
-	
-			// WILL DOWNLOAD THE FILE IF NOT FOUND
-				fileTransfer.download(
-				uri,
-				cordova.file.dataDirectory  +  localStorage.getItem("full_empnumber")  +"p.jpg"	,
-				function(entry) {
-					$("#dpHolder").attr("src",entry.toURL());
-					//downloadedFile = true;
-				},
-				function(error) {
-					//alert("download error source " + error.source);
-					//alert(JSON.stringify(error));
-					//$("#dpholder").attr("src",entry.toURL());
-					//global.sys("download error target " + error.target);
-					//alert("download error code" 	  + error.code);
-				},
-				true,
-				{
-					headers: {
-						"referrer" : "https://supportstaff.ust.edu.ph",
-						"referer"  : "https://supportstaff.ust.edu.ph"
-					}
-				});
+					
+		},500);
+		
+       
 		
 		/*
 		fileTransfer.download(

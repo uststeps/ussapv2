@@ -7,10 +7,10 @@ localStorage.setItem("isRemember" 	, "false"	);
 localStorage.setItem("curinfo"		, "0"		);
 localStorage.setItem("version" 		, "3.1.9"  );
 
-//localStorage.setItem("server"		, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
+localStorage.setItem("server"		, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
 //localStorage.setItem("server"		, "http://172.24.0.120:9279/restServiceUSSAP/resources/"	);
 //localStorage.setItem("server"		, "http://10.1.16.29:7101/restServiceUSSAP/resources/"		);
-localStorage.setItem("server"		, "https://supportstaff.ust.edu.ph/restServiceUSSAP/resources/");
+//localStorage.setItem("server"		, "https://supportstaff.ust.edu.ph/restServiceUSSAP/resources/");
 
 /*-------------------------------------------------*/
 /* SCHEDULE DATA */

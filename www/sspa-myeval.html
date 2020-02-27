@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" / <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+     <meta http-equiv="Content-Security-Policy" content="default-src * gap://ready file; style-src 'self' 'unsafe-inline'; script-src 'self'  'unsafe-inline' 'unsafe-eval' ">
+	 
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="lib/jquery.js"></script>
+    <script type="text/javascript" src="lib/jqueryUI/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/sidemenu.js"></script>
+    <script type="text/javascript" src="lib/slideout/slideout.min.js"></script>
+    <script type="text/javascript" src="lib/datatables/datatables.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="lib/datatables/datatables.min.css"/>
+    <link rel="stylesheet" type="text/css" href="lib/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="lib/jqueryUI/jquery-ui.min.css"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/sidemenu.css" />
+    <link rel="stylesheet" type="text/css" href="css/global.css" />
+    
+    <script type="text/javascript" src="js/global.js"></script>
+    <script type="text/javascript" src="js/sspa-global.js"></script>
+    <!--<link rel="stylesheet" type="text/css" href="css/merit.css" />-->
+    <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/all.css" />
+    
+    <title></title>
+</head>
+
+<body class="bg-cream">
+    <!--      Side Nav       -->
+    <nav id="sidenav" class="sidenav">
+    </nav>
+    <!--                     -->
+    <main id="panel" class="panel bg-cream">
+
+        <!-- Header -->
+        <div id="header">
+           
+			<div class="container">
+				<div class="row">
+					<div class="col-2"> 
+						<span class="menubutton" onclick="app.toggleMenu()">
+							<label class="hamburger-icon">
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+								<span>&nbsp;</span>
+							</label>
+						</span>
+					</div>
+					<div id="topbarTitle" class="col-8" align="center">EVALUATION TOOL</div>
+					<div class="col-2"></div>
+				</div>
+			</div>
+
+
+        </div> 
+
+
+        <div class="bg-cream p-4" id="empInfoHolder" style="margin-bottom:100px;">
+			<!-- EMPLOYEE INFORMATION -->
+            <div class="bg-white mb-4 info-card">
+				<h5 class="text-dkyellow p-3 mb-0"><strong>Employee Information</strong></h5>
+				<div class="line"></div>
+				<div align="center" id="loadingGif">
+				
+				<img src="img/loading.gif" style="width:20% !important;" />
+				<br/><small class="text-muted">Loading</small> 
+				</div>
+				<dl class="row p-3" id="employeeInfoHolder" style="display:none;">
+					<dd id="nickname" class="col-12 text-asphalt" align="center">
+						 <img src="img/none.png" class="w-25" id="dpHolder" /><br/>
+						 <b>
+							<h6 class="mt-3 text-asphalt"><strong id="nameholder"></strong></h6>
+						 </b>
+					</dd>
+					
+					<dt class="col-5" align="right">Job Position</dt>
+					<dd id="jobposition" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Rank</dt>
+					<dd id="rank" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Department</dt>
+					<dd id="department" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Division/ Work Area</dt>
+					<dd id="division" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Date Hired</dt>
+					<dd id="datehired" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Department Head</dt>
+					<dd id="departmenthead" class="col-7 text-asphalt"></dd>
+
+					<dt class="col-5" align="right">Evaluator</dt>
+					<dd id="evaluator" class="col-7 text-asphalt"></dd>        
+
+				</dl>
+
+				<div class="p-2"></div>
+			</div>
+			<div class="bg-white mb-4 info-card">
+				<h5 class="text-dkyellow p-3 mb-0"><strong>Coverage Periods</strong></h5>
+				<div class="line"></div>
+				<div align="center" id="CoverageListLoading">
+					<img src="img/loading.gif" style="width:20% !important;" />
+					<br/><small class="text-muted">Loading</small> 
+				</div>
+				<div class="p-2"></div>
+				<div id="coverageListHolder" style="display:none;">
+					
+				</div>
+				<div class="p-2"></div>
+				
+				<div class="btn-group btn-group-justified w-100" id="CoverageNavigationMenu">
+                   
+                   
+                </div>
+
+			</div>
+			
+			
+			
+			<div class="bg-white mb-4 info-card">
+			<div class="btn-group btn-group-justified w-100" id="componentHolder">
+               
+               
+            </div>
+			</div>
+			
+			
+			<div class="bg-white mb-4 info-card forTOOL">
+				<h5 class="text-dkyellow p-3 mb-0"><strong>Evaluation Response</strong></h5>
+				<div class="line"></div>
+				<dl class="row p-0 m-0" >
+				<dt class="col-3 bg bg-light p-0" align="left"> <img align="left" src="img/none.png" style="width:100%;height:100%;" id="evaluatorDp" /></dt>
+				<dt class="col-5 bg bg-light" align="left" id="evaluatorCommitName"></dt>
+				<dt class="col-4" align="center" id="evaluatorCommitStat"></dt>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-0 m-0" >
+				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;height:100%;"id="deptHeadDp"/></dt>
+				<dt class="col-5 bg bg-light" align="left" id="deptheadCommitName"></dt>
+				<dt class="col-4" align="center" id="deptheadCommitStat"></dt>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-0 m-0" >
+				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;height:100%;" id="evaluateeDp" /></dt>
+				<dt class="col-5 bg bg-light" align="left" id="evaluateeCommitName" ></dt>
+				<dt class="col-4" align="center" id="evaluateeCommitStat"></dt>
+				</dl>
+			</div>
+			
+			
+			<div class="bg-white mb-4 info-card forTOOL" id="evaluationToolTable">
+				<h5 class="text-dkyellow p-3 mb-0 "><strong>Evaluation Tool</strong></h5>
+				<div class="line"></div>
+				
+			</div>
+			
+			
+			<div class="bg-white mb-4 info-card forTOOL" >
+				<h5 class="text-dkyellow p-3 mb-0"><strong>Development Action Plan	
+				</strong></h5>
+				<div class="line"></div>
+				<dl class="row p-2 m-0" >
+				<span class="text-dark">Strength:</span><br/>
+				<span><small  id="dapStr">
+				
+				</small></span>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-2 m-0" >
+				<span class="text-dark">Areas For Improvement:</span><br/>
+				<span><small  id="dapAfi">
+				
+				</small></span>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-2 m-0" >
+				<span class="text-dark">Action Plan:</span><br/>
+				<span><small  id="dapAp">
+				
+				</small></span>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-2 m-0" >
+				<span class="text-dark">By When:</span><br/>
+				<span><small  id="dapWhen">
+				
+				</small></span>
+				</dl>
+				<div class="line"></div>
+				<dl class="row p-2 m-0" >
+				<span class="text-dark">Recommended Trainings:</span><br/>
+				<span><small  id="dapTraining">
+				
+				</small></span>
+				</dl>
+			</div>
+			
+			
+			<div class="bg-white mb-4 info-card forKRA" id="kraTable" style="display:none;">
+				<h5 class="text-dkyellow p-3 mb-0 "><strong>Key Result Areas (KRA)</strong></h5>
+				<div class="line"></div>
+			</div>
+        </div>
+     
+    
+	
+    </main>
+
+
+    <nav class="navbar fixed-bottom navbar-expand navbar-dark bg-dark" id="botNav">
+		  <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+        <ul class="navbar-nav">
+          <li class="nav-item text-center pr-2">
+            <a class="nav-link text-white" href="sspa-myeval.html">
+			<i id="botnav-myeval" class="far fa-id-card fa-2x text-warning"></i>
+			<br/><small>OL-PASSS</small></a>
+          </li>
+
+          <li class="nav-item text-center pr-2">
+            <a class="nav-link text-white" href="sspa-downloadables.html">
+			<i id="botnav-myevaldownload" class="fas fa-user-clock fa-2x"></i>
+			<br/><small>Downloadables</small></a>
+          </li>
+
+        </ul>
+	</div>
+    </nav>
+	
+	
+
+
+
+    <script type="text/javascript"> 
+        app.initialize();
+		document.addEventListener("deviceready", app.initializeEvalTool, false); 
+
+    </script>
+</body>
+
+</html>
