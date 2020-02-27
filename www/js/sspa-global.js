@@ -162,9 +162,7 @@ var app = {
 						pdf.fromData(toPrintHTML, options)
 							.then((base64)=>'ok')   // it will
 							.catch(
-							alert(err);
-							//(err)=>console.err(err)
-							
+							(err)=>alert(err)
 							);
 						
 					},
