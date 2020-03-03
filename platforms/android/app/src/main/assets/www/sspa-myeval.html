@@ -62,7 +62,7 @@
         </div> 
 
 
-        <div class="bg-cream p-4" id="empInfoHolder" style="margin-bottom:100px;">
+        <div class="bg-cream p-4" id="empInfoHolder" style="padding-bottom:200px !important;">
 			<!-- EMPLOYEE INFORMATION -->
             <div class="bg-white mb-4 info-card">
 				<h5 class="text-dkyellow p-3 mb-0"><strong>Employee Information</strong></h5>
@@ -139,19 +139,19 @@
 				<h5 class="text-dkyellow p-3 mb-0"><strong>Evaluation Response</strong></h5>
 				<div class="line"></div>
 				<dl class="row p-0 m-0" >
-				<dt class="col-3 bg bg-light p-0" align="left"> <img align="left" src="img/none.png" style="width:100%;height:100%;" id="evaluatorDp" /></dt>
+				<dt class="col-3 bg bg-light p-0" align="left"> <img align="left" src="img/none.png" style="width:100%;" id="evaluatorDp" /></dt>
 				<dt class="col-5 bg bg-light" align="left" id="evaluatorCommitName"></dt>
 				<dt class="col-4" align="center" id="evaluatorCommitStat"></dt>
 				</dl>
 				<div class="line"></div>
 				<dl class="row p-0 m-0" >
-				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;height:100%;"id="deptHeadDp"/></dt>
+				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;"id="deptHeadDp"/></dt>
 				<dt class="col-5 bg bg-light" align="left" id="deptheadCommitName"></dt>
 				<dt class="col-4" align="center" id="deptheadCommitStat"></dt>
 				</dl>
 				<div class="line"></div>
 				<dl class="row p-0 m-0" >
-				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;height:100%;" id="evaluateeDp" /></dt>
+				<dt class="col-3 bg bg-light p-0" align="left"> <img src="img/none.png" style="width:100%;" id="evaluateeDp" /></dt>
 				<dt class="col-5 bg bg-light" align="left" id="evaluateeCommitName" ></dt>
 				<dt class="col-4" align="center" id="evaluateeCommitStat"></dt>
 				</dl>
@@ -228,14 +228,51 @@
 
           <li class="nav-item text-center pr-2">
             <a class="nav-link text-white" href="sspa-downloadables.html">
-			<i id="botnav-myevaldownload" class="fas fa-user-clock fa-2x"></i>
+			<i id="botnav-myevaldownload" class="fas fa-download fa-2x"></i>
 			<br/><small>Downloadables</small></a>
           </li>
 
         </ul>
 	</div>
     </nav>
+	<div id="modalHolder">
+		<div class="modal fade" id="responseModal" tabindex="-1" role="dialog" aria-labelledby="responseModalLabel" aria-hidden="true">
+		  <div class="modal-dialog" role="document">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<h5 class="modal-title text-dark" id="exampleModalLabel">Evaluation Response</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true">&times;</span>
+				</button>
+			  </div>
+			  <div class="modal-body">
+			  
+				<input type="text" id="responseType"/>
+				<input type="text" id="coverageIdResponse"/>
+				
+				<p id="eeagreedmessage" style="display:none;">You <span class="text-success">AGREE</span> to the evaluation done 
+                by your evaluator and department head. If you have any remarks please 
+                specify it below.</p>
+                <p id="eedisagreedmessage" style="display:none;">You <span class="text-danger">DISAGREE</span> to the evaluation 
+                done by your evaluator and department head. To continue with this action 
+                please specify your remarks below.</p>
+                <br/>
+                <div class="form-group">
+                <label class="col-sm-4 control-label">Remarks From Evaluatee </label>
+                <div class="col-sm-8">
+                    <textarea name="remarks" id="responseRemarks" class="form-control"></textarea>
+                </div>
+                </div>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-success" onclick="app.submitEvalResponse()">Update Response</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
 	
+	</div>
 	
 
 

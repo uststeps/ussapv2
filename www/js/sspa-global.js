@@ -62,10 +62,6 @@ var app = {
 		});
 		
         $("#sidenav").load("inc.sidenav.html");
-		
-		
-       
-  
     },
     
     bindEvents: function() {
@@ -120,6 +116,10 @@ var app = {
 		
 	},
 	
+	
+	createAjaxRequest: function(data) {
+		 $.ajax
+	},
 	printEvaluationResult:function(){
 		var options = {
             documentSize: 'A4',
@@ -327,11 +327,26 @@ var app = {
 		var evaluateeHeadConstruct ="";
 		if (  commits.depthead.flag == commits.ID_DH_AGREED  ) {
 				
+			//COMMENT ON PRODUCTION
+			//commits.evaluatee.flag = commits.ID_EE_NOACTIONYET;
+			//scomponents.schedule.flag = 1;
+			
 			if (commits.evaluatee.flag == commits.ID_EE_NOACTIONYET){
-				evaluateeHeadConstruct = evaluateeHeadConstruct + "No Action Yet";
+				evaluateeHeadConstruct = evaluateeHeadConstruct + '<p><small class="text-danger">You can now review your evaluation.</small></p>';
+				if(scomponents.schedule.flag == 1){
+					
+
+					
+					evaluateeHeadConstruct = evaluateeHeadConstruct + '<hr/>'
+                    + '<button type="button" data-toggle="modal" data-target="#responseModal" class="text-left btn btn-link w-100 text-success"  onclick="app.onEvaluateeAction(' + commits.ID_EE_AGREED + ')"><i class="far fa-check-circle"></i>&nbsp;Agree</button> <br/>'
+                    + '<button type="button" data-toggle="modal" data-target="#responseModal" class="text-left btn btn-link w-100 text-danger" onclick="app.onEvaluateeAction(' + commits.ID_EE_DISAGREED + ')"><i class="far fa-times-circle"></i>&nbsp;Disagree</button>';
+				} else {
+		
+				}
 			}
 			if (commits.evaluatee.flag == commits.ID_EE_AGREED) {
 				evaluateeHeadConstruct = evaluateeHeadConstruct + ' <p><strong class="text-success">Agreed</strong><br/><small class="text-muted">(' + commits.evaluatee.date + ')</small></p>';
+				
 			}
 			if (commits.evaluatee.flag == commits.ID_EE_DISAGREED) {
 				evaluateeHeadConstruct = evaluateeHeadConstruct + ' <p><strong class="text-danger">Disagreed</strong><br/><small class="text-muted">(' + commits.evaluatee.date + ')</small></p>';
@@ -340,7 +355,11 @@ var app = {
 				evaluateeHeadConstruct = evaluateeHeadConstruct+' <small><strong>Remarks for Evaluatee:</strong><br/>' + commits.evaluatee.remarks + '</small>';
 			}
 		}
-
+		
+		if (  !(commits.depthead.flag == commits.ID_DH_AGREED || commits.depthead.flag == commits.ID_DH_DONE && scomponents.schedule.flag == 1)  ){
+			$("#modalHolder").html("");
+		}
+	
 
 		$("#evaluatorCommitStat").html(evaluatorConstruct);
 		$("#deptheadCommitStat" ).html(deptHeadConstruct);
@@ -401,10 +420,78 @@ var app = {
 		
 	},
 	
+	
+	
+	evaluateeResponseValue: null,
+	onEvaluateeAction: function(actionType){
+		// 1 - Agree
+		// 2 - Disagree
+		app.evaluateeResponseValue = actionType;
+		$("#responseType").val(actionType)
+		if (actionType == 1) {
+			$("#eeagreedmessage").show();
+			$("#eedisagreedmessage").hide();
+		} else {
+			$("#eedisagreedmessage").show();
+			$("#eeagreedmessage").hide();
+		}
+	},
+	
+	
+	submitEvalResponse: function(){
+		var errors = 0;
+		
+		if (app.evaluateeResponseValue==2){
+			if ($("#responseRemarks").val().length<=0){
+				$("#responseRemarks").addClass("border border-danger");
+				errors++;
+			} else {
+				$("#responseRemarks").removeClass("border border-danger");
+			}
+		}
+		
+		if (errors>0){
+			confirm("Remarks is required");
+		} else {
+			var data = {
+				coverageId 		: parseInt($("#coverageIdResponse").val()),
+				departmentId 	: parseInt(localStorage.getItem("college_2")),
+				empnumber		: localStorage.getItem("empnumber"),
+				remarks			: $("#responseRemarks").val(),
+				commitId		: parseInt($("#responseType").val()) 
+			}
+			
+			$.ajax({
+					url   : localStorage.getItem("server") + "sspa/request", 
+					type       : "POST",
+					dataType   : "json",            
+					beforeSend : function(xhr){
+						xhr.setRequestHeader("request", "submitevalresponse");
+						xhr.setRequestHeader('ecode'  , localStorage.getItem("ecode") 	);
+						xhr.setRequestHeader("data"	  , JSON.stringify(data));
+					},
+					success: function(msg) { 
+						alert(JSON.stringify(msg));
+						//alert("got past from data");
+						
+					},
+					error: function(jqXHR	, textStatus, errorThrown) {
+						alert(JSON.stringify(jqXHR));
+					}
+				});    
+			
+			
+			
+			
+		}
+	},
+	
 	loadEvaluationTool: function(Inputyear,inputCpid){
-				$("#nameholder"	).html(localStorage.getItem("full_name"));
+			$("#nameholder"	).html(localStorage.getItem("full_name"));
 		
-		
+			
+			
+	 
 	 
 	 
 			var dpDownloaded = false;
@@ -457,6 +544,9 @@ var app = {
             },
             success: function(msg) { 
 				console.log(JSON.stringify(msg));
+				
+				$("#coverageIdResponse").val(msg.selectedCoverage.id);
+				
                 $("#loadingGif").show();
 				$("#jobposition").html(msg["evaluatee"]["jobposition"]);
 				$("#rank").html(msg["evaluatee"]["rank"]);
