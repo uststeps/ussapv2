@@ -548,21 +548,21 @@ var app = {
 				$("#coverageIdResponse").val(msg.selectedCoverage.id);
 				
                 $("#loadingGif").show();
-				$("#jobposition").html(msg["evaluatee"]["jobposition"]);
-				$("#rank").html(msg["evaluatee"]["rank"]);
-				$("#department").html(msg["evaluatee"]["deptName"]);
+				$("#jobposition").html(msg.evaluatee.jobposition);
+				$("#rank").html(msg.evaluatee.rank);
+				$("#department").html(msg.evaluatee.deptName);
 				
-				if (msg["evaluatee"]["division"] != null) {
-				$("#division").html(msg["evaluatee"]["division"]);
+				if (msg.evaluatee.division != null) {
+				$("#division").html(msg.evaluatee.division);
 				}
-				$("#datehired").html(msg["evaluatee"]["dateHired"]);
+				$("#datehired").html(msg.evaluatee.dateHired);
 				
-				var departmentHead = msg["evaluatee"]["deptheadName"];
-				var departmentPosition = msg["evaluatee"]["deptheadPosition"] == null ? "Position N/A" : msg["evaluatee"]["deptheadPosition"];
+				var departmentHead = msg.evaluatee.deptheadName;
+				var departmentPosition = msg.evaluatee.deptheadPosition == null ? "Position N/A" : msg.evaluatee.deptheadPosition;
 				var deptheadContent = departmentHead + '<br/><small class="text-muted">' + departmentPosition + "</small>";
 				
-				var evaluator = msg["evaluatee"]["evaluatorName"];
-				var evaluatorPosition = msg["evaluatee"]["evaluatorPosition"] == null ? "Position N/A" : msg["evaluatee"]["evaluatorPosition"];
+				var evaluator = msg.evaluatee.evaluatorName;
+				var evaluatorPosition = msg.evaluatee.evaluatorPosition == null ? "Position N/A" : msg.evaluatee.evaluatorPosition;
 				var evaluatorContent = evaluator + '<br/><small class="text-muted">' + evaluatorPosition + "</small>";
 				
 				
@@ -696,7 +696,7 @@ var app = {
 		$.each(coverageList, function(index, coverage) {
 			var buttonConstruct = '<dt class="col-12" align="center">' +
 				'<button onclick="app.loadEvaluationTool('+coverage.year+','+coverage.id+')" class="btn btn-primary w-100" style="background-color:#337ab7 !important;border-color:#337ab7 !important">' +
-					coverage["dateFrom"] + " - " + coverage["dateTo"] + 
+					coverage.dateFrom + " - " + coverage.dateTo + 
 				'</button>' +
 			'</dt>';
 			

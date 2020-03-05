@@ -16,14 +16,8 @@ localStorage.setItem("server"		, "https://supportstaff.ust.edu.ph/restServiceUSS
 /* SCHEDULE DATA */
 var jsn;
 var lastIndex;
-
 var grid = {};
-
-var checking = {
-	
-	
-}
-
+var checking = {}
 var timedata = {
 	"06:00" : "6:00 am",
 	"06:30" : "6:30 am",
@@ -193,11 +187,11 @@ var app = {
 					   
                             localStorage.setItem("empnumber"       , empnum  );
                             //localStorage.setItem("empnumber"       , "4816"  );
-					  localStorage.setItem("college_1"       , msg["college_1"]       );
-					  localStorage.setItem("college_2"       , msg["college_2"]       );
-					  localStorage.setItem("full_name"       , msg["full_name"]       );
-					  localStorage.setItem("full_empnumber"  , msg["full_empnumber"]  );
-					  localStorage.setItem("employment_date" , msg["employment_date"] );
+					  localStorage.setItem("college_1"       , msg.college_1       );
+					  localStorage.setItem("college_2"       , msg.college_2       );
+					  localStorage.setItem("full_name"       , msg.full_name       );
+					  localStorage.setItem("full_empnumber"  , msg.full_empnumber  );
+					  localStorage.setItem("employment_date" , msg.employment_date );
 					  localStorage.setItem("mypass" , pass);
 					  
 					  
@@ -468,9 +462,6 @@ var app = {
 			var amOut 	= false;
 			var pmIn 	= false;
 			var pmOut	= false;
-			
-			
-			
 			
 			
 			/* 
