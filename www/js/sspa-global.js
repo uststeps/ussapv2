@@ -41,6 +41,7 @@ var app = {
              Slide out config
         */
 		empnumber = localStorage.getItem("empnumber");
+		//empnumber = 4816; //DEBUG
 		//empnumber = "1689";
                 slideout = new Slideout({
                     'panel'    : document.getElementById('panel'   ),
@@ -545,130 +546,137 @@ var app = {
             success: function(msg) { 
 				console.log(JSON.stringify(msg));
 				
-				$("#coverageIdResponse").val(msg.selectedCoverage.id);
+				if (msg.error == null) {
 				
-                $("#loadingGif").show();
-				$("#jobposition").html(msg.evaluatee.jobposition);
-				$("#rank").html(msg.evaluatee.rank);
-				$("#department").html(msg.evaluatee.deptName);
-				
-				if (msg.evaluatee.division != null) {
-				$("#division").html(msg.evaluatee.division);
-				}
-				$("#datehired").html(msg.evaluatee.dateHired);
-				
-				var departmentHead = msg.evaluatee.deptheadName;
-				var departmentPosition = msg.evaluatee.deptheadPosition == null ? "Position N/A" : msg.evaluatee.deptheadPosition;
-				var deptheadContent = departmentHead + '<br/><small class="text-muted">' + departmentPosition + "</small>";
-				
-				var evaluator = msg.evaluatee.evaluatorName;
-				var evaluatorPosition = msg.evaluatee.evaluatorPosition == null ? "Position N/A" : msg.evaluatee.evaluatorPosition;
-				var evaluatorContent = evaluator + '<br/><small class="text-muted">' + evaluatorPosition + "</small>";
-				
-				
-				// CoverageNavigationButton
-				// NEWER AND OLDER COVERAGE Button
-				var olderButton =  '<button type="button" onclick="app.navigateCoverage(' + (msg.selectedCoverage.year - 5) + ', ' + msg.selectedCoverage.id + ' )" class="btn btn-light w-100 only-button from-button"><i class="fas fa-chevron-left"></i>&nbsp; Older</button>';
-				var newerButton =  ' <button type="button" onclick="app.navigateCoverage(' + (msg.selectedCoverage.year + 5) + ', ' + msg.selectedCoverage.id + ' )" class="btn btn-light w-100 only-button from-button">Newer &nbsp;<i class="fas fa-chevron-right"></i></button>';
-				
-				$("#CoverageNavigationMenu").html(
-					olderButton + 
-					newerButton
-				);
-				
-				
-				
-				$("#departmenthead").html(deptheadContent);
-				$("#evaluator").html(evaluatorContent);
-				
-				app.populateCoverageList(msg.coverageList);
-				
-				var evaluatorDpDownloaded = false;
-				var t=setInterval(function() {
+					$("#coverageIdResponse").val(msg.selectedCoverage.id);
 					
-					if (!evaluatorDpDownloaded) {
-						var fileTransferEvaluator = new FileTransfer();
-						var uri = "http://digitalpix.ust.edu.ph/employee/" + msg.evaluatee.evaluatorId + "p.jpg"
-						// WILL DOWNLOAD THE FILE IF NOT FOUND
-						fileTransferEvaluator.download(
-							uri,
-							cordova.file.dataDirectory  +  msg.evaluatee.evaluatorId  +"p.jpg"	,
-							function(entry) {
-								$("#evaluatorDp").attr("src",entry.toURL());
-								evaluatorDpDownloaded = true;
-								clearInterval(t);
-								
-							},
-							function(error) {
-							},
-							true,
-							{
-								headers: {
-									"referrer" : "https://supportstaff.ust.edu.ph",
-									"referer"  : "https://supportstaff.ust.edu.ph"
+					$("#loadingGif").show();
+					$("#jobposition").html(msg.evaluatee.jobposition);
+					$("#rank").html(msg.evaluatee.rank);
+					$("#department").html(msg.evaluatee.deptName);
+					
+					if (msg.evaluatee.division != null) {
+					$("#division").html(msg.evaluatee.division);
+					}
+					$("#datehired").html(msg.evaluatee.dateHired);
+					
+					var departmentHead = msg.evaluatee.deptheadName;
+					var departmentPosition = msg.evaluatee.deptheadPosition == null ? "Position N/A" : msg.evaluatee.deptheadPosition;
+					var deptheadContent = departmentHead + '<br/><small class="text-muted">' + departmentPosition + "</small>";
+					
+					var evaluator = msg.evaluatee.evaluatorName;
+					var evaluatorPosition = msg.evaluatee.evaluatorPosition == null ? "Position N/A" : msg.evaluatee.evaluatorPosition;
+					var evaluatorContent = evaluator + '<br/><small class="text-muted">' + evaluatorPosition + "</small>";
+					
+					
+					// CoverageNavigationButton
+					// NEWER AND OLDER COVERAGE Button
+					var olderButton =  '<button type="button" onclick="app.navigateCoverage(' + (msg.selectedCoverage.year - 5) + ', ' + msg.selectedCoverage.id + ' )" class="btn btn-light w-100 only-button from-button"><i class="fas fa-chevron-left"></i>&nbsp; Older</button>';
+					var newerButton =  ' <button type="button" onclick="app.navigateCoverage(' + (msg.selectedCoverage.year + 5) + ', ' + msg.selectedCoverage.id + ' )" class="btn btn-light w-100 only-button from-button">Newer &nbsp;<i class="fas fa-chevron-right"></i></button>';
+					
+					$("#CoverageNavigationMenu").html(
+						olderButton + 
+						newerButton
+					);
+					
+					
+					
+					$("#departmenthead").html(deptheadContent);
+					$("#evaluator").html(evaluatorContent);
+					
+					app.populateCoverageList(msg.coverageList);
+					
+					var evaluatorDpDownloaded = false;
+					var t=setInterval(function() {
+						
+						if (!evaluatorDpDownloaded) {
+							var fileTransferEvaluator = new FileTransfer();
+							var uri = "http://digitalpix.ust.edu.ph/employee/" + msg.evaluatee.evaluatorId + "p.jpg"
+							// WILL DOWNLOAD THE FILE IF NOT FOUND
+							fileTransferEvaluator.download(
+								uri,
+								cordova.file.dataDirectory  +  msg.evaluatee.evaluatorId  +"p.jpg"	,
+								function(entry) {
+									$("#evaluatorDp").attr("src",entry.toURL());
+									evaluatorDpDownloaded = true;
+									clearInterval(t);
+									
+								},
+								function(error) {
+								},
+								true,
+								{
+									headers: {
+										"referrer" : "https://supportstaff.ust.edu.ph",
+										"referer"  : "https://supportstaff.ust.edu.ph"
+									}
 								}
-							}
-						);
-					}					
+							);
+						}					
+						
+					},500);
 					
-				},500);
-				
-				
-				var deptheadDpDownloaded = false;
-				var deptheadDpDownloader=setInterval(function() {
 					
-					if (!deptheadDpDownloaded) {
-						var fileTransferEvaluator = new FileTransfer();
-						var uri = "http://digitalpix.ust.edu.ph/employee/" + msg.evaluatee.deptheadId + "p.jpg"
-						// WILL DOWNLOAD THE FILE IF NOT FOUND
-						fileTransferEvaluator.download(
-							uri,
-							cordova.file.dataDirectory  +  msg.evaluatee.deptheadId  +"p.jpg"	,
-							function(entry) {
-								$("#deptHeadDp").attr("src",entry.toURL());
-								deptheadDpDownloaded = true;
-								clearInterval(deptheadDpDownloader);
-								
-							},
-							function(error) {
-							},
-							true,
-							{
-								headers: {
-									"referrer" : "https://supportstaff.ust.edu.ph",
-									"referer"  : "https://supportstaff.ust.edu.ph"
+					var deptheadDpDownloaded = false;
+					var deptheadDpDownloader=setInterval(function() {
+						
+						if (!deptheadDpDownloaded) {
+							var fileTransferEvaluator = new FileTransfer();
+							var uri = "http://digitalpix.ust.edu.ph/employee/" + msg.evaluatee.deptheadId + "p.jpg"
+							// WILL DOWNLOAD THE FILE IF NOT FOUND
+							fileTransferEvaluator.download(
+								uri,
+								cordova.file.dataDirectory  +  msg.evaluatee.deptheadId  +"p.jpg"	,
+								function(entry) {
+									$("#deptHeadDp").attr("src",entry.toURL());
+									deptheadDpDownloaded = true;
+									clearInterval(deptheadDpDownloader);
+									
+								},
+								function(error) {
+								},
+								true,
+								{
+									headers: {
+										"referrer" : "https://supportstaff.ust.edu.ph",
+										"referer"  : "https://supportstaff.ust.edu.ph"
+									}
 								}
-							}
-						);
-					}					
+							);
+						}					
+						
+					},500);
 					
-				},500);
-				
-				
-				
-				
-				$("#loadingGif").hide();
-				$("#employeeInfoHolder").show();
-				
-				
-				// POPULATE DATA
+					
+					
+					
+					$("#loadingGif").hide();
+					$("#employeeInfoHolder").show();
+					
+					
+					// POPULATE DATA
 
-				app.populateComponentList(msg.componentList,msg.scomponent,msg.viewFlags);
-				app.processCommitStatus(msg.evaluatee, msg.commitStatus, msg.scomponent);
-				app.processEvaluationResults(msg.commitStatus);
-				app.processPerformanceView(msg.performanceView);
+					app.populateComponentList(msg.componentList,msg.scomponent,msg.viewFlags);
+					app.processCommitStatus(msg.evaluatee, msg.commitStatus, msg.scomponent);
+					app.processEvaluationResults(msg.commitStatus);
+					app.processPerformanceView(msg.performanceView);
+					
+					
+					
+					if (msg.commitStatus.strength!=null) $("#dapStr").html(msg.commitStatus.strength);
+					if (msg.commitStatus.areasImprovement!=null) $("#dapAfi").html(msg.commitStatus.areasImprovement);
+					if (msg.commitStatus.actionPlan!=null) $("#dapAp").html(msg.commitStatus.actionPlan);
+					if (msg.commitStatus.byWhen!=null) $("#dapWhen").html(msg.commitStatus.byWhen);
+					if (msg.commitStatus.recommendedTraining!=null) $("#dapTraining").html(msg.commitStatus.recommendedTraining);
+					
+					app.instrument = msg.commitStatus.instrument;
 				
-				
-				
-				if (msg.commitStatus.strength!=null) $("#dapStr").html(msg.commitStatus.strength);
-				if (msg.commitStatus.areasImprovement!=null) $("#dapAfi").html(msg.commitStatus.areasImprovement);
-				if (msg.commitStatus.actionPlan!=null) $("#dapAp").html(msg.commitStatus.actionPlan);
-				if (msg.commitStatus.byWhen!=null) $("#dapWhen").html(msg.commitStatus.byWhen);
-				if (msg.commitStatus.recommendedTraining!=null) $("#dapTraining").html(msg.commitStatus.recommendedTraining);
-				
-				app.instrument = msg.commitStatus.instrument;
-				
-				
+				} else {
+					$("#empInfoHolder").html("");
+					$("#empInfoHolder").html(
+						'<div class="alert alert-warning" align="center">No Record Found.</div>'
+					);
+				}
             },
             error: function(jqXHR	, textStatus, errorThrown) {
                 alert(JSON.stringify(jqXHR));
