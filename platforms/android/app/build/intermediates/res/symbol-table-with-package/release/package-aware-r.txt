@@ -1,4 +1,4 @@
-com.steps.ussapv2
+com.steps.ussap
 attr font
 attr fontProviderAuthority
 attr fontProviderCerts

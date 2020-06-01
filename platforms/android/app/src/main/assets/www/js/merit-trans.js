@@ -64,7 +64,7 @@ var app = {
 		});
 		
         $("#sidenav").load("inc.sidenav.html");
-	$("#botnav-performance").addClass("text-warning");
+		$("#botnav-performance").addClass("text-warning");
 		
        
   
